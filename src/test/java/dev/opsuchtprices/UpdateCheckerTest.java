@@ -16,6 +16,16 @@ class UpdateCheckerTest {
     }
 
     @Test
+    void latestJsonLesen() {
+        var r = UpdateChecker.parseLatestJson("{\"version\":\"1.20.0\",\"file\":\"op-assistent-1.20.0.jar\",\"sha256\":\"ab12\"}",
+                "https://raw.githubusercontent.com/Jxlian0502/OP-Assist/main");
+        assertEquals("1.20.0", r.version());
+        assertEquals("https://raw.githubusercontent.com/Jxlian0502/OP-Assist/main/dist/op-assistent-1.20.0.jar", r.downloadUrl());
+        assertEquals("ab12", r.sha256());
+        assertNull(UpdateChecker.parseLatestJson("{\"version\":\"1\",\"file\":\"../evil.jar\"}", "x"));
+    }
+
+    @Test
     void releaseLesen() {
         String json = """
                 {"tag_name":"v1.17.0","draft":false,"prerelease":false,"assets":[

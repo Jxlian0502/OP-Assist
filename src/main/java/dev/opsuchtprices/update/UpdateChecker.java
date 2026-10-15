@@ -78,6 +78,19 @@ public final class UpdateChecker {
         return null;
     }
 
+    /**
+     * Liest dist/latest.json aus dem Repo: {"version":"1.19.1","file":"op-assistent-1.19.1.jar","sha256":"…"}.
+     * Die .jar liegt daneben in dist/. Liefert null bei ungültigem Inhalt.
+     */
+    public static Release parseLatestJson(String json, String rawBase) {
+        JsonObject o = JsonParser.parseString(json).getAsJsonObject();
+        if (!o.has("version") || !o.has("file")) return null;
+        String file = o.get("file").getAsString();
+        if (!file.matches("[A-Za-z0-9._-]+\\.jar")) return null;
+        String sha = o.has("sha256") && !o.get("sha256").isJsonNull() ? o.get("sha256").getAsString() : null;
+        return new Release(o.get("version").getAsString().replaceFirst("^[vV]", ""), file, rawBase + "/dist/" + file, sha);
+    }
+
     /** Prüft und lädt im Hintergrund. notify bekommt eine Meldung für den Chat (oder nichts). */
     public void checkAsync(Consumer<String> notify) {
         Thread t = new Thread(() -> {
@@ -94,18 +107,25 @@ public final class UpdateChecker {
     private void check(Consumer<String> notify) throws Exception {
         Path dir = currentJar.getParent();
         cleanupOldDownloads(dir);
-        HttpResponse<String> resp = http.send(HttpRequest.newBuilder(
-                        URI.create("https://api.github.com/repos/" + repo + "/releases/latest"))
-                .timeout(Duration.ofSeconds(20))
-                .header("Accept", "application/vnd.github+json")
-                .header("User-Agent", "opsuchtprices-updater")
-                .GET().build(), HttpResponse.BodyHandlers.ofString());
-        if (resp.statusCode() == 404) {
-            ModLog.info("Noch keine Release in {} vorhanden", repo);
-            return;
+        Release r = null;
+        // 1) dist/latest.json im Repo (öffentlich über raw.githubusercontent.com, kein Token nötig)
+        String rawBase = "https://raw.githubusercontent.com/" + repo + "/main";
+        HttpResponse<String> latest = http.send(HttpRequest.newBuilder(URI.create(rawBase + "/dist/latest.json"))
+                .timeout(Duration.ofSeconds(20)).header("User-Agent", "opsuchtprices-updater").GET().build(),
+                HttpResponse.BodyHandlers.ofString());
+        if (latest.statusCode() == 200) {
+            r = parseLatestJson(latest.body(), rawBase);
+        } else {
+            // 2) Ersatz: neueste GitHub-Release
+            HttpResponse<String> resp = http.send(HttpRequest.newBuilder(
+                            URI.create("https://api.github.com/repos/" + repo + "/releases/latest"))
+                    .timeout(Duration.ofSeconds(20))
+                    .header("Accept", "application/vnd.github+json")
+                    .header("User-Agent", "opsuchtprices-updater")
+                    .GET().build(), HttpResponse.BodyHandlers.ofString());
+            if (resp.statusCode() == 200) r = parseRelease(resp.body());
+            else ModLog.info("Keine Update-Info in {} gefunden (HTTP {} / {})", repo, latest.statusCode(), resp.statusCode());
         }
-        if (resp.statusCode() != 200) throw new java.io.IOException("GitHub antwortet mit HTTP " + resp.statusCode());
-        Release r = parseRelease(resp.body());
         if (r == null || compare(r.version(), currentVersion) <= 0) {
             ModLog.info("Mod ist aktuell ({})", currentVersion);
             return;

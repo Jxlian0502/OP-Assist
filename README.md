@@ -107,3 +107,9 @@ Name: **OP-Assistent (by Jxlian0502)**. Einstellungen über **Mod Menu** (Knopf 
 
 Befehle: `/opa` (Status), `/opa liste [text]`, `/opa einstellungen`, `/opa job`, `/opa job toggle`, `/opa job reset`, `/opa job actionbar an|aus`, `/opa job zaehler [reset|<grenze>]`, `/opa chat an|aus`, `/opa aufnahme start|stop`, `/opa ordner`, `/marktinfo`.
 Die Daten bleiben in `.minecraft\config\opsuchtprices\`.
+
+## Automatische Updates
+
+Die Mod prüft beim Start `dist/latest.json` in diesem Repository (https://github.com/Jxlian0502/OP-Assist) und lädt eine neuere `dist/op-assistent-<version>.jar` herunter (Prüfsumme SHA-256 + Mod-ID/Version werden kontrolliert). Installiert wird beim Beenden von Minecraft; beim nächsten Start läuft die neue Version. Abschalten: `"autoUpdate": false` in der config.json.
+
+**Download der aktuellen Version:** [`dist/`](dist/) – die .jar in den mods-Ordner legen.
