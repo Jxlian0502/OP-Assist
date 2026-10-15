@@ -40,7 +40,7 @@ public final class ModConfig {
     /** Automatische Updates über GitHub-Releases. */
     public boolean autoUpdate = true;
     /** GitHub-Repository "besitzer/name" mit den Releases. */
-    public String updateRepo = "OWNER/opsuchtprices";
+    public String updateRepo = "Jxlian0502/OP-Assist";
     /** Jobtracker: liest die Job-Actionbar (XP, Geld, Level) und zeigt ein HUD. */
     public boolean jobTracker = true;
     /** HUD-Position in GUI-Pixeln (von links/oben). */
@@ -89,6 +89,8 @@ public final class ModConfig {
         jobAutoPauseSeconds = Math.max(1, Math.min(jobAutoPauseSeconds, 3600));
         jobHideAfterMinutes = Math.max(0, Math.min(jobHideAfterMinutes, 1440));
         jobXpCounterStep = Math.max(0, jobXpCounterStep);
+        // Platzhalter aus älteren Versionen durch das echte Update-Repo ersetzen
+        if (updateRepo == null || updateRepo.isBlank() || updateRepo.startsWith("OWNER/")) updateRepo = "Jxlian0502/OP-Assist";
         chatScannerMinutes = Math.max(1, Math.min(chatScannerMinutes, 1440));
         chatScannerMinLength = Math.max(1, Math.min(chatScannerMinLength, 200));
         if (merchantRatesUrl == null || merchantRatesUrl.isBlank()) merchantRatesUrl = "https://api.opsucht.net/merchant/rates";
