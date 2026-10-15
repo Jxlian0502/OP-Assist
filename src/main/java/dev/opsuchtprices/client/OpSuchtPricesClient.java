@@ -176,6 +176,8 @@ public final class OpSuchtPricesClient implements ClientModInitializer {
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             onOpSucht = isOpSuchtServer(client, config);
+            // Nur für Tests: -Dopsuchtprices.autoQuitSeconds=N beendet Minecraft sauber nach N Sekunden
+            if (AUTO_QUIT_MS > 0 && System.currentTimeMillis() - STARTED_AT > AUTO_QUIT_MS) client.stop();
             if (pendingUpdateMessage != null && client.player != null) {
                 client.player.displayClientMessage(Component.literal("[OP-Assistent] " + pendingUpdateMessage)
                         .withStyle(ChatFormatting.GREEN), false);
@@ -361,6 +363,8 @@ public final class OpSuchtPricesClient implements ClientModInitializer {
     }
 
     private static volatile String pendingUpdateMessage;
+    private static final long STARTED_AT = System.currentTimeMillis();
+    private static final long AUTO_QUIT_MS = Long.getLong("opsuchtprices.autoQuitSeconds", 0L) * 1000L;
     private static ModConfig configRef;
     private static Path configFile;
     private static dev.opsuchtprices.job.JobTracker jobsRef;
