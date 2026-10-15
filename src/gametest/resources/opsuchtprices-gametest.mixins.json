@@ -1,0 +1,7 @@
+{
+	"required": true,
+	"package": "dev.opsuchtprices.gametest.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"client": ["TestHooksMixin", "NoPlayerTickMixin"],
+	"injectors": {"defaultRequire": 1}
+}

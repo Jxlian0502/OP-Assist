@@ -1,0 +1,15 @@
+{
+	"required": true,
+	"package": "dev.opsuchtprices.mixin",
+	"compatibilityLevel": "JAVA_21",
+	"client": [
+		"MultiPlayerGameModeMixin",
+		"AbstractContainerScreenMixin",
+		"ChatComponentMixin",
+		"GuiMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"refmap": "opsuchtprices.refmap.json"
+}

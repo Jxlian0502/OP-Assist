@@ -1,0 +1,2528 @@
+15:13:18 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x6 | 54 Slots ===
+  [0] minecraft:diamond_pickaxe | §c§lBergbau
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:bell | §c§lSofort verkaufen
+  [9] minecraft:netherite_axe | §c§lHolz
+  [10] minecraft:black_stained_glass_pane | 
+  [11] minecraft:netherite_ingot | §bNetheritbarren§r§7
+        §7Kaufpreis: §b9.599,7§r§7$
+        §7Verkaufspreis: §b9.010,2§r§7$
+  [12] minecraft:netherite_block | §bNetheritblock§r§7
+        §7Kaufpreis: §b94.882,5§r§7$
+        §7Verkaufspreis: §b78.936,5§r§7$
+  [13] minecraft:diamond | §bDiamant§r§7
+        §7Kaufpreis: §b76,8§r§7$
+        §7Verkaufspreis: §b55,7§r§7$
+  [14] minecraft:diamond_block | §bDiamantblock§r§7
+        §7Kaufpreis: §b663,5§r§7$
+        §7Verkaufspreis: §b600,1§r§7$
+  [15] minecraft:emerald | §bSmaragd§r§7
+        §7Kaufpreis: §b90,1§r§7$
+        §7Verkaufspreis: §b45,8§r§7$
+  [16] minecraft:emerald_block | §bSmaragdblock§r§7
+        §7Kaufpreis: §b538,2§r§7$
+        §7Verkaufspreis: §b420,3§r§7$
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:iron_sword | §c§lKampf
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:raw_iron | §bRoheisen§r§7
+        §7Kaufpreis: §b36,4§r§7$
+        §7Verkaufspreis: §b11,8§r§7$
+  [21] minecraft:iron_ingot | §bEisenbarren§r§7
+        §7Kaufpreis: §b38§r§7$
+        §7Verkaufspreis: §b18§r§7$
+  [22] minecraft:iron_block | §bEisenblock§r§7
+        §7Kaufpreis: §b294,7§r§7$
+        §7Verkaufspreis: §b157,4§r§7$
+  [23] minecraft:raw_gold | §bRohgold§r§7
+        §7Kaufpreis: §b23,3§r§7$
+        §7Verkaufspreis: §b10,8§r§7$
+  [24] minecraft:gold_ingot | §bGoldbarren§r§7
+        §7Kaufpreis: §b19§r§7$
+        §7Verkaufspreis: §b11,9§r§7$
+  [25] minecraft:gold_block | §bGoldblock§r§7
+        §7Kaufpreis: §b199§r§7$
+        §7Verkaufspreis: §b129,3§r§7$
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:golden_hoe | §c§lNahrung
+  [28] minecraft:black_stained_glass_pane | 
+  [29] minecraft:charcoal | §bHolzkohle§r§7
+        §7Kaufpreis: §b15§r§7$
+        §7Verkaufspreis: §b2,8§r§7$
+  [30] minecraft:coal | §bKohle§r§7
+        §7Kaufpreis: §b24,3§r§7$
+        §7Verkaufspreis: §b6,5§r§7$
+  [31] minecraft:coal_block | §bKohleblock§r§7
+        §7Kaufpreis: §b211,3§r§7$
+        §7Verkaufspreis: §b101,6§r§7$
+  [32] minecraft:raw_copper | §bRohkupfer§r§7
+        §7Kaufpreis: §b2,7§r§7$
+        §7Verkaufspreis: §b0,8§r§7$
+  [33] minecraft:copper_ingot | §bKupferbarren§r§7
+        §7Kaufpreis: §b7,1§r§7$
+        §7Verkaufspreis: §b1§r§7$
+  [34] minecraft:copper_block | §bKupferblock§r§7
+        §7Kaufpreis: §b51,7§r§7$
+        §7Verkaufspreis: §b8,2§r§7$
+  [35] minecraft:black_stained_glass_pane | 
+  [36] minecraft:grass_block | §c§lSonstiges
+  [37] minecraft:black_stained_glass_pane | 
+  [38] minecraft:amethyst_shard | §bAmethystscherbe§r§7
+        §7Kaufpreis: §b3,4§r§7$
+        §7Verkaufspreis: §b0,9§r§7$
+  [39] minecraft:amethyst_cluster | §bAmethysthaufen§r§7
+        §7Kaufpreis: §b44,6§r§7$
+        §7Verkaufspreis: §b5,2§r§7$
+  [40] minecraft:small_amethyst_bud | §bKleine Amethystknospe§r§7
+        §7Kaufpreis: §b44,6§r§7$
+        §7Verkaufspreis: §b11,6§r§7$
+  [41] minecraft:medium_amethyst_bud | §bMittlere Amethystknospe§r§7
+        §7Kaufpreis: §b94,7§r§7$
+        §7Verkaufspreis: §b26,6§r§7$
+  [42] minecraft:large_amethyst_bud | §bGroße Amethystknospe§r§7
+        §7Kaufpreis: §b84,8§r§7$
+        §7Verkaufspreis: §b5,2§r§7$
+  [43] minecraft:quartz | §bNetherquarz§r§7
+        §7Kaufpreis: §b32,9§r§7$
+        §7Verkaufspreis: §b23,3§r§7$
+  [44] minecraft:black_stained_glass_pane | 
+  [45] minecraft:beacon | §c§lBesonderes
+  [46] minecraft:black_stained_glass_pane | 
+  [47] minecraft:black_stained_glass_pane | 
+  [48] minecraft:black_stained_glass_pane | 
+  [49] minecraft:book | §c§lDeine Aufträge
+  [50] minecraft:oak_sign | §c§lSuche
+  [51] minecraft:black_stained_glass_pane | 
+  [52] minecraft:paper | Weiter | CMD [701.0][]
+  [53] minecraft:gold_block | §c§lExperten Modus
+        Einfacher Modus
+        Im einfachen Modus kannst du
+        bei bestehende Angebote von
+        anderen Spielern kaufen und verkaufen.
+        Experten Modus
+        Der Experten Modus bietet dir
+        neben den Funktionen des einfachen
+        Modus auch die Möglichkeit, eigene
+        Angebote zu erstellen.
+
+15:13:20 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x6 | 54 Slots ===
+  [0] minecraft:diamond_pickaxe | §c§lBergbau
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:bell | §c§lSofort verkaufen
+  [9] minecraft:netherite_axe | §c§lHolz
+  [10] minecraft:black_stained_glass_pane | 
+  [11] minecraft:oak_log | §bEichenstamm§r§7
+        §7Kaufpreis: §b18,1§r§7$
+        §7Verkaufspreis: §b8,3§r§7$
+  [12] minecraft:spruce_log | §bFichtenstamm§r§7
+        §7Kaufpreis: §b7,5§r§7$
+        §7Verkaufspreis: §b3,8§r§7$
+  [13] minecraft:birch_log | §bBirkenstamm§r§7
+        §7Kaufpreis: §b5,3§r§7$
+        §7Verkaufspreis: §b2,7§r§7$
+  [14] minecraft:jungle_log | §bTropenbaumstamm§r§7
+        §7Kaufpreis: §b8,7§r§7$
+        §7Verkaufspreis: §b3,5§r§7$
+  [15] minecraft:acacia_log | §bAkazienstamm§r§7
+        §7Kaufpreis: §b12,2§r§7$
+        §7Verkaufspreis: §b5,2§r§7$
+  [16] minecraft:dark_oak_log | §bSchwarzeichenstamm§r§7
+        §7Kaufpreis: §b5,8§r§7$
+        §7Verkaufspreis: §b2,8§r§7$
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:iron_sword | §c§lKampf
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:mangrove_log | §bMangrovenstamm§r§7
+        §7Kaufpreis: §b12,9§r§7$
+        §7Verkaufspreis: §b4,3§r§7$
+  [21] minecraft:cherry_log | §bKirschstamm§r§7
+        §7Kaufpreis: §b11,5§r§7$
+        §7Verkaufspreis: §b3,7§r§7$
+  [22] minecraft:pale_oak_log | §bBlasseichenstamm§r§7
+        §7Kaufpreis: §b8,4§r§7$
+        §7Verkaufspreis: §b3,1§r§7$
+  [23] minecraft:crimson_stem | §bKarmesinstiel§r§7
+        §7Kaufpreis: §b10,8§r§7$
+        §7Verkaufspreis: §b5§r§7$
+  [24] minecraft:warped_stem | §bWirrstiel§r§7
+        §7Kaufpreis: §b18,2§r§7$
+        §7Verkaufspreis: §b4,9§r§7$
+  [25] minecraft:bamboo_block | §bBambusblock§r§7
+        §7Kaufpreis: §b2,8§r§7$
+        §7Verkaufspreis: §b1§r§7$
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:golden_hoe | §c§lNahrung
+  [28] minecraft:black_stained_glass_pane | 
+  [29] minecraft:oak_leaves | §bEichenlaub§r§7
+        §7Kaufpreis: §b2,8§r§7$
+        §7Verkaufspreis: §b1,3§r§7$
+  [30] minecraft:spruce_leaves | §bFichtennadeln§r§7
+        §7Kaufpreis: §b5§r§7$
+        §7Verkaufspreis: §b1,5§r§7$
+  [31] minecraft:birch_leaves | §bBirkenlaub§r§7
+        §7Kaufpreis: §b13§r§7$
+        §7Verkaufspreis: §b1,3§r§7$
+  [32] minecraft:jungle_leaves | §bTropenbaumlaub§r§7
+        §7Kaufpreis: §b31,5§r§7$
+        §7Verkaufspreis: §b4,2§r§7$
+  [33] minecraft:acacia_leaves | §bAkazienlaub§r§7
+        §7Kaufpreis: §b28,8§r§7$
+        §7Verkaufspreis: §b2,1§r§7$
+  [34] minecraft:dark_oak_leaves | §bSchwarzeichenlaub§r§7
+        §7Kaufpreis: §b48,5§r§7$
+        §7Verkaufspreis: §b1,7§r§7$
+  [35] minecraft:black_stained_glass_pane | 
+  [36] minecraft:grass_block | §c§lSonstiges
+  [37] minecraft:black_stained_glass_pane | 
+  [38] minecraft:mangrove_leaves | §bMangrovenlaub§r§7
+        §7Kaufpreis: §b9§r§7$
+        §7Verkaufspreis: §b0,8§r§7$
+  [39] minecraft:cherry_leaves | §bKirschlaub§r§7
+        §7Kaufpreis: §b11,4§r§7$
+        §7Verkaufspreis: §b1,5§r§7$
+  [40] minecraft:pale_oak_leaves | §bBlasseichenlaub§r§7
+        §7Kaufpreis: §b28§r§7$
+        §7Verkaufspreis: §b4§r§7$
+  [41] minecraft:azalea_leaves | §bAzaleenlaub§r§7
+        §7Kaufpreis: §b7,5§r§7$
+        §7Verkaufspreis: §b1,4§r§7$
+  [42] minecraft:flowering_azalea_leaves | §bBlühendes Azaleenlaub§r§7
+        §7Kaufpreis: §b130,2§r§7$
+        §7Verkaufspreis: §b34,6§r§7$
+  [43] minecraft:oak_sapling | §bEichensetzling§r§7
+        §7Kaufpreis: §b13,6§r§7$
+        §7Verkaufspreis: §b0,9§r§7$
+  [44] minecraft:black_stained_glass_pane | 
+  [45] minecraft:beacon | §c§lBesonderes
+  [46] minecraft:black_stained_glass_pane | 
+  [47] minecraft:black_stained_glass_pane | 
+  [48] minecraft:black_stained_glass_pane | 
+  [49] minecraft:book | §c§lDeine Aufträge
+  [50] minecraft:oak_sign | §c§lSuche
+  [51] minecraft:black_stained_glass_pane | 
+  [52] minecraft:paper | Weiter | CMD [701.0][]
+  [53] minecraft:gold_block | §c§lExperten Modus
+        Einfacher Modus
+        Im einfachen Modus kannst du
+        bei bestehende Angebote von
+        anderen Spielern kaufen und verkaufen.
+        Experten Modus
+        Der Experten Modus bietet dir
+        neben den Funktionen des einfachen
+        Modus auch die Möglichkeit, eigene
+        Angebote zu erstellen.
+
+15:13:22 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x6 | 54 Slots ===
+  [0] minecraft:diamond_pickaxe | §c§lBergbau
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:bell | §c§lSofort verkaufen
+  [9] minecraft:netherite_axe | §c§lHolz
+  [10] minecraft:black_stained_glass_pane | 
+  [11] minecraft:ghast_tear | §bGhast-Träne§r§7
+        §7Kaufpreis: §b65§r§7$
+        §7Verkaufspreis: §b37§r§7$
+  [12] minecraft:ender_pearl | §bEnderperle§r§7
+        §7Kaufpreis: §b3,7§r§7$
+        §7Verkaufspreis: §b0,9§r§7$
+  [13] minecraft:blaze_rod | §bLohenrute§r§7
+        §7Kaufpreis: §b79,7§r§7$
+        §7Verkaufspreis: §b53,1§r§7$
+  [14] minecraft:magma_cream | §bMagmacreme§r§7
+        §7Kaufpreis: §b16,9§r§7$
+        §7Verkaufspreis: §b2,5§r§7$
+  [15] minecraft:slime_ball | §bSchleimball§r§7
+        §7Kaufpreis: §b18,4§r§7$
+        §7Verkaufspreis: §b3,3§r§7$
+  [16] minecraft:phantom_membrane | §bPhantomhaut§r§7
+        §7Kaufpreis: §b1,2§r§7$
+        §7Verkaufspreis: §b0,8§r§7$
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:iron_sword | §c§lKampf
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:glow_ink_sac | §bLeuchttintenbeutel§r§7
+        §7Kaufpreis: §b53,7§r§7$
+        §7Verkaufspreis: §b14,7§r§7$
+  [21] minecraft:ink_sac | §bTintenbeutel§r§7
+        §7Kaufpreis: §b53,6§r§7$
+        §7Verkaufspreis: §b38,1§r§7$
+  [22] minecraft:rotten_flesh | §bVerrottetes Fleisch§r§7
+        §7Kaufpreis: §b1,1§r§7$
+        §7Verkaufspreis: §b1§r§7$
+  [23] minecraft:string | §bFaden§r§7
+        §7Kaufpreis: §b12,5§r§7$
+        §7Verkaufspreis: §b2,2§r§7$
+  [24] minecraft:spider_eye | §bSpinnenauge§r§7
+        §7Kaufpreis: §b0,8§r§7$
+        §7Kein Verkaufspreis verfügbar
+  [25] minecraft:gunpowder | §bSchwarzpulver§r§7
+        §7Kaufpreis: §b10,4§r§7$
+        §7Verkaufspreis: §b7,6§r§7$
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:golden_hoe | §c§lNahrung
+  [28] minecraft:black_stained_glass_pane | 
+  [29] minecraft:bone | §bKnochen§r§7
+        §7Kaufpreis: §b18,7§r§7$
+        §7Verkaufspreis: §b5§r§7$
+  [30] minecraft:leather | §bLeder§r§7
+        §7Kaufpreis: §b12§r§7$
+        §7Verkaufspreis: §b6,5§r§7$
+  [31] minecraft:arrow | §bPfeil§r§7
+        §7Kaufpreis: §b0,8§r§7$
+        §7Kein Verkaufspreis verfügbar
+  [32] minecraft:rabbit_foot | §bHasenpfote§r§7
+        §7Kaufpreis: §b79,9§r§7$
+        §7Verkaufspreis: §b36,5§r§7$
+  [33] minecraft:rabbit_hide | §bKaninchenfell§r§7
+        §7Kaufpreis: §b2,3§r§7$
+        §7Verkaufspreis: §b1§r§7$
+  [34] minecraft:honeycomb | §bHonigwabe§r§7
+        §7Kaufpreis: §b5,1§r§7$
+        §7Verkaufspreis: §b3§r§7$
+  [35] minecraft:black_stained_glass_pane | 
+  [36] minecraft:grass_block | §c§lSonstiges
+  [37] minecraft:black_stained_glass_pane | 
+  [38] minecraft:feather | §bFeder§r§7
+        §7Kaufpreis: §b6§r§7$
+        §7Kein Verkaufspreis verfügbar
+  [39] minecraft:egg | §bEi§r§7
+        §7Kaufpreis: §b9,1§r§7$
+        §7Verkaufspreis: §b0,9§r§7$
+  [40] minecraft:blue_egg | §bBlaues Ei§r§7
+        §7Kaufpreis: §b15,8§r§7$
+        §7Verkaufspreis: §b1,4§r§7$
+  [41] minecraft:brown_egg | §bBraunes Ei§r§7
+        §7Kaufpreis: §b16,1§r§7$
+        §7Verkaufspreis: §b1,4§r§7$
+  [42] minecraft:saddle | §bSattel§r§7
+        §7Kaufpreis: §b4,8§r§7$
+        §7Kein Verkaufspreis verfügbar
+  [43] minecraft:skeleton_skull | §bSkelettschädel§r§7
+        §7Kaufpreis: §b3.260,7§r§7$
+        §7Verkaufspreis: §b838,5§r§7$
+  [44] minecraft:black_stained_glass_pane | 
+  [45] minecraft:beacon | §c§lBesonderes
+  [46] minecraft:black_stained_glass_pane | 
+  [47] minecraft:black_stained_glass_pane | 
+  [48] minecraft:black_stained_glass_pane | 
+  [49] minecraft:book | §c§lDeine Aufträge
+  [50] minecraft:oak_sign | §c§lSuche
+  [51] minecraft:black_stained_glass_pane | 
+  [52] minecraft:paper | Weiter | CMD [701.0][]
+  [53] minecraft:gold_block | §c§lExperten Modus
+        Einfacher Modus
+        Im einfachen Modus kannst du
+        bei bestehende Angebote von
+        anderen Spielern kaufen und verkaufen.
+        Experten Modus
+        Der Experten Modus bietet dir
+        neben den Funktionen des einfachen
+        Modus auch die Möglichkeit, eigene
+        Angebote zu erstellen.
+
+15:13:23 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x6 | 54 Slots ===
+  [0] minecraft:diamond_pickaxe | §c§lBergbau
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:bell | §c§lSofort verkaufen
+  [9] minecraft:netherite_axe | §c§lHolz
+  [10] minecraft:black_stained_glass_pane | 
+  [11] minecraft:apple | §bApfel§r§7
+        §7Kaufpreis: §b50§r§7$
+        §7Verkaufspreis: §b20§r§7$
+  [12] minecraft:golden_apple | §bGoldener Apfel§r§7
+        §7Kaufpreis: §b365,3§r§7$
+        §7Verkaufspreis: §b148,7§r§7$
+  [13] minecraft:wheat | §bWeizen§r§7
+        §7Kaufpreis: §b10§r§7$
+        §7Verkaufspreis: §b3,5§r§7$
+  [14] minecraft:wheat_seeds | §bWeizenkörner§r§7
+        §7Kaufpreis: §b0,8§r§7$
+        §7Kein Verkaufspreis verfügbar
+  [15] minecraft:bread | §bBrot§r§7
+        §7Kaufpreis: §b27,9§r§7$
+        §7Verkaufspreis: §b8,1§r§7$
+  [16] minecraft:carrot | §bKarotte§r§7
+        §7Kaufpreis: §b4§r§7$
+        §7Verkaufspreis: §b0,8§r§7$
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:iron_sword | §c§lKampf
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:golden_carrot | §bGoldene Karotte§r§7
+        §7Kaufpreis: §b37,6§r§7$
+        §7Verkaufspreis: §b22,2§r§7$
+  [21] minecraft:potato | §bKartoffel§r§7
+        §7Kaufpreis: §b2§r§7$
+        §7Verkaufspreis: §b0,9§r§7$
+  [22] minecraft:beetroot | §bRote Bete§r§7
+        §7Kaufpreis: §b6§r§7$
+        §7Verkaufspreis: §b1,6§r§7$
+  [23] minecraft:beetroot_seeds | §bRote-Bete-Samen§r§7
+        §7Kaufpreis: §b0,9§r§7$
+        §7Verkaufspreis: §b0,8§r§7$
+  [24] minecraft:melon_slice | §bMelonenscheibe§r§7
+        §7Kaufpreis: §b0,8§r§7$
+        §7Kein Verkaufspreis verfügbar
+  [25] minecraft:melon | §bMelone§r§7
+        §7Kaufpreis: §b1,9§r§7$
+        §7Verkaufspreis: §b1,5§r§7$
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:golden_hoe | §c§lNahrung
+  [28] minecraft:black_stained_glass_pane | 
+  [29] minecraft:melon_seeds | §bMelonenkerne§r§7
+        §7Kaufpreis: §b8,9§r§7$
+        §7Kein Verkaufspreis verfügbar
+  [30] minecraft:pumpkin_pie | §bKürbiskuchen§r§7
+        §7Kaufpreis: §b35,3§r§7$
+        §7Verkaufspreis: §b10§r§7$
+  [31] minecraft:pumpkin | §bKürbis§r§7
+        §7Kaufpreis: §b1,5§r§7$
+        §7Verkaufspreis: §b1,4§r§7$
+  [32] minecraft:pumpkin_seeds | §bKürbiskerne§r§7
+        §7Kaufpreis: §b8,6§r§7$
+        §7Kein Verkaufspreis verfügbar
+  [33] minecraft:cookie | §bKeks§r§7
+        §7Kaufpreis: §b9,7§r§7$
+        §7Kein Verkaufspreis verfügbar
+  [34] minecraft:cake | §bKuchen§r§7
+        §7Kaufpreis: §b244,3§r§7$
+        §7Verkaufspreis: §b10§r§7$
+  [35] minecraft:black_stained_glass_pane | 
+  [36] minecraft:grass_block | §c§lSonstiges
+  [37] minecraft:black_stained_glass_pane | 
+  [38] minecraft:sweet_berries | §bSüßbeeren§r§7
+        §7Kaufpreis: §b1,5§r§7$
+        §7Kein Verkaufspreis verfügbar
+  [39] minecraft:beef | §bRohes Rindfleisch§r§7
+        §7Kaufpreis: §b4,3§r§7$
+        §7Kein Verkaufspreis verfügbar
+  [40] minecraft:porkchop | §bRohes Schweinefleisch§r§7
+        §7Kaufpreis: §b7,6§r§7$
+        §7Verkaufspreis: §b2,3§r§7$
+  [41] minecraft:mutton | §bRohes Hammelfleisch§r§7
+        §7Kaufpreis: §b5,8§r§7$
+        §7Kein Verkaufspreis verfügbar
+  [42] minecraft:chicken | §bRohes Hühnchen§r§7
+        §7Kaufpreis: §b12,9§r§7$
+        §7Verkaufspreis: §b0,8§r§7$
+  [43] minecraft:rabbit | §bRohes Kaninchen§r§7
+        §7Kaufpreis: §b6,6§r§7$
+        §7Verkaufspreis: §b1,3§r§7$
+  [44] minecraft:black_stained_glass_pane | 
+  [45] minecraft:beacon | §c§lBesonderes
+  [46] minecraft:black_stained_glass_pane | 
+  [47] minecraft:black_stained_glass_pane | 
+  [48] minecraft:black_stained_glass_pane | 
+  [49] minecraft:book | §c§lDeine Aufträge
+  [50] minecraft:oak_sign | §c§lSuche
+  [51] minecraft:black_stained_glass_pane | 
+  [52] minecraft:paper | Weiter | CMD [701.0][]
+  [53] minecraft:gold_block | §c§lExperten Modus
+        Einfacher Modus
+        Im einfachen Modus kannst du
+        bei bestehende Angebote von
+        anderen Spielern kaufen und verkaufen.
+        Experten Modus
+        Der Experten Modus bietet dir
+        neben den Funktionen des einfachen
+        Modus auch die Möglichkeit, eigene
+        Angebote zu erstellen.
+
+15:13:24 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x6 | 54 Slots ===
+  [0] minecraft:diamond_pickaxe | §c§lBergbau
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:bell | §c§lSofort verkaufen
+  [9] minecraft:netherite_axe | §c§lHolz
+  [10] minecraft:black_stained_glass_pane | 
+  [11] minecraft:dirt | §bErde§r§7
+        §7Kaufpreis: §b3,3§r§7$
+        §7Verkaufspreis: §b1,3§r§7$
+  [12] minecraft:coarse_dirt | §bGrobe Erde§r§7
+        §7Kaufpreis: §b45§r§7$
+        §7Verkaufspreis: §b6,5§r§7$
+  [13] minecraft:dirt_path | §bTrampelpfad§r§7
+        §7Kaufpreis: §b225,9§r§7$
+        §7Verkaufspreis: §b6,2§r§7$
+  [14] minecraft:rooted_dirt | §bWurzelerde§r§7
+        §7Kaufpreis: §b29,4§r§7$
+        §7Verkaufspreis: §b2§r§7$
+  [15] minecraft:sugar_cane | §bZuckerrohr§r§7
+        §7Kaufpreis: §b2,9§r§7$
+        §7Verkaufspreis: §b1§r§7$
+  [16] minecraft:bamboo | §bBambus§r§7
+        §7Kaufpreis: §b1,2§r§7$
+        §7Kein Verkaufspreis verfügbar
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:iron_sword | §c§lKampf
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:cactus | §bKaktus§r§7
+        §7Kaufpreis: §b1,3§r§7$
+        §7Kein Verkaufspreis verfügbar
+  [21] minecraft:farmland | §bAckerboden§r§7
+        §7Kaufpreis: §b497,7§r§7$
+        §7Verkaufspreis: §b11,7§r§7$
+  [22] minecraft:cactus_flower | §bKaktusblüte§r§7
+        §7Kaufpreis: §b33,7§r§7$
+        §7Verkaufspreis: §b4,1§r§7$
+  [23] minecraft:grass_block | §bGrasblock§r§7
+        §7Kaufpreis: §b13,8§r§7$
+        §7Verkaufspreis: §b4,3§r§7$
+  [24] minecraft:podzol | §bPodsol§r§7
+        §7Kaufpreis: §b49,1§r§7$
+        §7Verkaufspreis: §b5,9§r§7$
+  [25] minecraft:mycelium | §bMyzel§r§7
+        §7Kaufpreis: §b2,7§r§7$
+        §7Kein Verkaufspreis verfügbar
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:golden_hoe | §c§lNahrung
+  [28] minecraft:black_stained_glass_pane | 
+  [29] minecraft:mud | §bSchlamm§r§7
+        §7Kaufpreis: §b19,8§r§7$
+        §7Verkaufspreis: §b4§r§7$
+  [30] minecraft:mangrove_roots | §bMangrovenwurzeln§r§7
+        §7Kaufpreis: §b5,4§r§7$
+        §7Kein Verkaufspreis verfügbar
+  [31] minecraft:muddy_mangrove_roots | §bSchlammige Mangrovenwurzeln§r§7
+        §7Kaufpreis: §b59,4§r§7$
+        §7Verkaufspreis: §b3,8§r§7$
+  [32] minecraft:clay | §bTon§r§7
+        §7Kaufpreis: §b23,2§r§7$
+        §7Verkaufspreis: §b4,7§r§7$
+  [33] minecraft:gravel | §bKies§r§7
+        §7Kaufpreis: §b6,3§r§7$
+        §7Verkaufspreis: §b4,5§r§7$
+  [34] minecraft:flint | §bFeuerstein§r§7
+        §7Kaufpreis: §b13,9§r§7$
+        §7Verkaufspreis: §b0,8§r§7$
+  [35] minecraft:black_stained_glass_pane | 
+  [36] minecraft:grass_block | §c§lSonstiges
+  [37] minecraft:black_stained_glass_pane | 
+  [38] minecraft:sand | §bSand§r§7
+        §7Kaufpreis: §b5,9§r§7$
+        §7Verkaufspreis: §b2,5§r§7$
+  [39] minecraft:sandstone | §bSandstein§r§7
+        §7Kaufpreis: §b2,9§r§7$
+        §7Verkaufspreis: §b1§r§7$
+  [40] minecraft:red_sand | §bRoter Sand§r§7
+        §7Kaufpreis: §b6,3§r§7$
+        §7Verkaufspreis: §b3,2§r§7$
+  [41] minecraft:red_sandstone | §bRoter Sandstein§r§7
+        §7Kaufpreis: §b19,9§r§7$
+        §7Verkaufspreis: §b5,6§r§7$
+  [42] minecraft:cobweb | §bSpinnennetz§r§7
+        §7Kaufpreis: §b196,9§r§7$
+        §7Verkaufspreis: §b72,7§r§7$
+  [43] minecraft:mushroom_stem | §bPilzstiel§r§7
+        §7Kaufpreis: §b49,4§r§7$
+        §7Verkaufspreis: §b6,9§r§7$
+  [44] minecraft:black_stained_glass_pane | 
+  [45] minecraft:beacon | §c§lBesonderes
+  [46] minecraft:black_stained_glass_pane | 
+  [47] minecraft:black_stained_glass_pane | 
+  [48] minecraft:black_stained_glass_pane | 
+  [49] minecraft:book | §c§lDeine Aufträge
+  [50] minecraft:oak_sign | §c§lSuche
+  [51] minecraft:black_stained_glass_pane | 
+  [52] minecraft:paper | Weiter | CMD [701.0][]
+  [53] minecraft:gold_block | §c§lExperten Modus
+        Einfacher Modus
+        Im einfachen Modus kannst du
+        bei bestehende Angebote von
+        anderen Spielern kaufen und verkaufen.
+        Experten Modus
+        Der Experten Modus bietet dir
+        neben den Funktionen des einfachen
+        Modus auch die Möglichkeit, eigene
+        Angebote zu erstellen.
+
+15:13:26 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x4 | 36 Slots ===
+  [0] minecraft:black_stained_glass_pane | 
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:black_stained_glass_pane | 
+  [9] minecraft:black_stained_glass_pane | 
+  [10] minecraft:golden_horse_armor | §c§lSofort kaufen
+        §7Kaufpreis: §b5,9§r§7$ pro Item
+        §7<Linksklick> §b1 kaufen
+        §7<Rechtsklick> §bAnzahl auswählen
+  [11] minecraft:hopper | §c§lSofort verkaufen
+        §7Verkaufspreis: §b2,5§r§7$ pro Item
+        §cKeine Items im Inventar.
+  [12] minecraft:black_stained_glass_pane | 
+  [13] minecraft:sand | Sand
+  [14] minecraft:black_stained_glass_pane | 
+  [15] minecraft:filled_map | §c§lKaufauftrag erstellen
+        §7Top 10 Aufträge:
+        §7 • §b2,5§r§7$ pro Item §8- §7§b912.613§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b2,4§r§7$ pro Item §8- §7§b5.760.000§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b2,3§r§7$ pro Item §8- §7§b1.845.884§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b2,2§r§7$ pro Item §8- §7§b339.761§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b1,5§r§7$ pro Item §8- §7§b465.345§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b1,4§r§7$ pro Item §8- §7§b38.249§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b1,2§r§7$ pro Item §8- §7§b128§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b1,0§r§7$ pro Item §8- §7§b67.442§r§7x (§b4§r§7 §bAufträge§r§7)
+        §7 • §b0,9§r§7$ pro Item §8- §7§b1.000.000§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b0,8§r§7$ pro Item §8- §7§b368§r§7x (§b1§r§7 §bAuftrag§r§7)
+  [16] minecraft:map | §c§lVerkaufsangebot erstellen
+        §7Top 10 Angebote:
+        §7 • §b5,9§r§7$ pro Item §8- §7§b13.679§r§7x (§b9§r§7 §bAngebote§r§7)
+        §7 • §b6,0§r§7$ pro Item §8- §7§b836.580§r§7x (§b369§r§7 §bAngebote§r§7)
+        §7 • §b6,5§r§7$ pro Item §8- §7§b159.409§r§7x (§b78§r§7 §bAngebote§r§7)
+        §7 • §b7,0§r§7$ pro Item §8- §7§b6.016§r§7x (§b3§r§7 §bAngebote§r§7)
+        §7 • §b7,4§r§7$ pro Item §8- §7§b10.240§r§7x (§b5§r§7 §bAngebote§r§7)
+        §7 • §b8,0§r§7$ pro Item §8- §7§b2.112§r§7x (§b1§r§7 §bAngebot§r§7)
+        §7 • §b8,9§r§7$ pro Item §8- §7§b47.405§r§7x (§b21§r§7 §bAngebote§r§7)
+        §7 • §b9,0§r§7$ pro Item §8- §7§b11.935§r§7x (§b6§r§7 §bAngebote§r§7)
+        §7 • §b9,2§r§7$ pro Item §8- §7§b10.185§r§7x (§b6§r§7 §bAngebote§r§7)
+        §7 • §b9,3§r§7$ pro Item §8- §7§b3.265§r§7x (§b2§r§7 §bAngebote§r§7)
+        §cKeine Items im Inventar.
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:black_stained_glass_pane | 
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:black_stained_glass_pane | 
+  [21] minecraft:black_stained_glass_pane | 
+  [22] minecraft:black_stained_glass_pane | 
+  [23] minecraft:black_stained_glass_pane | 
+  [24] minecraft:black_stained_glass_pane | 
+  [25] minecraft:black_stained_glass_pane | 
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:paper | Zurück | CMD [4501.0][]
+  [28] minecraft:black_stained_glass_pane | 
+  [29] minecraft:black_stained_glass_pane | 
+  [30] minecraft:black_stained_glass_pane | 
+  [31] minecraft:book | §c§lDeine Aufträge
+  [32] minecraft:black_stained_glass_pane | 
+  [33] minecraft:black_stained_glass_pane | 
+  [34] minecraft:black_stained_glass_pane | 
+  [35] minecraft:black_stained_glass_pane | 
+
+15:13:28 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x4 | 36 Slots ===
+  [0] minecraft:black_stained_glass_pane | 
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:black_stained_glass_pane | 
+  [9] minecraft:black_stained_glass_pane | 
+  [10] minecraft:golden_horse_armor | §c§lSofort kaufen
+        §7Kaufpreis: §b5,9§r§7$ pro Item
+        §7<Linksklick> §b1 kaufen
+        §7<Rechtsklick> §bAnzahl auswählen
+  [11] minecraft:hopper | §c§lSofort verkaufen
+        §7Verkaufspreis: §b2,5§r§7$ pro Item
+        §7Im Inventar: §b1§r§7
+        §7Inventar Wert: §b2,5§r§7$
+        §8Steuern: 5%
+        §7<Linksklick> §b1 verkaufen
+        §7<Rechtsklick> §bAnzahl auswählen
+  [12] minecraft:black_stained_glass_pane | 
+  [13] minecraft:sand | Sand
+  [14] minecraft:black_stained_glass_pane | 
+  [15] minecraft:filled_map | §c§lKaufauftrag erstellen
+        §7Top 10 Aufträge:
+        §7 • §b2,5§r§7$ pro Item §8- §7§b912.613§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b2,4§r§7$ pro Item §8- §7§b5.760.000§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b2,3§r§7$ pro Item §8- §7§b1.845.884§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b2,2§r§7$ pro Item §8- §7§b339.761§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b1,5§r§7$ pro Item §8- §7§b465.345§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b1,4§r§7$ pro Item §8- §7§b38.249§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b1,2§r§7$ pro Item §8- §7§b128§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b1,0§r§7$ pro Item §8- §7§b67.442§r§7x (§b4§r§7 §bAufträge§r§7)
+        §7 • §b0,9§r§7$ pro Item §8- §7§b1.000.000§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b0,8§r§7$ pro Item §8- §7§b368§r§7x (§b1§r§7 §bAuftrag§r§7)
+  [16] minecraft:map | §c§lVerkaufsangebot erstellen
+        §7Top 10 Angebote:
+        §7 • §b5,9§r§7$ pro Item §8- §7§b13.679§r§7x (§b9§r§7 §bAngebote§r§7)
+        §7 • §b6,0§r§7$ pro Item §8- §7§b836.580§r§7x (§b369§r§7 §bAngebote§r§7)
+        §7 • §b6,5§r§7$ pro Item §8- §7§b159.409§r§7x (§b78§r§7 §bAngebote§r§7)
+        §7 • §b7,0§r§7$ pro Item §8- §7§b6.016§r§7x (§b3§r§7 §bAngebote§r§7)
+        §7 • §b7,4§r§7$ pro Item §8- §7§b10.240§r§7x (§b5§r§7 §bAngebote§r§7)
+        §7 • §b8,0§r§7$ pro Item §8- §7§b2.112§r§7x (§b1§r§7 §bAngebot§r§7)
+        §7 • §b8,9§r§7$ pro Item §8- §7§b47.405§r§7x (§b21§r§7 §bAngebote§r§7)
+        §7 • §b9,0§r§7$ pro Item §8- §7§b11.935§r§7x (§b6§r§7 §bAngebote§r§7)
+        §7 • §b9,2§r§7$ pro Item §8- §7§b10.185§r§7x (§b6§r§7 §bAngebote§r§7)
+        §7 • §b9,3§r§7$ pro Item §8- §7§b3.265§r§7x (§b2§r§7 §bAngebote§r§7)
+        §7Im Inventar: §b1§r§7
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:black_stained_glass_pane | 
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:black_stained_glass_pane | 
+  [21] minecraft:black_stained_glass_pane | 
+  [22] minecraft:black_stained_glass_pane | 
+  [23] minecraft:black_stained_glass_pane | 
+  [24] minecraft:black_stained_glass_pane | 
+  [25] minecraft:black_stained_glass_pane | 
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:paper | Zurück | CMD [4501.0][]
+  [28] minecraft:black_stained_glass_pane | 
+  [29] minecraft:black_stained_glass_pane | 
+  [30] minecraft:black_stained_glass_pane | 
+  [31] minecraft:book | §c§lDeine Aufträge
+  [32] minecraft:black_stained_glass_pane | 
+  [33] minecraft:black_stained_glass_pane | 
+  [34] minecraft:black_stained_glass_pane | 
+  [35] minecraft:black_stained_glass_pane | 
+
+15:13:31 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x4 | 36 Slots ===
+  [0] minecraft:black_stained_glass_pane | 
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:black_stained_glass_pane | 
+  [9] minecraft:black_stained_glass_pane | 
+  [10] minecraft:golden_horse_armor | §c§lSofort kaufen
+        §7Kaufpreis: §b5,9§r§7$ pro Item
+        §7<Linksklick> §b1 kaufen
+        §7<Rechtsklick> §bAnzahl auswählen
+  [11] minecraft:hopper | §c§lSofort verkaufen
+        §7Verkaufspreis: §b2,5§r§7$ pro Item
+        §cKeine Items im Inventar.
+  [12] minecraft:black_stained_glass_pane | 
+  [13] minecraft:sand | Sand
+  [14] minecraft:black_stained_glass_pane | 
+  [15] minecraft:filled_map | §c§lKaufauftrag erstellen
+        §7Top 10 Aufträge:
+        §7 • §b2,5§r§7$ pro Item §8- §7§b912.613§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b2,4§r§7$ pro Item §8- §7§b5.760.000§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b2,3§r§7$ pro Item §8- §7§b1.845.884§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b2,2§r§7$ pro Item §8- §7§b339.761§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b1,5§r§7$ pro Item §8- §7§b465.345§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b1,4§r§7$ pro Item §8- §7§b38.249§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b1,2§r§7$ pro Item §8- §7§b128§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b1,0§r§7$ pro Item §8- §7§b67.442§r§7x (§b4§r§7 §bAufträge§r§7)
+        §7 • §b0,9§r§7$ pro Item §8- §7§b1.000.000§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b0,8§r§7$ pro Item §8- §7§b368§r§7x (§b1§r§7 §bAuftrag§r§7)
+  [16] minecraft:map | §c§lVerkaufsangebot erstellen
+        §7Top 10 Angebote:
+        §7 • §b5,9§r§7$ pro Item §8- §7§b13.679§r§7x (§b9§r§7 §bAngebote§r§7)
+        §7 • §b6,0§r§7$ pro Item §8- §7§b836.580§r§7x (§b369§r§7 §bAngebote§r§7)
+        §7 • §b6,5§r§7$ pro Item §8- §7§b159.409§r§7x (§b78§r§7 §bAngebote§r§7)
+        §7 • §b7,0§r§7$ pro Item §8- §7§b6.016§r§7x (§b3§r§7 §bAngebote§r§7)
+        §7 • §b7,4§r§7$ pro Item §8- §7§b10.240§r§7x (§b5§r§7 §bAngebote§r§7)
+        §7 • §b8,0§r§7$ pro Item §8- §7§b2.112§r§7x (§b1§r§7 §bAngebot§r§7)
+        §7 • §b8,9§r§7$ pro Item §8- §7§b47.405§r§7x (§b21§r§7 §bAngebote§r§7)
+        §7 • §b9,0§r§7$ pro Item §8- §7§b11.935§r§7x (§b6§r§7 §bAngebote§r§7)
+        §7 • §b9,2§r§7$ pro Item §8- §7§b10.185§r§7x (§b6§r§7 §bAngebote§r§7)
+        §7 • §b9,3§r§7$ pro Item §8- §7§b3.265§r§7x (§b2§r§7 §bAngebote§r§7)
+        §cKeine Items im Inventar.
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:black_stained_glass_pane | 
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:black_stained_glass_pane | 
+  [21] minecraft:black_stained_glass_pane | 
+  [22] minecraft:black_stained_glass_pane | 
+  [23] minecraft:black_stained_glass_pane | 
+  [24] minecraft:black_stained_glass_pane | 
+  [25] minecraft:black_stained_glass_pane | 
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:paper | Zurück | CMD [4501.0][]
+  [28] minecraft:black_stained_glass_pane | 
+  [29] minecraft:black_stained_glass_pane | 
+  [30] minecraft:black_stained_glass_pane | 
+  [31] minecraft:book | §c§lDeine Aufträge
+  [32] minecraft:black_stained_glass_pane | 
+  [33] minecraft:black_stained_glass_pane | 
+  [34] minecraft:black_stained_glass_pane | 
+  [35] minecraft:black_stained_glass_pane | 
+
+15:13:34 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x4 | 36 Slots ===
+  [0] minecraft:black_stained_glass_pane | 
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:black_stained_glass_pane | 
+  [9] minecraft:black_stained_glass_pane | 
+  [10] minecraft:black_stained_glass_pane | 
+  [11] minecraft:sand | §b1§r§7x §bSand§r§7
+        §8Ein Item
+  [12] minecraft:black_stained_glass_pane | 
+  [13] minecraft:sand x64 | §b64§r§7x §bSand§r§7
+        §8Ein Stack
+  [14] minecraft:black_stained_glass_pane | 
+  [15] minecraft:chest | §b1.216§r§7x §bSand§r§7
+        §8Ganzes Inventar
+  [16] minecraft:black_stained_glass_pane | 
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:black_stained_glass_pane | 
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:black_stained_glass_pane | 
+  [21] minecraft:black_stained_glass_pane | 
+  [22] minecraft:black_stained_glass_pane | 
+  [23] minecraft:black_stained_glass_pane | 
+  [24] minecraft:black_stained_glass_pane | 
+  [25] minecraft:black_stained_glass_pane | 
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:paper | Zurück | CMD [4501.0][]
+  [28] minecraft:black_stained_glass_pane | 
+  [29] minecraft:black_stained_glass_pane | 
+  [30] minecraft:black_stained_glass_pane | 
+  [31] minecraft:acacia_sign | §c§lAnzahl setzen
+        §8Kaufauftrag
+  [32] minecraft:black_stained_glass_pane | 
+  [33] minecraft:black_stained_glass_pane | 
+  [34] minecraft:black_stained_glass_pane | 
+  [35] minecraft:black_stained_glass_pane | 
+
+15:13:37 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x4 | 36 Slots ===
+  [0] minecraft:black_stained_glass_pane | 
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:black_stained_glass_pane | 
+  [9] minecraft:black_stained_glass_pane | 
+  [10] minecraft:black_stained_glass_pane | 
+  [11] minecraft:paper | §c§lBestes Angebot | CMD [20203.0][]
+        §8Kaufauftrag
+        §7Anzahl: §b1§r§7 §bItem§r§7
+        §7Preis: §b2,5§r§7$
+        §7Gesamt: §b2,5§r§7$
+  [12] minecraft:black_stained_glass_pane | 
+  [13] minecraft:paper | §c§lBestes Angebot +0.1$ | CMD [20204.0][]
+        §8Kaufauftrag
+        §7Anzahl: §b1§r§7 §bItem§r§7
+        §7Preis: §b2,6§r§7$
+        §7Gesamt: §b2,6§r§7$
+  [14] minecraft:black_stained_glass_pane | 
+  [15] minecraft:paper | §c§l5% der Spanne | CMD [20205.0][]
+        §8Kaufauftrag
+        §7Niedrigster Verkaufspreis: §b5,9§r§7$
+        §7Höchster Kaufpreis: §b2,5§r§7$
+        §7Spanne: §b5,9§r§7 - §b2,5§r§7 = §b3,4§r§7$
+        §7Anzahl: §b1§r§7 §bItem§r§7
+        §7Preis: §b2,7§r§7$
+        §7Gesamt: §b2,7§r§7$
+  [16] minecraft:black_stained_glass_pane | 
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:black_stained_glass_pane | 
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:black_stained_glass_pane | 
+  [21] minecraft:black_stained_glass_pane | 
+  [22] minecraft:black_stained_glass_pane | 
+  [23] minecraft:black_stained_glass_pane | 
+  [24] minecraft:black_stained_glass_pane | 
+  [25] minecraft:black_stained_glass_pane | 
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:paper | Zurück | CMD [4501.0][]
+  [28] minecraft:black_stained_glass_pane | 
+  [29] minecraft:black_stained_glass_pane | 
+  [30] minecraft:black_stained_glass_pane | 
+  [31] minecraft:acacia_sign | §c§lPreis setzen
+        §8Kaufauftrag
+        §7Anzahl: §b1§r§7 §bItem§r§7
+  [32] minecraft:black_stained_glass_pane | 
+  [33] minecraft:black_stained_glass_pane | 
+  [34] minecraft:black_stained_glass_pane | 
+  [35] minecraft:black_stained_glass_pane | 
+
+15:13:40 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x4 | 36 Slots ===
+  [0] minecraft:black_stained_glass_pane | 
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:black_stained_glass_pane | 
+  [9] minecraft:black_stained_glass_pane | 
+  [10] minecraft:black_stained_glass_pane | 
+  [11] minecraft:black_stained_glass_pane | 
+  [12] minecraft:black_stained_glass_pane | 
+  [13] minecraft:sand | §bSand§r§7
+        §8Kaufauftrag
+        §7Anzahl: §b1§r§7 §bItem§r§7
+        §7Preis pro Item: §b2,5§r§7$
+        §7Gesamt: §b2,5§r§7$
+        §cKlicke 3x, um zu Bestätigen
+  [14] minecraft:black_stained_glass_pane | 
+  [15] minecraft:black_stained_glass_pane | 
+  [16] minecraft:black_stained_glass_pane | 
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:black_stained_glass_pane | 
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:black_stained_glass_pane | 
+  [21] minecraft:black_stained_glass_pane | 
+  [22] minecraft:black_stained_glass_pane | 
+  [23] minecraft:black_stained_glass_pane | 
+  [24] minecraft:black_stained_glass_pane | 
+  [25] minecraft:black_stained_glass_pane | 
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:paper | Zurück | CMD [4501.0][]
+  [28] minecraft:black_stained_glass_pane | 
+  [29] minecraft:black_stained_glass_pane | 
+  [30] minecraft:black_stained_glass_pane | 
+  [31] minecraft:black_stained_glass_pane | 
+  [32] minecraft:black_stained_glass_pane | 
+  [33] minecraft:black_stained_glass_pane | 
+  [34] minecraft:black_stained_glass_pane | 
+  [35] minecraft:black_stained_glass_pane | 
+
+15:13:41 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x4 | 36 Slots ===
+  [0] minecraft:black_stained_glass_pane | 
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:black_stained_glass_pane | 
+  [9] minecraft:black_stained_glass_pane | 
+  [10] minecraft:black_stained_glass_pane | 
+  [11] minecraft:black_stained_glass_pane | 
+  [12] minecraft:black_stained_glass_pane | 
+  [13] minecraft:sand | §bSand§r§7
+        §8Kaufauftrag
+        §7Anzahl: §b1§r§7 §bItem§r§7
+        §7Preis pro Item: §b2,5§r§7$
+        §7Gesamt: §b2,5§r§7$
+        §cKlicke noch 2x, um zu Bestätigen
+  [14] minecraft:black_stained_glass_pane | 
+  [15] minecraft:black_stained_glass_pane | 
+  [16] minecraft:black_stained_glass_pane | 
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:black_stained_glass_pane | 
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:black_stained_glass_pane | 
+  [21] minecraft:black_stained_glass_pane | 
+  [22] minecraft:black_stained_glass_pane | 
+  [23] minecraft:black_stained_glass_pane | 
+  [24] minecraft:black_stained_glass_pane | 
+  [25] minecraft:black_stained_glass_pane | 
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:paper | Zurück | CMD [4501.0][]
+  [28] minecraft:black_stained_glass_pane | 
+  [29] minecraft:black_stained_glass_pane | 
+  [30] minecraft:black_stained_glass_pane | 
+  [31] minecraft:black_stained_glass_pane | 
+  [32] minecraft:black_stained_glass_pane | 
+  [33] minecraft:black_stained_glass_pane | 
+  [34] minecraft:black_stained_glass_pane | 
+  [35] minecraft:black_stained_glass_pane | 
+
+15:13:42 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x4 | 36 Slots ===
+  [0] minecraft:black_stained_glass_pane | 
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:black_stained_glass_pane | 
+  [9] minecraft:black_stained_glass_pane | 
+  [10] minecraft:black_stained_glass_pane | 
+  [11] minecraft:sand | §b1§r§7x §bSand§r§7
+        §8Ein Item
+  [12] minecraft:black_stained_glass_pane | 
+  [13] minecraft:sand x64 | §b64§r§7x §bSand§r§7
+        §8Ein Stack
+  [14] minecraft:black_stained_glass_pane | 
+  [15] minecraft:chest | §b1.216§r§7x §bSand§r§7
+        §8Ganzes Inventar
+  [16] minecraft:black_stained_glass_pane | 
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:black_stained_glass_pane | 
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:black_stained_glass_pane | 
+  [21] minecraft:black_stained_glass_pane | 
+  [22] minecraft:black_stained_glass_pane | 
+  [23] minecraft:black_stained_glass_pane | 
+  [24] minecraft:black_stained_glass_pane | 
+  [25] minecraft:black_stained_glass_pane | 
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:paper | Zurück | CMD [4501.0][]
+  [28] minecraft:black_stained_glass_pane | 
+  [29] minecraft:black_stained_glass_pane | 
+  [30] minecraft:black_stained_glass_pane | 
+  [31] minecraft:acacia_sign | §c§lAnzahl setzen
+        §8Kaufauftrag
+  [32] minecraft:black_stained_glass_pane | 
+  [33] minecraft:black_stained_glass_pane | 
+  [34] minecraft:black_stained_glass_pane | 
+  [35] minecraft:black_stained_glass_pane | 
+
+15:13:45 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x4 | 36 Slots ===
+  [0] minecraft:black_stained_glass_pane | 
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:black_stained_glass_pane | 
+  [9] minecraft:black_stained_glass_pane | 
+  [10] minecraft:black_stained_glass_pane | 
+  [11] minecraft:paper | §c§lBestes Angebot | CMD [20203.0][]
+        §8Kaufauftrag
+        §7Anzahl: §b1.216§r§7 §bItems§r§7
+        §7Preis: §b2,5§r§7$
+        §7Gesamt: §b3.040,0§r§7$
+  [12] minecraft:black_stained_glass_pane | 
+  [13] minecraft:paper | §c§lBestes Angebot +0.1$ | CMD [20204.0][]
+        §8Kaufauftrag
+        §7Anzahl: §b1.216§r§7 §bItems§r§7
+        §7Preis: §b2,6§r§7$
+        §7Gesamt: §b3.161,6§r§7$
+  [14] minecraft:black_stained_glass_pane | 
+  [15] minecraft:paper | §c§l5% der Spanne | CMD [20205.0][]
+        §8Kaufauftrag
+        §7Niedrigster Verkaufspreis: §b5,9§r§7$
+        §7Höchster Kaufpreis: §b2,5§r§7$
+        §7Spanne: §b5,9§r§7 - §b2,5§r§7 = §b3,4§r§7$
+        §7Anzahl: §b1.216§r§7 §bItems§r§7
+        §7Preis: §b2,7§r§7$
+        §7Gesamt: §b3.283,2§r§7$
+  [16] minecraft:black_stained_glass_pane | 
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:black_stained_glass_pane | 
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:black_stained_glass_pane | 
+  [21] minecraft:black_stained_glass_pane | 
+  [22] minecraft:black_stained_glass_pane | 
+  [23] minecraft:black_stained_glass_pane | 
+  [24] minecraft:black_stained_glass_pane | 
+  [25] minecraft:black_stained_glass_pane | 
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:paper | Zurück | CMD [4501.0][]
+  [28] minecraft:black_stained_glass_pane | 
+  [29] minecraft:black_stained_glass_pane | 
+  [30] minecraft:black_stained_glass_pane | 
+  [31] minecraft:acacia_sign | §c§lPreis setzen
+        §8Kaufauftrag
+        §7Anzahl: §b1.216§r§7 §bItems§r§7
+  [32] minecraft:black_stained_glass_pane | 
+  [33] minecraft:black_stained_glass_pane | 
+  [34] minecraft:black_stained_glass_pane | 
+  [35] minecraft:black_stained_glass_pane | 
+
+15:13:48 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x4 | 36 Slots ===
+  [0] minecraft:black_stained_glass_pane | 
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:black_stained_glass_pane | 
+  [9] minecraft:black_stained_glass_pane | 
+  [10] minecraft:black_stained_glass_pane | 
+  [11] minecraft:black_stained_glass_pane | 
+  [12] minecraft:black_stained_glass_pane | 
+  [13] minecraft:sand | §bSand§r§7
+        §8Kaufauftrag
+        §7Anzahl: §b1.216§r§7 §bItems§r§7
+        §7Preis pro Item: §b2,5§r§7$
+        §7Gesamt: §b3.040,0§r§7$
+        §cKlicke 3x, um zu Bestätigen
+  [14] minecraft:black_stained_glass_pane | 
+  [15] minecraft:black_stained_glass_pane | 
+  [16] minecraft:black_stained_glass_pane | 
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:black_stained_glass_pane | 
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:black_stained_glass_pane | 
+  [21] minecraft:black_stained_glass_pane | 
+  [22] minecraft:black_stained_glass_pane | 
+  [23] minecraft:black_stained_glass_pane | 
+  [24] minecraft:black_stained_glass_pane | 
+  [25] minecraft:black_stained_glass_pane | 
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:paper | Zurück | CMD [4501.0][]
+  [28] minecraft:black_stained_glass_pane | 
+  [29] minecraft:black_stained_glass_pane | 
+  [30] minecraft:black_stained_glass_pane | 
+  [31] minecraft:black_stained_glass_pane | 
+  [32] minecraft:black_stained_glass_pane | 
+  [33] minecraft:black_stained_glass_pane | 
+  [34] minecraft:black_stained_glass_pane | 
+  [35] minecraft:black_stained_glass_pane | 
+
+15:13:49 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x4 | 36 Slots ===
+  [0] minecraft:black_stained_glass_pane | 
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:black_stained_glass_pane | 
+  [9] minecraft:black_stained_glass_pane | 
+  [10] minecraft:black_stained_glass_pane | 
+  [11] minecraft:sand | §b1§r§7x §bSand§r§7
+        §8Ein Item
+  [12] minecraft:black_stained_glass_pane | 
+  [13] minecraft:sand x64 | §b64§r§7x §bSand§r§7
+        §8Ein Stack
+  [14] minecraft:black_stained_glass_pane | 
+  [15] minecraft:chest | §b1.216§r§7x §bSand§r§7
+        §8Ganzes Inventar
+  [16] minecraft:black_stained_glass_pane | 
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:black_stained_glass_pane | 
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:black_stained_glass_pane | 
+  [21] minecraft:black_stained_glass_pane | 
+  [22] minecraft:black_stained_glass_pane | 
+  [23] minecraft:black_stained_glass_pane | 
+  [24] minecraft:black_stained_glass_pane | 
+  [25] minecraft:black_stained_glass_pane | 
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:paper | Zurück | CMD [4501.0][]
+  [28] minecraft:black_stained_glass_pane | 
+  [29] minecraft:black_stained_glass_pane | 
+  [30] minecraft:black_stained_glass_pane | 
+  [31] minecraft:acacia_sign | §c§lAnzahl setzen
+        §8Kaufauftrag
+  [32] minecraft:black_stained_glass_pane | 
+  [33] minecraft:black_stained_glass_pane | 
+  [34] minecraft:black_stained_glass_pane | 
+  [35] minecraft:black_stained_glass_pane | 
+
+15:13:57 === MENÜ "§c§lOPSUCHT§r §8»§r §7§8Anzahl" | Typ minecraft:anvil | 3 Slots ===
+  [0] minecraft:acacia_sign | Eingabe...
+        §8Kaufauftrag
+  [2] minecraft:acacia_sign | Akazienholzschild
+        §8Kaufauftrag
+
+
+15:13:59 === MENÜ "§c§lOPSUCHT§r §8»§r §7§8Anzahl" | Typ minecraft:anvil | 3 Slots ===
+  [0] minecraft:acacia_sign | Eingabe...
+        §8Kaufauftrag
+  [2] minecraft:acacia_sign | 1
+        §8Kaufauftrag
+
+15:14:00 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x4 | 36 Slots ===
+  [0] minecraft:black_stained_glass_pane | 
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:black_stained_glass_pane | 
+  [9] minecraft:black_stained_glass_pane | 
+  [10] minecraft:black_stained_glass_pane | 
+  [11] minecraft:paper | §c§lBestes Angebot | CMD [20203.0][]
+        §8Kaufauftrag
+        §7Anzahl: §b1§r§7 §bItem§r§7
+        §7Preis: §b2,5§r§7$
+        §7Gesamt: §b2,5§r§7$
+  [12] minecraft:black_stained_glass_pane | 
+  [13] minecraft:paper | §c§lBestes Angebot +0.1$ | CMD [20204.0][]
+        §8Kaufauftrag
+        §7Anzahl: §b1§r§7 §bItem§r§7
+        §7Preis: §b2,6§r§7$
+        §7Gesamt: §b2,6§r§7$
+  [14] minecraft:black_stained_glass_pane | 
+  [15] minecraft:paper | §c§l5% der Spanne | CMD [20205.0][]
+        §8Kaufauftrag
+        §7Niedrigster Verkaufspreis: §b5,9§r§7$
+        §7Höchster Kaufpreis: §b2,5§r§7$
+        §7Spanne: §b5,9§r§7 - §b2,5§r§7 = §b3,4§r§7$
+        §7Anzahl: §b1§r§7 §bItem§r§7
+        §7Preis: §b2,7§r§7$
+        §7Gesamt: §b2,7§r§7$
+  [16] minecraft:black_stained_glass_pane | 
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:black_stained_glass_pane | 
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:black_stained_glass_pane | 
+  [21] minecraft:black_stained_glass_pane | 
+  [22] minecraft:black_stained_glass_pane | 
+  [23] minecraft:black_stained_glass_pane | 
+  [24] minecraft:black_stained_glass_pane | 
+  [25] minecraft:black_stained_glass_pane | 
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:paper | Zurück | CMD [4501.0][]
+  [28] minecraft:black_stained_glass_pane | 
+  [29] minecraft:black_stained_glass_pane | 
+  [30] minecraft:black_stained_glass_pane | 
+  [31] minecraft:acacia_sign | §c§lPreis setzen
+        §8Kaufauftrag
+        §7Anzahl: §b1§r§7 §bItem§r§7
+  [32] minecraft:black_stained_glass_pane | 
+  [33] minecraft:black_stained_glass_pane | 
+  [34] minecraft:black_stained_glass_pane | 
+  [35] minecraft:black_stained_glass_pane | 
+
+15:14:01 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x4 | 36 Slots ===
+  [0] minecraft:black_stained_glass_pane | 
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:black_stained_glass_pane | 
+  [9] minecraft:black_stained_glass_pane | 
+  [10] minecraft:black_stained_glass_pane | 
+  [11] minecraft:black_stained_glass_pane | 
+  [12] minecraft:black_stained_glass_pane | 
+  [13] minecraft:sand | §bSand§r§7
+        §8Kaufauftrag
+        §7Anzahl: §b1§r§7 §bItem§r§7
+        §7Preis pro Item: §b2,6§r§7$
+        §7Gesamt: §b2,6§r§7$
+        §cKlicke 3x, um zu Bestätigen
+  [14] minecraft:black_stained_glass_pane | 
+  [15] minecraft:black_stained_glass_pane | 
+  [16] minecraft:black_stained_glass_pane | 
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:black_stained_glass_pane | 
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:black_stained_glass_pane | 
+  [21] minecraft:black_stained_glass_pane | 
+  [22] minecraft:black_stained_glass_pane | 
+  [23] minecraft:black_stained_glass_pane | 
+  [24] minecraft:black_stained_glass_pane | 
+  [25] minecraft:black_stained_glass_pane | 
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:paper | Zurück | CMD [4501.0][]
+  [28] minecraft:black_stained_glass_pane | 
+  [29] minecraft:black_stained_glass_pane | 
+  [30] minecraft:black_stained_glass_pane | 
+  [31] minecraft:black_stained_glass_pane | 
+  [32] minecraft:black_stained_glass_pane | 
+  [33] minecraft:black_stained_glass_pane | 
+  [34] minecraft:black_stained_glass_pane | 
+  [35] minecraft:black_stained_glass_pane | 
+
+15:14:02 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x4 | 36 Slots ===
+  [0] minecraft:black_stained_glass_pane | 
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:black_stained_glass_pane | 
+  [9] minecraft:black_stained_glass_pane | 
+  [10] minecraft:black_stained_glass_pane | 
+  [11] minecraft:sand | §b1§r§7x §bSand§r§7
+        §8Ein Item
+  [12] minecraft:black_stained_glass_pane | 
+  [13] minecraft:sand x64 | §b64§r§7x §bSand§r§7
+        §8Ein Stack
+  [14] minecraft:black_stained_glass_pane | 
+  [15] minecraft:chest | §b1.216§r§7x §bSand§r§7
+        §8Ganzes Inventar
+  [16] minecraft:black_stained_glass_pane | 
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:black_stained_glass_pane | 
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:black_stained_glass_pane | 
+  [21] minecraft:black_stained_glass_pane | 
+  [22] minecraft:black_stained_glass_pane | 
+  [23] minecraft:black_stained_glass_pane | 
+  [24] minecraft:black_stained_glass_pane | 
+  [25] minecraft:black_stained_glass_pane | 
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:paper | Zurück | CMD [4501.0][]
+  [28] minecraft:black_stained_glass_pane | 
+  [29] minecraft:black_stained_glass_pane | 
+  [30] minecraft:black_stained_glass_pane | 
+  [31] minecraft:acacia_sign | §c§lAnzahl setzen
+        §8Kaufauftrag
+  [32] minecraft:black_stained_glass_pane | 
+  [33] minecraft:black_stained_glass_pane | 
+  [34] minecraft:black_stained_glass_pane | 
+  [35] minecraft:black_stained_glass_pane | 
+
+15:14:04 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x4 | 36 Slots ===
+  [0] minecraft:black_stained_glass_pane | 
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:black_stained_glass_pane | 
+  [9] minecraft:black_stained_glass_pane | 
+  [10] minecraft:golden_horse_armor | §c§lSofort kaufen
+        §7Kaufpreis: §b5,9§r§7$ pro Item
+        §7<Linksklick> §b1 kaufen
+        §7<Rechtsklick> §bAnzahl auswählen
+  [11] minecraft:hopper | §c§lSofort verkaufen
+        §7Verkaufspreis: §b2,6§r§7$ pro Item
+        §cKeine Items im Inventar.
+  [12] minecraft:black_stained_glass_pane | 
+  [13] minecraft:sand | Sand
+  [14] minecraft:black_stained_glass_pane | 
+  [15] minecraft:filled_map | §c§lKaufauftrag erstellen
+        §7Top 10 Aufträge:
+        §7 • §b2,5§r§7$ pro Item §8- §7§b912.613§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b2,4§r§7$ pro Item §8- §7§b5.760.000§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b2,3§r§7$ pro Item §8- §7§b1.845.884§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b2,2§r§7$ pro Item §8- §7§b339.761§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b1,5§r§7$ pro Item §8- §7§b465.345§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b1,4§r§7$ pro Item §8- §7§b38.249§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b1,2§r§7$ pro Item §8- §7§b128§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b1,0§r§7$ pro Item §8- §7§b67.442§r§7x (§b4§r§7 §bAufträge§r§7)
+        §7 • §b0,9§r§7$ pro Item §8- §7§b1.000.000§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b0,8§r§7$ pro Item §8- §7§b368§r§7x (§b1§r§7 §bAuftrag§r§7)
+  [16] minecraft:map | §c§lVerkaufsangebot erstellen
+        §7Top 10 Angebote:
+        §7 • §b5,9§r§7$ pro Item §8- §7§b13.679§r§7x (§b9§r§7 §bAngebote§r§7)
+        §7 • §b6,0§r§7$ pro Item §8- §7§b836.580§r§7x (§b369§r§7 §bAngebote§r§7)
+        §7 • §b6,5§r§7$ pro Item §8- §7§b159.409§r§7x (§b78§r§7 §bAngebote§r§7)
+        §7 • §b7,0§r§7$ pro Item §8- §7§b6.016§r§7x (§b3§r§7 §bAngebote§r§7)
+        §7 • §b7,4§r§7$ pro Item §8- §7§b10.240§r§7x (§b5§r§7 §bAngebote§r§7)
+        §7 • §b8,0§r§7$ pro Item §8- §7§b2.112§r§7x (§b1§r§7 §bAngebot§r§7)
+        §7 • §b8,9§r§7$ pro Item §8- §7§b47.405§r§7x (§b21§r§7 §bAngebote§r§7)
+        §7 • §b9,0§r§7$ pro Item §8- §7§b11.935§r§7x (§b6§r§7 §bAngebote§r§7)
+        §7 • §b9,2§r§7$ pro Item §8- §7§b10.185§r§7x (§b6§r§7 §bAngebote§r§7)
+        §7 • §b9,3§r§7$ pro Item §8- §7§b3.265§r§7x (§b2§r§7 §bAngebote§r§7)
+        §cKeine Items im Inventar.
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:black_stained_glass_pane | 
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:black_stained_glass_pane | 
+  [21] minecraft:black_stained_glass_pane | 
+  [22] minecraft:black_stained_glass_pane | 
+  [23] minecraft:black_stained_glass_pane | 
+  [24] minecraft:black_stained_glass_pane | 
+  [25] minecraft:black_stained_glass_pane | 
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:paper | Zurück | CMD [4501.0][]
+  [28] minecraft:black_stained_glass_pane | 
+  [29] minecraft:black_stained_glass_pane | 
+  [30] minecraft:black_stained_glass_pane | 
+  [31] minecraft:book | §c§lDeine Aufträge
+  [32] minecraft:black_stained_glass_pane | 
+  [33] minecraft:black_stained_glass_pane | 
+  [34] minecraft:black_stained_glass_pane | 
+  [35] minecraft:black_stained_glass_pane | 
+
+15:14:07 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x6 | 54 Slots ===
+  [0] minecraft:black_stained_glass_pane | 
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:black_stained_glass_pane | 
+  [9] minecraft:black_stained_glass_pane | 
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:black_stained_glass_pane | 
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:black_stained_glass_pane | 
+  [28] minecraft:sand | §c§bSand§r§7
+        §8Kaufauftrag
+        §7Anzahl: §b1§r§7
+        §7Erfüllt: §b0§r§7/§b1§r§7 (§b0,0§r§7%)
+        §7Preis pro Item: §b2,5§r§7$
+        §7Gesamtwert: §b2,5§r§7$
+        §7Status: §bOffen
+  [29] minecraft:sand | §c§bSand§r§7
+        §8Kaufauftrag
+        §7Anzahl: §b1.216§r§7
+        §7Erfüllt: §b0§r§7/§b1.216§r§7 (§b0,0§r§7%)
+        §7Preis pro Item: §b2,5§r§7$
+        §7Gesamtwert: §b3.040§r§7$
+        §7Status: §bOffen
+  [30] minecraft:sand | §c§bSand§r§7
+        §8Kaufauftrag
+        §7Anzahl: §b1§r§7
+        §7Erfüllt: §b0§r§7/§b1§r§7 (§b0,0§r§7%)
+        §7Preis pro Item: §b2,6§r§7$
+        §7Gesamtwert: §b2,6§r§7$
+        §7Status: §bOffen
+  [35] minecraft:black_stained_glass_pane | 
+  [36] minecraft:black_stained_glass_pane | 
+  [44] minecraft:black_stained_glass_pane | 
+  [45] minecraft:paper | Zurück | CMD [4501.0][]
+  [46] minecraft:black_stained_glass_pane | 
+  [47] minecraft:black_stained_glass_pane | 
+  [48] minecraft:black_stained_glass_pane | 
+  [49] minecraft:black_stained_glass_pane | 
+  [50] minecraft:black_stained_glass_pane | 
+  [51] minecraft:black_stained_glass_pane | 
+  [52] minecraft:black_stained_glass_pane | 
+  [53] minecraft:hopper | §c§lFilter
+        §7» §bAlles§r§7
+        §7• §bEinsammelbar§r§7
+        §7• §bAktiv§r§7
+
+15:14:09 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x3 | 27 Slots ===
+  [0] minecraft:black_stained_glass_pane | 
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:black_stained_glass_pane | 
+  [9] minecraft:black_stained_glass_pane | 
+  [10] minecraft:black_stained_glass_pane | 
+  [11] minecraft:black_stained_glass_pane | 
+  [12] minecraft:black_stained_glass_pane | 
+  [13] minecraft:red_dye | §cAuftrag abbrechen
+        §cKlicke noch 3x, um zu Bestätigen
+  [14] minecraft:black_stained_glass_pane | 
+  [15] minecraft:black_stained_glass_pane | 
+  [16] minecraft:black_stained_glass_pane | 
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:paper | Zurück | CMD [4501.0][]
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:black_stained_glass_pane | 
+  [21] minecraft:black_stained_glass_pane | 
+  [22] minecraft:black_stained_glass_pane | 
+  [23] minecraft:black_stained_glass_pane | 
+  [24] minecraft:black_stained_glass_pane | 
+  [25] minecraft:black_stained_glass_pane | 
+  [26] minecraft:black_stained_glass_pane | 
+
+15:14:10 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x3 | 27 Slots ===
+  [0] minecraft:black_stained_glass_pane | 
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:black_stained_glass_pane | 
+  [9] minecraft:black_stained_glass_pane | 
+  [10] minecraft:black_stained_glass_pane | 
+  [11] minecraft:black_stained_glass_pane | 
+  [12] minecraft:black_stained_glass_pane | 
+  [13] minecraft:red_dye | §cAuftrag abbrechen
+        §cKlicke noch 2x, um zu Bestätigen
+  [14] minecraft:black_stained_glass_pane | 
+  [15] minecraft:black_stained_glass_pane | 
+  [16] minecraft:black_stained_glass_pane | 
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:paper | Zurück | CMD [4501.0][]
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:black_stained_glass_pane | 
+  [21] minecraft:black_stained_glass_pane | 
+  [22] minecraft:black_stained_glass_pane | 
+  [23] minecraft:black_stained_glass_pane | 
+  [24] minecraft:black_stained_glass_pane | 
+  [25] minecraft:black_stained_glass_pane | 
+  [26] minecraft:black_stained_glass_pane | 
+
+15:14:11 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x3 | 27 Slots ===
+  [0] minecraft:black_stained_glass_pane | 
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:black_stained_glass_pane | 
+  [9] minecraft:black_stained_glass_pane | 
+  [10] minecraft:black_stained_glass_pane | 
+  [11] minecraft:black_stained_glass_pane | 
+  [12] minecraft:black_stained_glass_pane | 
+  [13] minecraft:red_dye | §cAuftrag abbrechen
+        §cKlicke noch 1x, um zu Bestätigen
+  [14] minecraft:black_stained_glass_pane | 
+  [15] minecraft:black_stained_glass_pane | 
+  [16] minecraft:black_stained_glass_pane | 
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:paper | Zurück | CMD [4501.0][]
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:black_stained_glass_pane | 
+  [21] minecraft:black_stained_glass_pane | 
+  [22] minecraft:black_stained_glass_pane | 
+  [23] minecraft:black_stained_glass_pane | 
+  [24] minecraft:black_stained_glass_pane | 
+  [25] minecraft:black_stained_glass_pane | 
+  [26] minecraft:black_stained_glass_pane | 
+
+15:14:13 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x6 | 54 Slots ===
+  [0] minecraft:diamond_pickaxe | §c§lBergbau
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:bell | §c§lSofort verkaufen
+  [9] minecraft:netherite_axe | §c§lHolz
+  [10] minecraft:black_stained_glass_pane | 
+  [11] minecraft:netherite_ingot | §bNetheritbarren§r§7
+        §7Kaufpreis: §b9.599,7§r§7$
+        §7Verkaufspreis: §b9.010,2§r§7$
+  [12] minecraft:netherite_block | §bNetheritblock§r§7
+        §7Kaufpreis: §b94.882,5§r§7$
+        §7Verkaufspreis: §b78.936,5§r§7$
+  [13] minecraft:diamond | §bDiamant§r§7
+        §7Kaufpreis: §b76,8§r§7$
+        §7Verkaufspreis: §b55,7§r§7$
+  [14] minecraft:diamond_block | §bDiamantblock§r§7
+        §7Kaufpreis: §b663,5§r§7$
+        §7Verkaufspreis: §b600,1§r§7$
+  [15] minecraft:emerald | §bSmaragd§r§7
+        §7Kaufpreis: §b90,1§r§7$
+        §7Verkaufspreis: §b45,8§r§7$
+  [16] minecraft:emerald_block | §bSmaragdblock§r§7
+        §7Kaufpreis: §b538,2§r§7$
+        §7Verkaufspreis: §b420,3§r§7$
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:iron_sword | §c§lKampf
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:raw_iron | §bRoheisen§r§7
+        §7Kaufpreis: §b36,4§r§7$
+        §7Verkaufspreis: §b11,8§r§7$
+  [21] minecraft:iron_ingot | §bEisenbarren§r§7
+        §7Kaufpreis: §b38§r§7$
+        §7Verkaufspreis: §b18§r§7$
+  [22] minecraft:iron_block | §bEisenblock§r§7
+        §7Kaufpreis: §b294,7§r§7$
+        §7Verkaufspreis: §b157,4§r§7$
+  [23] minecraft:raw_gold | §bRohgold§r§7
+        §7Kaufpreis: §b23,3§r§7$
+        §7Verkaufspreis: §b10,8§r§7$
+  [24] minecraft:gold_ingot | §bGoldbarren§r§7
+        §7Kaufpreis: §b19§r§7$
+        §7Verkaufspreis: §b11,9§r§7$
+  [25] minecraft:gold_block | §bGoldblock§r§7
+        §7Kaufpreis: §b199§r§7$
+        §7Verkaufspreis: §b129,3§r§7$
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:golden_hoe | §c§lNahrung
+  [28] minecraft:black_stained_glass_pane | 
+  [29] minecraft:charcoal | §bHolzkohle§r§7
+        §7Kaufpreis: §b15§r§7$
+        §7Verkaufspreis: §b2,8§r§7$
+  [30] minecraft:coal | §bKohle§r§7
+        §7Kaufpreis: §b24,3§r§7$
+        §7Verkaufspreis: §b6,5§r§7$
+  [31] minecraft:coal_block | §bKohleblock§r§7
+        §7Kaufpreis: §b211,3§r§7$
+        §7Verkaufspreis: §b101,6§r§7$
+  [32] minecraft:raw_copper | §bRohkupfer§r§7
+        §7Kaufpreis: §b2,7§r§7$
+        §7Verkaufspreis: §b0,8§r§7$
+  [33] minecraft:copper_ingot | §bKupferbarren§r§7
+        §7Kaufpreis: §b7,1§r§7$
+        §7Verkaufspreis: §b1§r§7$
+  [34] minecraft:copper_block | §bKupferblock§r§7
+        §7Kaufpreis: §b51,7§r§7$
+        §7Verkaufspreis: §b8,2§r§7$
+  [35] minecraft:black_stained_glass_pane | 
+  [36] minecraft:grass_block | §c§lSonstiges
+  [37] minecraft:black_stained_glass_pane | 
+  [38] minecraft:amethyst_shard | §bAmethystscherbe§r§7
+        §7Kaufpreis: §b3,4§r§7$
+        §7Verkaufspreis: §b0,9§r§7$
+  [39] minecraft:amethyst_cluster | §bAmethysthaufen§r§7
+        §7Kaufpreis: §b44,6§r§7$
+        §7Verkaufspreis: §b5,2§r§7$
+  [40] minecraft:small_amethyst_bud | §bKleine Amethystknospe§r§7
+        §7Kaufpreis: §b44,6§r§7$
+        §7Verkaufspreis: §b11,6§r§7$
+  [41] minecraft:medium_amethyst_bud | §bMittlere Amethystknospe§r§7
+        §7Kaufpreis: §b94,7§r§7$
+        §7Verkaufspreis: §b26,6§r§7$
+  [42] minecraft:large_amethyst_bud | §bGroße Amethystknospe§r§7
+        §7Kaufpreis: §b84,8§r§7$
+        §7Verkaufspreis: §b5,2§r§7$
+  [43] minecraft:quartz | §bNetherquarz§r§7
+        §7Kaufpreis: §b32,9§r§7$
+        §7Verkaufspreis: §b23,3§r§7$
+  [44] minecraft:black_stained_glass_pane | 
+  [45] minecraft:beacon | §c§lBesonderes
+  [46] minecraft:black_stained_glass_pane | 
+  [47] minecraft:black_stained_glass_pane | 
+  [48] minecraft:black_stained_glass_pane | 
+  [49] minecraft:book | §c§lDeine Aufträge
+  [50] minecraft:oak_sign | §c§lSuche
+  [51] minecraft:black_stained_glass_pane | 
+  [52] minecraft:paper | Weiter | CMD [701.0][]
+  [53] minecraft:gold_block | §c§lExperten Modus
+        Einfacher Modus
+        Im einfachen Modus kannst du
+        bei bestehende Angebote von
+        anderen Spielern kaufen und verkaufen.
+        Experten Modus
+        Der Experten Modus bietet dir
+        neben den Funktionen des einfachen
+        Modus auch die Möglichkeit, eigene
+        Angebote zu erstellen.
+
+15:14:17 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x6 | 54 Slots ===
+  [0] minecraft:diamond_pickaxe | §c§lBergbau
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:bell | §c§lSofort verkaufen
+  [9] minecraft:netherite_axe | §c§lHolz
+  [10] minecraft:black_stained_glass_pane | 
+  [11] minecraft:redstone | §bRedstone-Staub§r§7
+        §7Kaufpreis: §b4,5§r§7$
+        §7Verkaufspreis: §b0,8§r§7$
+  [12] minecraft:redstone_block | §bRedstone-Block§r§7
+        §7Kaufpreis: §b14,7§r§7$
+        §7Verkaufspreis: §b3,2§r§7$
+  [13] minecraft:lapis_lazuli | §bLapislazuli§r§7
+        §7Kaufpreis: §b3,9§r§7$
+        §7Verkaufspreis: §b0,8§r§7$
+  [14] minecraft:lapis_block | §bLapislazuliblock§r§7
+        §7Kaufpreis: §b28,6§r§7$
+        §7Verkaufspreis: §b6,7§r§7$
+  [15] minecraft:ancient_debris | §bAntiker Schrott§r§7
+        §7Kaufpreis: §b3.189§r§7$
+        §7Verkaufspreis: §b2.211,3§r§7$
+  [16] minecraft:diamond_ore | §bDiamanterz§r§7
+        §7Kaufpreis: §b3.495,5§r§7$
+        §7Verkaufspreis: §b471,9§r§7$
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:iron_sword | §c§lKampf
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:deepslate_diamond_ore | §bTiefenschiefer-Diamanterz§r§7
+        §7Kaufpreis: §b276,1§r§7$
+        §7Verkaufspreis: §b242,3§r§7$
+  [21] minecraft:emerald_ore | §bSmaragderz§r§7
+        §7Kaufpreis: §b784,5§r§7$
+        §7Verkaufspreis: §b317,2§r§7$
+  [22] minecraft:deepslate_emerald_ore | §bTiefenschiefer-Smaragderz§r§7
+        §7Kaufpreis: §b31.867§r§7$
+        §7Verkaufspreis: §b18.514,1§r§7$
+  [23] minecraft:iron_ore | §bEisenerz§r§7
+        §7Kaufpreis: §b68,6§r§7$
+        §7Verkaufspreis: §b13,2§r§7$
+  [24] minecraft:raw_iron_block | §bRoheisenblock§r§7
+        §7Kaufpreis: §b268,3§r§7$
+        §7Verkaufspreis: §b100,1§r§7$
+  [25] minecraft:deepslate_iron_ore | §bTiefenschiefer-Eisenerz§r§7
+        §7Kaufpreis: §b37,9§r§7$
+        §7Verkaufspreis: §b15,2§r§7$
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:golden_hoe | §c§lNahrung
+  [28] minecraft:black_stained_glass_pane | 
+  [29] minecraft:gold_ore | §bGolderz§r§7
+        §7Kaufpreis: §b117,8§r§7$
+        §7Verkaufspreis: §b38,4§r§7$
+  [30] minecraft:raw_gold_block | §bRohgoldblock§r§7
+        §7Kaufpreis: §b337,1§r§7$
+        §7Verkaufspreis: §b73§r§7$
+  [31] minecraft:deepslate_gold_ore | §bTiefenschiefer-Golderz§r§7
+        §7Kaufpreis: §b29,9§r§7$
+        §7Verkaufspreis: §b14§r§7$
+  [32] minecraft:coal_ore | §bSteinkohle§r§7
+        §7Kaufpreis: §b40,5§r§7$
+        §7Verkaufspreis: §b7,3§r§7$
+  [33] minecraft:deepslate_coal_ore | §bTiefenschiefer-Steinkohle§r§7
+        §7Kaufpreis: §b1.499,5§r§7$
+        §7Verkaufspreis: §b624§r§7$
+  [34] minecraft:copper_ore | §bKupfererz§r§7
+        §7Kaufpreis: §b23,9§r§7$
+        §7Verkaufspreis: §b8,5§r§7$
+  [35] minecraft:black_stained_glass_pane | 
+  [36] minecraft:grass_block | §c§lSonstiges
+  [37] minecraft:black_stained_glass_pane | 
+  [38] minecraft:raw_copper_block | §bRohkupferblock§r§7
+        §7Kaufpreis: §b15§r§7$
+        §7Verkaufspreis: §b5§r§7$
+  [39] minecraft:deepslate_copper_ore | §bTiefenschiefer-Kupfererz§r§7
+        §7Kaufpreis: §b126,2§r§7$
+        §7Verkaufspreis: §b12,8§r§7$
+  [40] minecraft:redstone_ore | §bRedstone-Erz§r§7
+        §7Kaufpreis: §b217,9§r§7$
+        §7Verkaufspreis: §b36,7§r§7$
+  [41] minecraft:deepslate_redstone_ore | §bTiefenschiefer-Redstone-Erz§r§7
+        §7Kaufpreis: §b3,9§r§7$
+        §7Verkaufspreis: §b1§r§7$
+  [42] minecraft:lapis_ore | §bLapislazulierz§r§7
+        §7Kaufpreis: §b95§r§7$
+        §7Verkaufspreis: §b21,3§r§7$
+  [43] minecraft:deepslate_lapis_ore | §bTiefenschiefer-Lapislazulierz§r§7
+        §7Kaufpreis: §b12,8§r§7$
+        §7Verkaufspreis: §b2,8§r§7$
+  [44] minecraft:black_stained_glass_pane | 
+  [45] minecraft:beacon | §c§lBesonderes
+  [46] minecraft:black_stained_glass_pane | 
+  [47] minecraft:paper | Zurück | CMD [700.0][]
+  [48] minecraft:black_stained_glass_pane | 
+  [49] minecraft:book | §c§lDeine Aufträge
+  [50] minecraft:oak_sign | §c§lSuche
+  [51] minecraft:black_stained_glass_pane | 
+  [52] minecraft:paper | Weiter | CMD [701.0][]
+  [53] minecraft:gold_block | §c§lExperten Modus
+        Einfacher Modus
+        Im einfachen Modus kannst du
+        bei bestehende Angebote von
+        anderen Spielern kaufen und verkaufen.
+        Experten Modus
+        Der Experten Modus bietet dir
+        neben den Funktionen des einfachen
+        Modus auch die Möglichkeit, eigene
+        Angebote zu erstellen.
+
+15:14:18 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x6 | 54 Slots ===
+  [0] minecraft:diamond_pickaxe | §c§lBergbau
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:bell | §c§lSofort verkaufen
+  [9] minecraft:netherite_axe | §c§lHolz
+  [10] minecraft:black_stained_glass_pane | 
+  [11] minecraft:nether_quartz_ore | §bNetherquarzerz§r§7
+        §7Kaufpreis: §b69,9§r§7$
+        §7Verkaufspreis: §b50,2§r§7$
+  [12] minecraft:nether_gold_ore | §bNethergolderz§r§7
+        §7Kaufpreis: §b36,6§r§7$
+        §7Verkaufspreis: §b12,8§r§7$
+  [13] minecraft:gilded_blackstone | §bGolddurchzogener Schwarzstein§r§7
+        §7Kaufpreis: §b497,5§r§7$
+        §7Verkaufspreis: §b250,1§r§7$
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:iron_sword | §c§lKampf
+  [19] minecraft:black_stained_glass_pane | 
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:golden_hoe | §c§lNahrung
+  [28] minecraft:black_stained_glass_pane | 
+  [35] minecraft:black_stained_glass_pane | 
+  [36] minecraft:grass_block | §c§lSonstiges
+  [37] minecraft:black_stained_glass_pane | 
+  [44] minecraft:black_stained_glass_pane | 
+  [45] minecraft:beacon | §c§lBesonderes
+  [46] minecraft:black_stained_glass_pane | 
+  [47] minecraft:paper | Zurück | CMD [700.0][]
+  [48] minecraft:black_stained_glass_pane | 
+  [49] minecraft:book | §c§lDeine Aufträge
+  [50] minecraft:oak_sign | §c§lSuche
+  [51] minecraft:black_stained_glass_pane | 
+  [52] minecraft:black_stained_glass_pane | 
+  [53] minecraft:gold_block | §c§lExperten Modus
+        Einfacher Modus
+        Im einfachen Modus kannst du
+        bei bestehende Angebote von
+        anderen Spielern kaufen und verkaufen.
+        Experten Modus
+        Der Experten Modus bietet dir
+        neben den Funktionen des einfachen
+        Modus auch die Möglichkeit, eigene
+        Angebote zu erstellen.
+
+15:14:20 === MENÜ "OPSUCHT » Items verkaufen" | Typ minecraft:generic_9x6 | 54 Slots ===
+  [45] minecraft:lime_stained_glass_pane | §aItems verkaufen
+        §7Preis: §b0§r§7$
+        §cKlicke 3x zum Bestätigen
+  [46] minecraft:lime_stained_glass_pane | §aItems verkaufen
+        §7Preis: §b0§r§7$
+        §cKlicke 3x zum Bestätigen
+  [47] minecraft:lime_stained_glass_pane | §aItems verkaufen
+        §7Preis: §b0§r§7$
+        §cKlicke 3x zum Bestätigen
+  [48] minecraft:lime_stained_glass_pane | §aItems verkaufen
+        §7Preis: §b0§r§7$
+        §cKlicke 3x zum Bestätigen
+  [49] minecraft:hopper | Alle verkaufbaren Items hinzufügen
+        Legt alle verkaufbaren Items aus deinem
+        Inventar in das Verkaufsfenster.
+        Es werden nur unveränderte Vanilla-Items
+        hinzugefügt. Items mit Verzauberungen,
+        Attributen, Namen o.Ä. bleiben im Inventar.
+  [50] minecraft:lime_stained_glass_pane | §aItems verkaufen
+        §7Preis: §b0§r§7$
+        §cKlicke 3x zum Bestätigen
+  [51] minecraft:lime_stained_glass_pane | §aItems verkaufen
+        §7Preis: §b0§r§7$
+        §cKlicke 3x zum Bestätigen
+  [52] minecraft:lime_stained_glass_pane | §aItems verkaufen
+        §7Preis: §b0§r§7$
+        §cKlicke 3x zum Bestätigen
+  [53] minecraft:lime_stained_glass_pane | §aItems verkaufen
+        §7Preis: §b0§r§7$
+        §cKlicke 3x zum Bestätigen
+
+15:14:23 === MENÜ "OPSUCHT » Items verkaufen" | Typ minecraft:generic_9x6 | 54 Slots ===
+  [39] minecraft:dark_oak_log x64 | Schwarzeichenstamm
+  [45] minecraft:lime_stained_glass_pane | §aItems verkaufen
+        §7Preis: §b179,2§r§7$
+        §cKlicke 3x zum Bestätigen
+  [46] minecraft:lime_stained_glass_pane | §aItems verkaufen
+        §7Preis: §b179,2§r§7$
+        §cKlicke 3x zum Bestätigen
+  [47] minecraft:lime_stained_glass_pane | §aItems verkaufen
+        §7Preis: §b179,2§r§7$
+        §cKlicke 3x zum Bestätigen
+  [48] minecraft:lime_stained_glass_pane | §aItems verkaufen
+        §7Preis: §b179,2§r§7$
+        §cKlicke 3x zum Bestätigen
+  [49] minecraft:hopper | Alle verkaufbaren Items hinzufügen
+        Legt alle verkaufbaren Items aus deinem
+        Inventar in das Verkaufsfenster.
+        Es werden nur unveränderte Vanilla-Items
+        hinzugefügt. Items mit Verzauberungen,
+        Attributen, Namen o.Ä. bleiben im Inventar.
+  [50] minecraft:lime_stained_glass_pane | §aItems verkaufen
+        §7Preis: §b179,2§r§7$
+        §cKlicke 3x zum Bestätigen
+  [51] minecraft:lime_stained_glass_pane | §aItems verkaufen
+        §7Preis: §b179,2§r§7$
+        §cKlicke 3x zum Bestätigen
+  [52] minecraft:lime_stained_glass_pane | §aItems verkaufen
+        §7Preis: §b179,2§r§7$
+        §cKlicke 3x zum Bestätigen
+  [53] minecraft:lime_stained_glass_pane | §aItems verkaufen
+        §7Preis: §b179,2§r§7$
+        §cKlicke 3x zum Bestätigen
+
+15:14:24 === MENÜ "OPSUCHT » Items verkaufen" | Typ minecraft:generic_9x6 | 54 Slots ===
+  [0] minecraft:dark_oak_log x64 | Schwarzeichenstamm
+  [1] minecraft:dark_oak_log x64 | Schwarzeichenstamm
+  [2] minecraft:dark_oak_log x64 | Schwarzeichenstamm
+  [3] minecraft:dark_oak_log x57 | Schwarzeichenstamm
+  [4] minecraft:dark_oak_log x64 | Schwarzeichenstamm
+  [39] minecraft:dark_oak_log x64 | Schwarzeichenstamm
+  [45] minecraft:lime_stained_glass_pane | §aItems verkaufen
+        §7Preis: §b1.055,6§r§7$
+        §cKlicke 3x zum Bestätigen
+  [46] minecraft:lime_stained_glass_pane | §aItems verkaufen
+        §7Preis: §b1.055,6§r§7$
+        §cKlicke 3x zum Bestätigen
+  [47] minecraft:lime_stained_glass_pane | §aItems verkaufen
+        §7Preis: §b1.055,6§r§7$
+        §cKlicke 3x zum Bestätigen
+  [48] minecraft:lime_stained_glass_pane | §aItems verkaufen
+        §7Preis: §b1.055,6§r§7$
+        §cKlicke 3x zum Bestätigen
+  [49] minecraft:hopper | Alle verkaufbaren Items hinzufügen
+        Legt alle verkaufbaren Items aus deinem
+        Inventar in das Verkaufsfenster.
+        Es werden nur unveränderte Vanilla-Items
+        hinzugefügt. Items mit Verzauberungen,
+        Attributen, Namen o.Ä. bleiben im Inventar.
+  [50] minecraft:lime_stained_glass_pane | §aItems verkaufen
+        §7Preis: §b1.055,6§r§7$
+        §cKlicke 3x zum Bestätigen
+  [51] minecraft:lime_stained_glass_pane | §aItems verkaufen
+        §7Preis: §b1.055,6§r§7$
+        §cKlicke 3x zum Bestätigen
+  [52] minecraft:lime_stained_glass_pane | §aItems verkaufen
+        §7Preis: §b1.055,6§r§7$
+        §cKlicke 3x zum Bestätigen
+  [53] minecraft:lime_stained_glass_pane | §aItems verkaufen
+        §7Preis: §b1.055,6§r§7$
+        §cKlicke 3x zum Bestätigen
+
+15:14:27 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x6 | 54 Slots ===
+  [0] minecraft:diamond_pickaxe | §c§lBergbau
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:bell | §c§lSofort verkaufen
+  [9] minecraft:netherite_axe | §c§lHolz
+  [10] minecraft:black_stained_glass_pane | 
+  [11] minecraft:netherite_ingot | §bNetheritbarren§r§7
+        §7Kaufpreis: §b9.599,7§r§7$
+        §7Verkaufspreis: §b9.010,2§r§7$
+  [12] minecraft:netherite_block | §bNetheritblock§r§7
+        §7Kaufpreis: §b94.882,5§r§7$
+        §7Verkaufspreis: §b78.936,5§r§7$
+  [13] minecraft:diamond | §bDiamant§r§7
+        §7Kaufpreis: §b76,8§r§7$
+        §7Verkaufspreis: §b55,7§r§7$
+  [14] minecraft:diamond_block | §bDiamantblock§r§7
+        §7Kaufpreis: §b663,5§r§7$
+        §7Verkaufspreis: §b600,1§r§7$
+  [15] minecraft:emerald | §bSmaragd§r§7
+        §7Kaufpreis: §b90,1§r§7$
+        §7Verkaufspreis: §b45,8§r§7$
+  [16] minecraft:emerald_block | §bSmaragdblock§r§7
+        §7Kaufpreis: §b538,2§r§7$
+        §7Verkaufspreis: §b420,3§r§7$
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:iron_sword | §c§lKampf
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:raw_iron | §bRoheisen§r§7
+        §7Kaufpreis: §b36,4§r§7$
+        §7Verkaufspreis: §b11,8§r§7$
+  [21] minecraft:iron_ingot | §bEisenbarren§r§7
+        §7Kaufpreis: §b38§r§7$
+        §7Verkaufspreis: §b18§r§7$
+  [22] minecraft:iron_block | §bEisenblock§r§7
+        §7Kaufpreis: §b294,7§r§7$
+        §7Verkaufspreis: §b157,4§r§7$
+  [23] minecraft:raw_gold | §bRohgold§r§7
+        §7Kaufpreis: §b23,3§r§7$
+        §7Verkaufspreis: §b10,8§r§7$
+  [24] minecraft:gold_ingot | §bGoldbarren§r§7
+        §7Kaufpreis: §b19§r§7$
+        §7Verkaufspreis: §b11,9§r§7$
+  [25] minecraft:gold_block | §bGoldblock§r§7
+        §7Kaufpreis: §b199§r§7$
+        §7Verkaufspreis: §b129,3§r§7$
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:golden_hoe | §c§lNahrung
+  [28] minecraft:black_stained_glass_pane | 
+  [29] minecraft:charcoal | §bHolzkohle§r§7
+        §7Kaufpreis: §b15§r§7$
+        §7Verkaufspreis: §b2,8§r§7$
+  [30] minecraft:coal | §bKohle§r§7
+        §7Kaufpreis: §b24,3§r§7$
+        §7Verkaufspreis: §b6,5§r§7$
+  [31] minecraft:coal_block | §bKohleblock§r§7
+        §7Kaufpreis: §b211,3§r§7$
+        §7Verkaufspreis: §b101,6§r§7$
+  [32] minecraft:raw_copper | §bRohkupfer§r§7
+        §7Kaufpreis: §b2,7§r§7$
+        §7Verkaufspreis: §b0,8§r§7$
+  [33] minecraft:copper_ingot | §bKupferbarren§r§7
+        §7Kaufpreis: §b7,1§r§7$
+        §7Verkaufspreis: §b1§r§7$
+  [34] minecraft:copper_block | §bKupferblock§r§7
+        §7Kaufpreis: §b51,7§r§7$
+        §7Verkaufspreis: §b8,2§r§7$
+  [35] minecraft:black_stained_glass_pane | 
+  [36] minecraft:grass_block | §c§lSonstiges
+  [37] minecraft:black_stained_glass_pane | 
+  [38] minecraft:amethyst_shard | §bAmethystscherbe§r§7
+        §7Kaufpreis: §b3,4§r§7$
+        §7Verkaufspreis: §b0,9§r§7$
+  [39] minecraft:amethyst_cluster | §bAmethysthaufen§r§7
+        §7Kaufpreis: §b44,6§r§7$
+        §7Verkaufspreis: §b5,2§r§7$
+  [40] minecraft:small_amethyst_bud | §bKleine Amethystknospe§r§7
+        §7Kaufpreis: §b44,6§r§7$
+        §7Verkaufspreis: §b11,6§r§7$
+  [41] minecraft:medium_amethyst_bud | §bMittlere Amethystknospe§r§7
+        §7Kaufpreis: §b94,7§r§7$
+        §7Verkaufspreis: §b26,6§r§7$
+  [42] minecraft:large_amethyst_bud | §bGroße Amethystknospe§r§7
+        §7Kaufpreis: §b84,8§r§7$
+        §7Verkaufspreis: §b5,2§r§7$
+  [43] minecraft:quartz | §bNetherquarz§r§7
+        §7Kaufpreis: §b32,9§r§7$
+        §7Verkaufspreis: §b23,3§r§7$
+  [44] minecraft:black_stained_glass_pane | 
+  [45] minecraft:beacon | §c§lBesonderes
+  [46] minecraft:black_stained_glass_pane | 
+  [47] minecraft:black_stained_glass_pane | 
+  [48] minecraft:black_stained_glass_pane | 
+  [49] minecraft:book | §c§lDeine Aufträge
+  [50] minecraft:oak_sign | §c§lSuche
+  [51] minecraft:black_stained_glass_pane | 
+  [52] minecraft:paper | Weiter | CMD [701.0][]
+  [53] minecraft:gold_block | §c§lExperten Modus
+        Einfacher Modus
+        Im einfachen Modus kannst du
+        bei bestehende Angebote von
+        anderen Spielern kaufen und verkaufen.
+        Experten Modus
+        Der Experten Modus bietet dir
+        neben den Funktionen des einfachen
+        Modus auch die Möglichkeit, eigene
+        Angebote zu erstellen.
+
+15:14:29 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x6 | 54 Slots ===
+  [0] minecraft:diamond_pickaxe | §c§lBergbau
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:bell | §c§lSofort verkaufen
+  [9] minecraft:netherite_axe | §c§lHolz
+  [10] minecraft:black_stained_glass_pane | 
+  [11] minecraft:netherite_ingot | §bNetheritbarren§r§7
+        §7Kaufpreis: §b9.599,7§r§7$
+        §7Verkaufspreis: §b9.010,2§r§7$
+  [12] minecraft:netherite_block | §bNetheritblock§r§7
+        §7Kaufpreis: §b94.882,5§r§7$
+        §7Verkaufspreis: §b78.936,5§r§7$
+  [13] minecraft:diamond | §bDiamant§r§7
+        §7Kaufpreis: §b76,8§r§7$
+        §7Verkaufspreis: §b55,7§r§7$
+  [14] minecraft:diamond_block | §bDiamantblock§r§7
+        §7Kaufpreis: §b663,5§r§7$
+        §7Verkaufspreis: §b600,1§r§7$
+  [15] minecraft:emerald | §bSmaragd§r§7
+        §7Kaufpreis: §b90,1§r§7$
+        §7Verkaufspreis: §b45,8§r§7$
+  [16] minecraft:emerald_block | §bSmaragdblock§r§7
+        §7Kaufpreis: §b538,2§r§7$
+        §7Verkaufspreis: §b420,3§r§7$
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:iron_sword | §c§lKampf
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:raw_iron | §bRoheisen§r§7
+        §7Kaufpreis: §b36,4§r§7$
+        §7Verkaufspreis: §b11,8§r§7$
+  [21] minecraft:iron_ingot | §bEisenbarren§r§7
+        §7Kaufpreis: §b38§r§7$
+        §7Verkaufspreis: §b18§r§7$
+  [22] minecraft:iron_block | §bEisenblock§r§7
+        §7Kaufpreis: §b294,7§r§7$
+        §7Verkaufspreis: §b157,4§r§7$
+  [23] minecraft:raw_gold | §bRohgold§r§7
+        §7Kaufpreis: §b23,3§r§7$
+        §7Verkaufspreis: §b10,8§r§7$
+  [24] minecraft:gold_ingot | §bGoldbarren§r§7
+        §7Kaufpreis: §b19§r§7$
+        §7Verkaufspreis: §b11,9§r§7$
+  [25] minecraft:gold_block | §bGoldblock§r§7
+        §7Kaufpreis: §b199§r§7$
+        §7Verkaufspreis: §b129,3§r§7$
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:golden_hoe | §c§lNahrung
+  [28] minecraft:black_stained_glass_pane | 
+  [29] minecraft:charcoal | §bHolzkohle§r§7
+        §7Kaufpreis: §b15§r§7$
+        §7Verkaufspreis: §b2,8§r§7$
+  [30] minecraft:coal | §bKohle§r§7
+        §7Kaufpreis: §b24,3§r§7$
+        §7Verkaufspreis: §b6,5§r§7$
+  [31] minecraft:coal_block | §bKohleblock§r§7
+        §7Kaufpreis: §b211,3§r§7$
+        §7Verkaufspreis: §b101,6§r§7$
+  [32] minecraft:raw_copper | §bRohkupfer§r§7
+        §7Kaufpreis: §b2,7§r§7$
+        §7Verkaufspreis: §b0,8§r§7$
+  [33] minecraft:copper_ingot | §bKupferbarren§r§7
+        §7Kaufpreis: §b7,1§r§7$
+        §7Verkaufspreis: §b1§r§7$
+  [34] minecraft:copper_block | §bKupferblock§r§7
+        §7Kaufpreis: §b51,7§r§7$
+        §7Verkaufspreis: §b8,2§r§7$
+  [35] minecraft:black_stained_glass_pane | 
+  [36] minecraft:grass_block | §c§lSonstiges
+  [37] minecraft:black_stained_glass_pane | 
+  [38] minecraft:amethyst_shard | §bAmethystscherbe§r§7
+        §7Kaufpreis: §b3,4§r§7$
+        §7Verkaufspreis: §b0,9§r§7$
+  [39] minecraft:amethyst_cluster | §bAmethysthaufen§r§7
+        §7Kaufpreis: §b44,6§r§7$
+        §7Verkaufspreis: §b5,2§r§7$
+  [40] minecraft:small_amethyst_bud | §bKleine Amethystknospe§r§7
+        §7Kaufpreis: §b44,6§r§7$
+        §7Verkaufspreis: §b11,6§r§7$
+  [41] minecraft:medium_amethyst_bud | §bMittlere Amethystknospe§r§7
+        §7Kaufpreis: §b94,7§r§7$
+        §7Verkaufspreis: §b26,6§r§7$
+  [42] minecraft:large_amethyst_bud | §bGroße Amethystknospe§r§7
+        §7Kaufpreis: §b84,8§r§7$
+        §7Verkaufspreis: §b5,2§r§7$
+  [43] minecraft:quartz | §bNetherquarz§r§7
+        §7Kaufpreis: §b32,9§r§7$
+        §7Verkaufspreis: §b23,3§r§7$
+  [44] minecraft:black_stained_glass_pane | 
+  [45] minecraft:beacon | §c§lBesonderes
+  [46] minecraft:black_stained_glass_pane | 
+  [47] minecraft:black_stained_glass_pane | 
+  [48] minecraft:black_stained_glass_pane | 
+  [49] minecraft:book | §c§lDeine Aufträge
+  [50] minecraft:oak_sign | §c§lSuche
+  [51] minecraft:black_stained_glass_pane | 
+  [52] minecraft:paper | Weiter | CMD [701.0][]
+  [53] minecraft:gold_nugget | §c§lEinfacher Modus
+        Einfacher Modus
+        Im einfachen Modus kannst du
+        bei bestehende Angebote von
+        anderen Spielern kaufen und verkaufen.
+        Experten Modus
+        Der Experten Modus bietet dir
+        neben den Funktionen des einfachen
+        Modus auch die Möglichkeit, eigene
+        Angebote zu erstellen.
+
+15:14:30 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x6 | 54 Slots ===
+  [0] minecraft:diamond_pickaxe | §c§lBergbau
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:bell | §c§lSofort verkaufen
+  [9] minecraft:netherite_axe | §c§lHolz
+  [10] minecraft:black_stained_glass_pane | 
+  [11] minecraft:netherite_ingot | §bNetheritbarren§r§7
+        §7Kaufpreis: §b9.599,7§r§7$
+        §7Verkaufspreis: §b9.010,2§r§7$
+  [12] minecraft:netherite_block | §bNetheritblock§r§7
+        §7Kaufpreis: §b94.882,5§r§7$
+        §7Verkaufspreis: §b78.936,5§r§7$
+  [13] minecraft:diamond | §bDiamant§r§7
+        §7Kaufpreis: §b76,8§r§7$
+        §7Verkaufspreis: §b55,7§r§7$
+  [14] minecraft:diamond_block | §bDiamantblock§r§7
+        §7Kaufpreis: §b663,5§r§7$
+        §7Verkaufspreis: §b600,1§r§7$
+  [15] minecraft:emerald | §bSmaragd§r§7
+        §7Kaufpreis: §b90,1§r§7$
+        §7Verkaufspreis: §b45,8§r§7$
+  [16] minecraft:emerald_block | §bSmaragdblock§r§7
+        §7Kaufpreis: §b538,2§r§7$
+        §7Verkaufspreis: §b420,3§r§7$
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:iron_sword | §c§lKampf
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:raw_iron | §bRoheisen§r§7
+        §7Kaufpreis: §b36,4§r§7$
+        §7Verkaufspreis: §b11,8§r§7$
+  [21] minecraft:iron_ingot | §bEisenbarren§r§7
+        §7Kaufpreis: §b38§r§7$
+        §7Verkaufspreis: §b18§r§7$
+  [22] minecraft:iron_block | §bEisenblock§r§7
+        §7Kaufpreis: §b294,7§r§7$
+        §7Verkaufspreis: §b157,4§r§7$
+  [23] minecraft:raw_gold | §bRohgold§r§7
+        §7Kaufpreis: §b23,3§r§7$
+        §7Verkaufspreis: §b10,8§r§7$
+  [24] minecraft:gold_ingot | §bGoldbarren§r§7
+        §7Kaufpreis: §b19§r§7$
+        §7Verkaufspreis: §b11,9§r§7$
+  [25] minecraft:gold_block | §bGoldblock§r§7
+        §7Kaufpreis: §b199§r§7$
+        §7Verkaufspreis: §b129,3§r§7$
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:golden_hoe | §c§lNahrung
+  [28] minecraft:black_stained_glass_pane | 
+  [29] minecraft:charcoal | §bHolzkohle§r§7
+        §7Kaufpreis: §b15§r§7$
+        §7Verkaufspreis: §b2,8§r§7$
+  [30] minecraft:coal | §bKohle§r§7
+        §7Kaufpreis: §b24,3§r§7$
+        §7Verkaufspreis: §b6,5§r§7$
+  [31] minecraft:coal_block | §bKohleblock§r§7
+        §7Kaufpreis: §b211,3§r§7$
+        §7Verkaufspreis: §b101,6§r§7$
+  [32] minecraft:raw_copper | §bRohkupfer§r§7
+        §7Kaufpreis: §b2,7§r§7$
+        §7Verkaufspreis: §b0,8§r§7$
+  [33] minecraft:copper_ingot | §bKupferbarren§r§7
+        §7Kaufpreis: §b7,1§r§7$
+        §7Verkaufspreis: §b1§r§7$
+  [34] minecraft:copper_block | §bKupferblock§r§7
+        §7Kaufpreis: §b51,7§r§7$
+        §7Verkaufspreis: §b8,2§r§7$
+  [35] minecraft:black_stained_glass_pane | 
+  [36] minecraft:grass_block | §c§lSonstiges
+  [37] minecraft:black_stained_glass_pane | 
+  [38] minecraft:amethyst_shard | §bAmethystscherbe§r§7
+        §7Kaufpreis: §b3,4§r§7$
+        §7Verkaufspreis: §b0,9§r§7$
+  [39] minecraft:amethyst_cluster | §bAmethysthaufen§r§7
+        §7Kaufpreis: §b44,6§r§7$
+        §7Verkaufspreis: §b5,2§r§7$
+  [40] minecraft:small_amethyst_bud | §bKleine Amethystknospe§r§7
+        §7Kaufpreis: §b44,6§r§7$
+        §7Verkaufspreis: §b11,6§r§7$
+  [41] minecraft:medium_amethyst_bud | §bMittlere Amethystknospe§r§7
+        §7Kaufpreis: §b94,7§r§7$
+        §7Verkaufspreis: §b26,6§r§7$
+  [42] minecraft:large_amethyst_bud | §bGroße Amethystknospe§r§7
+        §7Kaufpreis: §b84,8§r§7$
+        §7Verkaufspreis: §b5,2§r§7$
+  [43] minecraft:quartz | §bNetherquarz§r§7
+        §7Kaufpreis: §b32,9§r§7$
+        §7Verkaufspreis: §b23,3§r§7$
+  [44] minecraft:black_stained_glass_pane | 
+  [45] minecraft:beacon | §c§lBesonderes
+  [46] minecraft:black_stained_glass_pane | 
+  [47] minecraft:black_stained_glass_pane | 
+  [48] minecraft:black_stained_glass_pane | 
+  [49] minecraft:book | §c§lDeine Aufträge
+  [50] minecraft:oak_sign | §c§lSuche
+  [51] minecraft:black_stained_glass_pane | 
+  [52] minecraft:paper | Weiter | CMD [701.0][]
+  [53] minecraft:gold_block | §c§lExperten Modus
+        Einfacher Modus
+        Im einfachen Modus kannst du
+        bei bestehende Angebote von
+        anderen Spielern kaufen und verkaufen.
+        Experten Modus
+        Der Experten Modus bietet dir
+        neben den Funktionen des einfachen
+        Modus auch die Möglichkeit, eigene
+        Angebote zu erstellen.
+
+15:14:33 === MENÜ "§c§lOPSUCHT§r §8»§r §7§8Suche" | Typ minecraft:anvil | 3 Slots ===
+  [0] minecraft:oak_sign | Suche...
+  [2] minecraft:oak_sign | Eichenholzschild
+
+
+15:14:36 === MENÜ "§c§lOPSUCHT§r §8»§r §7§8Suche" | Typ minecraft:anvil | 3 Slots ===
+  [0] minecraft:oak_sign | Suche...
+  [2] minecraft:oak_sign | H
+
+
+15:14:37 === MENÜ "§c§lOPSUCHT§r §8»§r §7§8Suche" | Typ minecraft:anvil | 3 Slots ===
+  [0] minecraft:oak_sign | Suche...
+  [2] minecraft:oak_sign | Holz
+
+15:14:37 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x6 | 54 Slots ===
+  [0] minecraft:diamond_pickaxe | §c§lBergbau
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:bell | §c§lSofort verkaufen
+  [9] minecraft:netherite_axe | §c§lHolz
+  [10] minecraft:black_stained_glass_pane | 
+  [11] minecraft:charcoal | §bHolzkohle§r§7
+        §7Kaufpreis: §b15§r§7$
+        §7Verkaufspreis: §b2,8§r§7$
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:iron_sword | §c§lKampf
+  [19] minecraft:black_stained_glass_pane | 
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:golden_hoe | §c§lNahrung
+  [28] minecraft:black_stained_glass_pane | 
+  [35] minecraft:black_stained_glass_pane | 
+  [36] minecraft:grass_block | §c§lSonstiges
+  [37] minecraft:black_stained_glass_pane | 
+  [44] minecraft:black_stained_glass_pane | 
+  [45] minecraft:beacon | §c§lBesonderes
+  [46] minecraft:black_stained_glass_pane | 
+  [47] minecraft:black_stained_glass_pane | 
+  [48] minecraft:black_stained_glass_pane | 
+  [49] minecraft:book | §c§lDeine Aufträge
+  [50] minecraft:oak_sign | §c§lSuche
+  [51] minecraft:black_stained_glass_pane | 
+  [52] minecraft:black_stained_glass_pane | 
+  [53] minecraft:gold_block | §c§lExperten Modus
+        Einfacher Modus
+        Im einfachen Modus kannst du
+        bei bestehende Angebote von
+        anderen Spielern kaufen und verkaufen.
+        Experten Modus
+        Der Experten Modus bietet dir
+        neben den Funktionen des einfachen
+        Modus auch die Möglichkeit, eigene
+        Angebote zu erstellen.
+
+15:14:38 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x4 | 36 Slots ===
+  [0] minecraft:black_stained_glass_pane | 
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:black_stained_glass_pane | 
+  [9] minecraft:black_stained_glass_pane | 
+  [10] minecraft:golden_horse_armor | §c§lSofort kaufen
+        §7Kaufpreis: §b15,0§r§7$ pro Item
+        §7<Linksklick> §b1 kaufen
+        §7<Rechtsklick> §bAnzahl auswählen
+  [11] minecraft:hopper | §c§lSofort verkaufen
+        §7Verkaufspreis: §b2,8§r§7$ pro Item
+        §cKeine Items im Inventar.
+  [12] minecraft:black_stained_glass_pane | 
+  [13] minecraft:charcoal | Holzkohle
+  [14] minecraft:black_stained_glass_pane | 
+  [15] minecraft:filled_map | §c§lKaufauftrag erstellen
+        §7Top 10 Aufträge:
+        §7 • §b2,8§r§7$ pro Item §8- §7§b6.136§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b2,7§r§7$ pro Item §8- §7§b16§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b2,6§r§7$ pro Item §8- §7§b1.319§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b2,4§r§7$ pro Item §8- §7§b433§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b2,3§r§7$ pro Item §8- §7§b11.365§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b2,1§r§7$ pro Item §8- §7§b494§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b2,0§r§7$ pro Item §8- §7§b1.045§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b1,5§r§7$ pro Item §8- §7§b948§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b1,4§r§7$ pro Item §8- §7§b79.634§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b1,3§r§7$ pro Item §8- §7§b201.523§r§7x (§b4§r§7 §bAufträge§r§7)
+  [16] minecraft:map | §c§lVerkaufsangebot erstellen
+        §7Top 10 Angebote:
+        §7 • §b15,0§r§7$ pro Item §8- §7§b5.865§r§7x (§b3§r§7 §bAngebote§r§7)
+        §7 • §b18,7§r§7$ pro Item §8- §7§b4.629§r§7x (§b3§r§7 §bAngebote§r§7)
+        §7 • §b18,8§r§7$ pro Item §8- §7§b428§r§7x (§b1§r§7 §bAngebot§r§7)
+        §7 • §b19,0§r§7$ pro Item §8- §7§b228§r§7x (§b1§r§7 §bAngebot§r§7)
+        §7 • §b23,0§r§7$ pro Item §8- §7§b1.966§r§7x (§b2§r§7 §bAngebote§r§7)
+        §7 • §b24,0§r§7$ pro Item §8- §7§b4.792§r§7x (§b3§r§7 §bAngebote§r§7)
+        §7 • §b24,5§r§7$ pro Item §8- §7§b1.439§r§7x (§b1§r§7 §bAngebot§r§7)
+        §7 • §b25,0§r§7$ pro Item §8- §7§b1.582§r§7x (§b1§r§7 §bAngebot§r§7)
+        §7 • §b27,0§r§7$ pro Item §8- §7§b960§r§7x (§b1§r§7 §bAngebot§r§7)
+        §7 • §b27,5§r§7$ pro Item §8- §7§b1.326§r§7x (§b1§r§7 §bAngebot§r§7)
+        §cKeine Items im Inventar.
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:black_stained_glass_pane | 
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:black_stained_glass_pane | 
+  [21] minecraft:black_stained_glass_pane | 
+  [22] minecraft:black_stained_glass_pane | 
+  [23] minecraft:black_stained_glass_pane | 
+  [24] minecraft:black_stained_glass_pane | 
+  [25] minecraft:black_stained_glass_pane | 
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:paper | Zurück | CMD [4501.0][]
+  [28] minecraft:black_stained_glass_pane | 
+  [29] minecraft:black_stained_glass_pane | 
+  [30] minecraft:black_stained_glass_pane | 
+  [31] minecraft:book | §c§lDeine Aufträge
+  [32] minecraft:black_stained_glass_pane | 
+  [33] minecraft:black_stained_glass_pane | 
+  [34] minecraft:black_stained_glass_pane | 
+  [35] minecraft:black_stained_glass_pane | 
+
+15:14:44 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x6 | 54 Slots ===
+  [0] minecraft:black_stained_glass_pane | 
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:black_stained_glass_pane | 
+  [9] minecraft:black_stained_glass_pane | 
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:black_stained_glass_pane | 
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:black_stained_glass_pane | 
+  [35] minecraft:black_stained_glass_pane | 
+  [36] minecraft:black_stained_glass_pane | 
+  [44] minecraft:black_stained_glass_pane | 
+  [45] minecraft:paper | Zurück | CMD [4501.0][]
+  [46] minecraft:black_stained_glass_pane | 
+  [47] minecraft:black_stained_glass_pane | 
+  [48] minecraft:black_stained_glass_pane | 
+  [49] minecraft:black_stained_glass_pane | 
+  [50] minecraft:black_stained_glass_pane | 
+  [51] minecraft:black_stained_glass_pane | 
+  [52] minecraft:black_stained_glass_pane | 
+  [53] minecraft:hopper | §c§lFilter
+        §7» §bAlles§r§7
+        §7• §bEinsammelbar§r§7
+        §7• §bAktiv§r§7
+
+15:14:45 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x4 | 36 Slots ===
+  [0] minecraft:black_stained_glass_pane | 
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:black_stained_glass_pane | 
+  [9] minecraft:black_stained_glass_pane | 
+  [10] minecraft:golden_horse_armor | §c§lSofort kaufen
+        §7Kaufpreis: §b15,0§r§7$ pro Item
+        §7<Linksklick> §b1 kaufen
+        §7<Rechtsklick> §bAnzahl auswählen
+  [11] minecraft:hopper | §c§lSofort verkaufen
+        §7Verkaufspreis: §b2,8§r§7$ pro Item
+        §cKeine Items im Inventar.
+  [12] minecraft:black_stained_glass_pane | 
+  [13] minecraft:charcoal | Holzkohle
+  [14] minecraft:black_stained_glass_pane | 
+  [15] minecraft:filled_map | §c§lKaufauftrag erstellen
+        §7Top 10 Aufträge:
+        §7 • §b2,8§r§7$ pro Item §8- §7§b6.136§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b2,7§r§7$ pro Item §8- §7§b16§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b2,6§r§7$ pro Item §8- §7§b1.319§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b2,4§r§7$ pro Item §8- §7§b433§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b2,3§r§7$ pro Item §8- §7§b11.365§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b2,1§r§7$ pro Item §8- §7§b494§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b2,0§r§7$ pro Item §8- §7§b1.045§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b1,5§r§7$ pro Item §8- §7§b948§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b1,4§r§7$ pro Item §8- §7§b79.634§r§7x (§b1§r§7 §bAuftrag§r§7)
+        §7 • §b1,3§r§7$ pro Item §8- §7§b201.523§r§7x (§b4§r§7 §bAufträge§r§7)
+  [16] minecraft:map | §c§lVerkaufsangebot erstellen
+        §7Top 10 Angebote:
+        §7 • §b15,0§r§7$ pro Item §8- §7§b5.865§r§7x (§b3§r§7 §bAngebote§r§7)
+        §7 • §b18,7§r§7$ pro Item §8- §7§b4.629§r§7x (§b3§r§7 §bAngebote§r§7)
+        §7 • §b18,8§r§7$ pro Item §8- §7§b428§r§7x (§b1§r§7 §bAngebot§r§7)
+        §7 • §b19,0§r§7$ pro Item §8- §7§b228§r§7x (§b1§r§7 §bAngebot§r§7)
+        §7 • §b23,0§r§7$ pro Item §8- §7§b1.966§r§7x (§b2§r§7 §bAngebote§r§7)
+        §7 • §b24,0§r§7$ pro Item §8- §7§b4.792§r§7x (§b3§r§7 §bAngebote§r§7)
+        §7 • §b24,5§r§7$ pro Item §8- §7§b1.439§r§7x (§b1§r§7 §bAngebot§r§7)
+        §7 • §b25,0§r§7$ pro Item §8- §7§b1.582§r§7x (§b1§r§7 §bAngebot§r§7)
+        §7 • §b27,0§r§7$ pro Item §8- §7§b960§r§7x (§b1§r§7 §bAngebot§r§7)
+        §7 • §b27,5§r§7$ pro Item §8- §7§b1.326§r§7x (§b1§r§7 §bAngebot§r§7)
+        §cKeine Items im Inventar.
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:black_stained_glass_pane | 
+  [19] minecraft:black_stained_glass_pane | 
+  [20] minecraft:black_stained_glass_pane | 
+  [21] minecraft:black_stained_glass_pane | 
+  [22] minecraft:black_stained_glass_pane | 
+  [23] minecraft:black_stained_glass_pane | 
+  [24] minecraft:black_stained_glass_pane | 
+  [25] minecraft:black_stained_glass_pane | 
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:paper | Zurück | CMD [4501.0][]
+  [28] minecraft:black_stained_glass_pane | 
+  [29] minecraft:black_stained_glass_pane | 
+  [30] minecraft:black_stained_glass_pane | 
+  [31] minecraft:book | §c§lDeine Aufträge
+  [32] minecraft:black_stained_glass_pane | 
+  [33] minecraft:black_stained_glass_pane | 
+  [34] minecraft:black_stained_glass_pane | 
+  [35] minecraft:black_stained_glass_pane | 
+
+15:14:46 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x6 | 54 Slots ===
+  [0] minecraft:diamond_pickaxe | §c§lBergbau
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:bell | §c§lSofort verkaufen
+  [9] minecraft:netherite_axe | §c§lHolz
+  [10] minecraft:black_stained_glass_pane | 
+  [11] minecraft:charcoal | §bHolzkohle§r§7
+        §7Kaufpreis: §b15§r§7$
+        §7Verkaufspreis: §b2,8§r§7$
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:iron_sword | §c§lKampf
+  [19] minecraft:black_stained_glass_pane | 
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:golden_hoe | §c§lNahrung
+  [28] minecraft:black_stained_glass_pane | 
+  [35] minecraft:black_stained_glass_pane | 
+  [36] minecraft:grass_block | §c§lSonstiges
+  [37] minecraft:black_stained_glass_pane | 
+  [44] minecraft:black_stained_glass_pane | 
+  [45] minecraft:beacon | §c§lBesonderes
+  [46] minecraft:black_stained_glass_pane | 
+  [47] minecraft:black_stained_glass_pane | 
+  [48] minecraft:black_stained_glass_pane | 
+  [49] minecraft:book | §c§lDeine Aufträge
+  [50] minecraft:oak_sign | §c§lSuche
+  [51] minecraft:black_stained_glass_pane | 
+  [52] minecraft:black_stained_glass_pane | 
+  [53] minecraft:gold_block | §c§lExperten Modus
+        Einfacher Modus
+        Im einfachen Modus kannst du
+        bei bestehende Angebote von
+        anderen Spielern kaufen und verkaufen.
+        Experten Modus
+        Der Experten Modus bietet dir
+        neben den Funktionen des einfachen
+        Modus auch die Möglichkeit, eigene
+        Angebote zu erstellen.
+
+99:99:99 === MENÜ "OPSUCHT » Marktplatz" | Typ minecraft:generic_9x6 | 54 Slots ===
+  [0] minecraft:black_stained_glass_pane | 
+  [1] minecraft:black_stained_glass_pane | 
+  [2] minecraft:black_stained_glass_pane | 
+  [3] minecraft:black_stained_glass_pane | 
+  [4] minecraft:black_stained_glass_pane | 
+  [5] minecraft:black_stained_glass_pane | 
+  [6] minecraft:black_stained_glass_pane | 
+  [7] minecraft:black_stained_glass_pane | 
+  [8] minecraft:black_stained_glass_pane | 
+  [9] minecraft:black_stained_glass_pane | 
+  [17] minecraft:black_stained_glass_pane | 
+  [18] minecraft:black_stained_glass_pane | 
+  [26] minecraft:black_stained_glass_pane | 
+  [27] minecraft:black_stained_glass_pane | 
+  [28] minecraft:sand | §c§bSand§r§7
+        §8Kaufauftrag
+        §7Anzahl: §b1§r§7
+        §7Erfüllt: §b0§r§7/§b1§r§7 (§b0,0§r§7%)
+        §7Preis pro Item: §b2,5§r§7$
+        §7Gesamtwert: §b2,5§r§7$
+        §7Status: §bErfüllt
+  [29] minecraft:sand | §c§bSand§r§7
+        §8Kaufauftrag
+        §7Anzahl: §b1.216§r§7
+        §7Erfüllt: §b0§r§7/§b1.216§r§7 (§b0,0§r§7%)
+        §7Preis pro Item: §b2,5§r§7$
+        §7Gesamtwert: §b3.040§r§7$
+        §7Status: §bErfüllt
+  [30] minecraft:sand | §c§bSand§r§7
+        §8Kaufauftrag
+        §7Anzahl: §b1§r§7
+        §7Erfüllt: §b0§r§7/§b1§r§7 (§b0,0§r§7%)
+        §7Preis pro Item: §b2,6§r§7$
+        §7Gesamtwert: §b2,6§r§7$
+        §7Status: §bErfüllt
+  [35] minecraft:black_stained_glass_pane | 
+  [36] minecraft:black_stained_glass_pane | 
+  [44] minecraft:black_stained_glass_pane | 
+  [45] minecraft:paper | Zurück | CMD [4501.0][]
+  [46] minecraft:black_stained_glass_pane | 
+  [47] minecraft:black_stained_glass_pane | 
+  [48] minecraft:black_stained_glass_pane | 
+  [49] minecraft:black_stained_glass_pane | 
+  [50] minecraft:black_stained_glass_pane | 
+  [51] minecraft:black_stained_glass_pane | 
+  [52] minecraft:black_stained_glass_pane | 
+  [53] minecraft:hopper | §c§lFilter
+        §7• §bAlles§r§7
+        §7» §bEinsammelbar§r§7
+        §7• §bAktiv§r§7
+

@@ -1,0 +1,19 @@
+{
+	"schemaVersion": 1,
+	"id": "opsuchtprices-gametest",
+	"version": "1.0.0",
+	"name": "OP SUCHT Price Checker Tests",
+	"environment": "client",
+	"entrypoints": {
+		"fabric-client-gametest": [
+			"dev.opsuchtprices.gametest.MarketOverlayGameTest"
+		]
+	},
+	"depends": {
+		"opsuchtprices": "*",
+		"fabric-client-gametest-api-v1": "*"
+	},
+	"mixins": [
+		"opsuchtprices-gametest.mixins.json"
+	]
+}

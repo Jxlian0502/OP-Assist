@@ -1,0 +1,90 @@
+plugins {
+	id 'net.fabricmc.fabric-loom-remap' version "${loom_version}"
+}
+
+version = project.mod_version
+group = project.maven_group
+
+base {
+	archivesName = project.archives_base_name
+}
+
+repositories {
+	mavenCentral()
+	maven { url = "https://maven.terraformersmc.com/releases/" }
+}
+
+dependencies {
+	minecraft "com.mojang:minecraft:${project.minecraft_version}"
+	mappings loom.officialMojangMappings()
+	modImplementation "net.fabricmc:fabric-loader:${project.loader_version}"
+	modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+	// Mod Menu nur zum Kompilieren (optional zur Laufzeit): Einstellungen-Knopf im Mod-Menü
+	modCompileOnly("com.terraformersmc:modmenu:17.0.1") { transitive = false }
+
+	testImplementation platform("org.junit:junit-bom:5.11.4")
+	testImplementation "org.junit.jupiter:junit-jupiter"
+	testRuntimeOnly "org.junit.platform:junit-platform-launcher"
+}
+
+processResources {
+	inputs.property "version", project.version
+	filesMatching("fabric.mod.json") {
+		expand "version": inputs.properties.version
+	}
+}
+
+tasks.withType(JavaCompile).configureEach {
+	it.options.release = 21
+	it.options.encoding = "UTF-8"
+}
+
+java {
+	sourceCompatibility = JavaVersion.VERSION_21
+	targetCompatibility = JavaVersion.VERSION_21
+}
+
+test {
+	useJUnitPlatform()
+	testLogging {
+		events "passed", "skipped", "failed"
+		exceptionFormat "full"
+	}
+}
+
+fabricApi {
+	configureTests {
+		createSourceSet = true
+		modId = "opsuchtprices-gametest"
+		enableGameTests = false
+		enableClientGameTests = true
+		eula = true
+	}
+}
+
+loom {
+	mixin {
+		useLegacyMixinAp = true
+		defaultRefmapName = "opsuchtprices.refmap.json"
+	}
+	runs {
+		client {
+			// Nur Entwicklung: öffnet die Verkaufsübersicht direkt im Hauptmenü
+			vmArg "-Dopsuchtprices.debugScreen=" + (project.findProperty("debugScreen") ?: "false")
+			vmArg "-Dopsuchtprices.debugScreenType=" + (project.findProperty("debugScreenType") ?: "")
+		}
+	}
+}
+
+// Startet die fertige .jar wie im echten Spiel (Fabric Loader + Fabric API), nur zum Testen
+configurations {
+	productionRuntimeMods
+}
+dependencies {
+	productionRuntimeMods "net.fabricmc.fabric-api:fabric-api:${project.fabric_api_version}"
+}
+tasks.register("prodClient", net.fabricmc.loom.task.prod.ClientProductionRunTask) {
+	mods.from(configurations.productionRuntimeMods)
+	jvmArgs.add("-Dopsuchtprices.debugScreen=true")
+	jvmArgs.add("-Dopsuchtprices.debugScreenType=" + (project.findProperty("debugScreenType") ?: ""))
+}

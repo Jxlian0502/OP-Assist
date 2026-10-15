@@ -1,0 +1,30 @@
+{
+	"schemaVersion": 1,
+	"id": "opsuchtprices",
+	"version": "${version}",
+	"name": "OP-Assistent (by Jxlian0502)",
+	"description": "OP-Assistent für OP SUCHT – erstellt von Jxlian0502. AH-Preise im Tooltip, Markt-Overlay, Jobtracker mit Jobschatz und Shard-Wert, Chatscanner. Befehl: /opa",
+	"authors": [
+		"Jxlian0502"
+	],
+	"license": "MIT",
+	"icon": "assets/opsuchtprices/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"client": [
+			"dev.opsuchtprices.client.OpSuchtPricesClient"
+		],
+		"modmenu": [
+			"dev.opsuchtprices.client.ModMenuIntegration"
+		]
+	},
+	"depends": {
+		"fabricloader": ">=0.19.5",
+		"minecraft": "~1.21.11",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+	"mixins": [
+		"opsuchtprices.mixins.json"
+	]
+}
