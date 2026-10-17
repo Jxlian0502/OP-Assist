@@ -151,6 +151,10 @@ public final class OpSuchtPricesClient implements ClientModInitializer {
             }
             return true;
         });
+        // "Du hast dein Job-Geld-Limit erreicht, weiter geht es in 22 Minuten!" -> eigene Info, und noch eine, wenn es vorbei ist
+        net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.GAME.register((message, overlay) -> {
+            if (!overlay && config.jobMoneyLimitInfo) onMoneyLimitChat(message.getString(), System.currentTimeMillis());
+        });
         jobs.setXpListener(xp -> {
             if (config.jobXpCounterStep <= 0) return;
             int done = xpCounter.add(xp);
@@ -190,6 +194,10 @@ public final class OpSuchtPricesClient implements ClientModInitializer {
             }
             if (client.level != null && client.level.getGameTime() % 200 == 0) xpCounter.saveIfDirty();
             GuiRecorder.tick(client);
+            if (MONEY_LIMIT.pollReset(System.currentTimeMillis()) && config.jobMoneyLimitInfo && client.player != null) {
+                client.player.displayClientMessage(Component.literal("✔ Job-Geld-Limit vorbei – du verdienst wieder Geld.")
+                        .withStyle(ChatFormatting.AQUA), false);
+            }
             MarketOverlay.tick(client);
             StatsTracker.tick(client);
             ShardValue.tick(client, config.jobTracker && client.player != null);
@@ -372,6 +380,28 @@ public final class OpSuchtPricesClient implements ClientModInitializer {
     private static final long STARTED_AT = System.currentTimeMillis();
     private static final long AUTO_QUIT_MS = Long.getLong("opsuchtprices.autoQuitSeconds", 0L) * 1000L;
     private static ModConfig configRef;
+    /** Job-Geld-Limit (1,5 Mio. $ pro Stunde): einmal Bescheid geben und wieder, wenn es vorbei ist. */
+    public static final dev.opsuchtprices.job.MoneyLimit MONEY_LIMIT = new dev.opsuchtprices.job.MoneyLimit();
+
+    /**
+     * Verarbeitet eine Chat-Meldung des Servers. Ist es die Job-Geld-Limit-Meldung (zum ersten Mal für
+     * dieses Limit), schreibt die Mod eine eigene Info in den Chat und liefert deren Text, sonst null.
+     */
+    public static String onMoneyLimitChat(String text, long now) {
+        if (!dev.opsuchtprices.job.MoneyLimit.isLimitMessage(text) || !MONEY_LIMIT.onLimitMessage(text, now)) return null;
+        long resetAt = MONEY_LIMIT.resetAt();
+        String until = resetAt > 0
+                ? " – wieder Geld ab ca. " + java.time.Instant.ofEpochMilli(resetAt).atZone(java.time.ZoneId.systemDefault())
+                        .toLocalTime().format(java.time.format.DateTimeFormatter.ofPattern("HH:mm")) + " Uhr"
+                        + " (in " + Math.max(1, Math.round((resetAt - now) / 60_000.0)) + " Min.)"
+                : "";
+        String info = "⚠ Job-Geld-Limit erreicht (max. " + dev.opsuchtprices.job.MoneyLimit.LIMIT_TEXT + ")" + until + ".";
+        Minecraft mc = Minecraft.getInstance();
+        mc.execute(() -> {
+            if (mc.player != null) mc.player.displayClientMessage(Component.literal(info).withStyle(ChatFormatting.AQUA), false);
+        });
+        return info;
+    }
     private static dev.opsuchtprices.cache.HttpSalesSource databaseRef;
     private static Path configFile;
     private static dev.opsuchtprices.job.JobTracker jobsRef;

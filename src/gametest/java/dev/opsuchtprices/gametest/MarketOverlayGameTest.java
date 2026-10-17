@@ -295,6 +295,22 @@ public class MarketOverlayGameTest implements FabricClientGameTest {
         if (!offline.startsWith("nicht erreichbar")) throw new AssertionError("Offline-Status falsch: " + offline);
         System.out.println("OVERLAY-TEST ok: AH-Preise vom Preis-Server (" + priceState[1] + " Verkäufe), offline ohne Absturz");
 
+        // Job-Geld-Limit: echter Wortlaut vom Server -> eine Info, Wiederholungen ohne Spam
+        String[] limit = ctx.computeOnClient(mc -> {
+            long now = System.currentTimeMillis();
+            String msg = "§4OPSUCHT §8» §cDu hast dein Job-Geld-Limit erreicht, weiter geht es in 22 Minuten!";
+            String first = dev.opsuchtprices.client.OpSuchtPricesClient.onMoneyLimitChat(msg, now);
+            String again = dev.opsuchtprices.client.OpSuchtPricesClient.onMoneyLimitChat(msg.replace("22", "21"), now + 60_000);
+            String other = dev.opsuchtprices.client.OpSuchtPricesClient.onMoneyLimitChat("Du hast einen Jobschatz erhalten!", now);
+            return new String[]{first, again, other};
+        });
+        System.out.println("OVERLAY-TEST info: Limit-Info -> " + limit[0]);
+        if (limit[0] == null || !limit[0].contains("Job-Geld-Limit erreicht") || !limit[0].contains("1,5 Mio")
+                || !limit[0].contains("Uhr (in 22 Min.)") || limit[1] != null || limit[2] != null) {
+            throw new AssertionError("Job-Geld-Limit-Info falsch: " + java.util.Arrays.toString(limit));
+        }
+        System.out.println("OVERLAY-TEST ok: Job-Geld-Limit-Info einmal, ohne Spam");
+
         ctx.setScreen(() -> new net.minecraft.client.gui.screens.TitleScreen());
         System.out.println("OVERLAY-TEST OK");
     }

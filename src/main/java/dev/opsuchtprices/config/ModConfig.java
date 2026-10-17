@@ -67,6 +67,8 @@ public final class ModConfig {
     public int jobXpCounterStep = 100_000;
     /** Shard-Wert des Inventars im Jobtracker anzeigen (Kurse aus der API). */
     public boolean jobShowShards = true;
+    /** Info im Chat, wenn das Job-Geld-Limit (1,5 Mio. $/h) erreicht ist, und wenn es wieder vorbei ist. */
+    public boolean jobMoneyLimitInfo = true;
     /** Chatscanner: markiert Nachrichten, die derselbe Spieler im Zeitfenster schon einmal geschrieben hat. */
     public boolean chatScanner = true;
     /** Zeitfenster in Minuten. */
