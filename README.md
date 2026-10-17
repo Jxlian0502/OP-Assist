@@ -142,11 +142,10 @@ Weitere Funktionen (ab 1.24.0)
 
 Einstellungen → „Weitere…“ (alles einzeln abschaltbar):
 - **Inventar voll:** Warnung in der Actionbar (alle `invFullWarningSeconds` s, optional mit Ton).
-- **AFK-Warnung:** grosse Einblendung nach `afkWarningMinutes` Minuten ohne Bewegung (optional mit Ton).
+- **AFK-Warnung:** grosse Einblendung, wenn man nach einem Job `afkWarningMinutes` Minuten weder bewegt hat noch Job-Meldungen bekommt (optional mit Ton). Ohne vorherigen Job keine Warnung.
 - **Kurzschreibweise:** `1k`, `2,5m`, `1mrd` werden bei `/pay`, `/bank` und im Amboss (Eingabefelder des Servers) zur vollen Zahl.
 - **Sign-Schutz:** `/sign <Text>` wird erst gesendet, wenn man im Chat auf [ BESTÄTIGEN ] klickt; vorher zeigt die Mod Item und Vorschau mit Farbcodes (&a, &l, &#RRGGBB).
 - **Rename-Schutz:** dasselbe für `/rename <Name>`.
-- **Befehls-Schutz:** Klick auf Chat-Text, der einen Befehl ausführt, muss bestätigt werden.
 - **Verkaufbares grün:** Items mit Kaufaufträgen am Markt bekommen im Verkaufsmenü (`/sell`, Markt „Items verkaufen“) einen grünen Hintergrund (Menütitel-Begriffe: `sellMenuTitles`).
 - **Rucksack-Vorschau:** Inhalt von Talismanrucksack und anderen Behälter-Items im Tooltip.
 - **Schilder-Suche:** `/opa schild <Text>` umrandet passende Schilder 2 Minuten golden und listet die Koordinaten.

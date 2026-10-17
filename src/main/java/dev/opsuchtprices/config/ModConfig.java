@@ -107,7 +107,7 @@ public final class ModConfig {
     public boolean invFullWarning = true;
     public int invFullWarningSeconds = 3;
     public boolean invFullWarningSound = false;
-    /** AFK-Warnung: nach X Minuten ohne Bewegung grosse Einblendung, optional mit Ton. */
+    /** AFK-Warnung: nach einem Job X Minuten ohne Bewegung und ohne Job-Meldung -> grosse Einblendung, optional mit Ton. */
     public boolean afkWarning = true;
     public int afkWarningMinutes = 4;
     public boolean afkWarningSound = false;
@@ -116,7 +116,6 @@ public final class ModConfig {
     /** Schutz: beschriebene Schilder nur schleichend bearbeiten; Custom Items nicht versehentlich umbenennen; Chat-Befehle bestätigen. */
     public boolean signProtection = true;
     public boolean renameProtection = true;
-    public boolean commandLinkProtection = true;
     /** Items, die man am Markt verkaufen kann (es gibt Kaufaufträge), grün hervorheben – nur in Verkaufsmenüs. */
     public boolean highlightSellable = true;
     /** Verkaufsmenüs: Menütitel enthält einen dieser Begriffe (z. B. "OPSUCHT » Items verkaufen", /sell). */

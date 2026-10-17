@@ -500,7 +500,7 @@ public class MarketOverlayGameTest implements FabricClientGameTest {
                 java.util.List<net.minecraft.network.chat.Component> lines = new java.util.ArrayList<>();
                 dev.opsuchtprices.client.QualityOfLife.appendTooltip(mc.player.getMainHandItem(), lines);
                 String t = lines.stream().map(net.minecraft.network.chat.Component::getString).collect(java.util.stream.Collectors.joining(" | "));
-                return t.contains("Inhalt (2):") && t.contains("Diamond") && t.contains("x3") ? "ok " + t : "Vorschau falsch: " + t;
+                return t.contains("Inhalt:") && !t.contains("Inhalt (") && t.contains("Diamond") && t.contains("x3") ? "ok " + t : "Vorschau falsch: " + t;
             });
             if (!qol.startsWith("ok")) throw new AssertionError(qol);
             System.out.println("OVERLAY-TEST ok: verkaufbare Items + Rucksack-Vorschau (" + qol.substring(3) + ")");
@@ -525,9 +525,17 @@ public class MarketOverlayGameTest implements FabricClientGameTest {
             if (ctx.computeOnClient(mc -> dev.opsuchtprices.client.QualityOfLife.isInventoryFull(mc))) throw new AssertionError("Inventar nach clear noch voll");
             System.out.println("OVERLAY-TEST ok: Inventar-voll erkannt und wieder frei");
             // AFK-Warnung
+            // ohne Job vorher: keine Warnung (Titel bleibt leer); mit Job kurz vor dem Stillstand: Warnung
+            dev.opsuchtprices.client.QualityOfLife.setJobEventAgoForTest(null);
+            ctx.runOnClient(mc -> mc.gui.clearTitles());
+            ctx.runOnClient(mc -> dev.opsuchtprices.client.QualityOfLife.simulateIdle(5 * 60_000L));
+            ctx.waitTicks(5);
+            ctx.takeScreenshot("afk-ohne-job-keine-warnung");
+            dev.opsuchtprices.client.QualityOfLife.setJobEventAgoForTest(5 * 60_000L + 30_000L);
             ctx.runOnClient(mc -> dev.opsuchtprices.client.QualityOfLife.simulateIdle(5 * 60_000L));
             ctx.waitTicks(15);
             ctx.takeScreenshot("afk-warnung");
+            dev.opsuchtprices.client.QualityOfLife.setJobEventAgoForTest(null);
             System.out.println("OVERLAY-TEST ok: AFK-Warnung ausgelöst (Screenshot)");
             // Jobtracker: Job abwählen
             cfg.jobTrackedJobs.remove("holzfäller");

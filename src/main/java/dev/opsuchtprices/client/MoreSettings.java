@@ -14,13 +14,12 @@ public final class MoreSettings {
         return new ToggleScreen(parent, config, save, "Weitere Funktionen", "Warnungen, Schutz und Komfort", List.of(
                 new ToggleScreen.Toggle("Inventar voll", c -> c.invFullWarning, (c, v) -> c.invFullWarning = v),
                 new ToggleScreen.Toggle("…mit Ton", c -> c.invFullWarningSound, (c, v) -> c.invFullWarningSound = v),
-                new ToggleScreen.Toggle("AFK-Warnung", c -> c.afkWarning, (c, v) -> c.afkWarning = v),
+                new ToggleScreen.Toggle("AFK nach Job", c -> c.afkWarning, (c, v) -> c.afkWarning = v),
                 new ToggleScreen.Toggle("…mit Ton", c -> c.afkWarningSound, (c, v) -> c.afkWarningSound = v),
                 new ToggleScreen.Slider("AFK nach", 1, 15, c -> c.afkWarningMinutes, (c, v) -> c.afkWarningMinutes = v, v -> v + " Min."),
                 new ToggleScreen.Toggle("Kurzschreibweise 1k", c -> c.numberShorthand, (c, v) -> c.numberShorthand = v),
                 new ToggleScreen.Toggle("Sign-Schutz /sign", c -> c.signProtection, (c, v) -> c.signProtection = v),
                 new ToggleScreen.Toggle("Rename-Schutz /rename", c -> c.renameProtection, (c, v) -> c.renameProtection = v),
-                new ToggleScreen.Toggle("Befehls-Schutz", c -> c.commandLinkProtection, (c, v) -> c.commandLinkProtection = v),
                 new ToggleScreen.Toggle("Verkaufbares grün", c -> c.highlightSellable, (c, v) -> c.highlightSellable = v),
                 new ToggleScreen.Toggle("Rucksack-Vorschau", c -> c.bundlePreview, (c, v) -> c.bundlePreview = v)));
     }

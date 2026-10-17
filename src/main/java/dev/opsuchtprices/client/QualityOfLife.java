@@ -8,7 +8,6 @@ import dev.opsuchtprices.market.MarketService;
 import net.minecraft.ChatFormatting;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.gui.GuiGraphics;
-import net.minecraft.client.gui.screens.ConfirmScreen;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.client.gui.screens.inventory.AbstractContainerScreen;
 import net.minecraft.client.renderer.ShapeRenderer;
@@ -99,7 +98,8 @@ public final class QualityOfLife {
             lastAfkWarn = 0;
         }
         long afkMs = Math.max(1, config.afkWarningMinutes) * 60_000L;
-        if (config.afkWarning && now - lastMove >= afkMs && now - lastAfkWarn >= 60_000L && mc.screen == null) {
+        if (config.afkWarning && now - lastAfkWarn >= 60_000L && mc.screen == null
+                && dev.opsuchtprices.util.AfkRule.shouldWarn(now, lastMove, jobEventAgo(), afkMs)) {
             lastAfkWarn = now;
             mc.gui.setTimes(10, 60, 20);
             mc.gui.setSubtitle(Component.literal("Seit " + (now - lastMove) / 60_000 + " Min. nicht bewegt").withStyle(ChatFormatting.GRAY));
@@ -108,6 +108,21 @@ public final class QualityOfLife {
                 mc.getSoundManager().play(net.minecraft.client.resources.sounds.SimpleSoundInstance.forUI(SoundEvents.NOTE_BLOCK_PLING.value(), 1.0f));
             }
         }
+    }
+
+    private static Long jobEventAgoForTest;
+
+    /** Wie lange die letzte Job-Meldung her ist (ms), null = noch kein Job. */
+    private static Long jobEventAgo() {
+        if (jobEventAgoForTest != null) return jobEventAgoForTest;
+        var t = JobHud.tracker();
+        var s = t == null ? null : t.current();
+        return s == null ? null : t.sinceLastEventMs(s);
+    }
+
+    /** Für Tests: Zeit seit der letzten Job-Meldung vorgeben (null = echte Daten). */
+    public static void setJobEventAgoForTest(Long ms) {
+        jobEventAgoForTest = ms;
     }
 
     /** true, wenn keiner der 36 Inventar-Slots (Hotbar + Inventar) frei ist. */
@@ -189,7 +204,7 @@ public final class QualityOfLife {
         if (!on() || !config.bundlePreview) return;
         List<ItemStack> items = containedItems(stack);
         if (items.isEmpty()) return;
-        lines.add(Component.literal("Inhalt (" + items.size() + "):").withStyle(ChatFormatting.GOLD));
+        lines.add(Component.literal("Inhalt:").withStyle(ChatFormatting.GOLD));
         int shown = 0;
         for (ItemStack it : items) {
             if (shown++ == 8) {
@@ -340,16 +355,4 @@ public final class QualityOfLife {
         return pendingToken;
     }
 
-    /** Befehls-Schutz: Chat-Klick, der einen Befehl ausführt, erst nach Bestätigung. true = abgefangen. */
-    public static boolean confirmChatCommand(Minecraft mc, Screen parent, String command) {
-        if (!on() || !config.commandLinkProtection || command == null) return false;
-        String cmd = command.startsWith("/") ? command.substring(1) : command;
-        if (cmd.startsWith("opa ")) return false; // eigene Bestätigungs-Links (Sign-/Rename-Schutz)
-        mc.setScreen(new ConfirmScreen(yes -> {
-            mc.setScreen(parent);
-            if (yes && mc.getConnection() != null) mc.getConnection().sendCommand(cmd);
-        }, Component.literal("Befehl aus dem Chat ausführen?"),
-                Component.literal("/" + cmd).withStyle(ChatFormatting.YELLOW)));
-        return true;
-    }
 }
