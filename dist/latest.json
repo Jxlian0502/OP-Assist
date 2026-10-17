@@ -1,5 +1,6 @@
 {
-  "version": "1.25.7",
-  "file": "op-assistent-1.25.7.jar",
-  "sha256": "47451f6fe7daed50d6aec454a5b959350950648486b1411c86fb1973e8a1ac1b"
+  "version": "1.26.1",
+  "file": "op-assistent-1.26.1.jar",
+  "sha256": "3da542600127775385ee655074f14080c64a1c8090c1bd09193f0cb6562e91c9",
+  "signature": "VQfFxGXF9lJzTgeHE831pgkEYLnOeKhwogaRKryJKC9tONP0j4pnoJAz0MvGXet1/fnYAUwoFvIbpa66Jib2Bw=="
 }
