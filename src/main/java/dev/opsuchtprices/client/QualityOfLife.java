@@ -102,7 +102,7 @@ public final class QualityOfLife {
                 && dev.opsuchtprices.util.AfkRule.shouldWarn(now, lastMove, jobEventAgo(), afkMs)) {
             lastAfkWarn = now;
             mc.gui.setTimes(10, 60, 20);
-            mc.gui.setSubtitle(Component.literal("Seit " + (now - lastMove) / 60_000 + " Min. nicht bewegt").withStyle(ChatFormatting.GRAY));
+            mc.gui.setSubtitle(Component.literal("Seit " + (now - lastMove) / 60_000 + " Min. nicht bewegt – ab 5 Min. kein Jobgeld").withStyle(ChatFormatting.GRAY));
             mc.gui.setTitle(Component.literal("AFK?").withStyle(ChatFormatting.RED, ChatFormatting.BOLD));
             if (config.afkWarningSound) {
                 mc.getSoundManager().play(net.minecraft.client.resources.sounds.SimpleSoundInstance.forUI(SoundEvents.NOTE_BLOCK_PLING.value(), 1.0f));

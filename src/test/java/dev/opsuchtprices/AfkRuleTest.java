@@ -24,9 +24,10 @@ class AfkRuleTest {
     }
 
     @Test
-    void noWarningWhileJobStillRuns() {
-        long now = 100 * MIN, lastMove = now - 10 * MIN;
-        assertFalse(AfkRule.shouldWarn(now, lastMove, 20_000L, AFK), "angeln im Stehen: Job-Meldungen kommen noch");
+    void warnsWhileFishingInPlace() {
+        // OP SUCHT: auch wer still steht und angelt, gilt nach 5 Min. als AFK (kein Jobgeld mehr)
+        long now = 100 * MIN, lastMove = now - 4 * MIN;
+        assertTrue(AfkRule.shouldWarn(now, lastMove, 20_000L, AFK), "Job-Meldungen beim Angeln verhindern die Warnung nicht");
     }
 
     @Test

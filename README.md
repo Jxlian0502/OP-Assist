@@ -142,7 +142,7 @@ Weitere Funktionen (ab 1.24.0)
 
 Einstellungen → „Weitere…“ (alles einzeln abschaltbar):
 - **Inventar voll:** Warnung in der Actionbar (alle `invFullWarningSeconds` s, optional mit Ton).
-- **AFK-Warnung:** grosse Einblendung, wenn man nach einem Job `afkWarningMinutes` Minuten weder bewegt hat noch Job-Meldungen bekommt (optional mit Ton). Ohne vorherigen Job keine Warnung.
+- **AFK-Warnung:** OP SUCHT zahlt nach 5 Minuten ohne Bewegung kein Jobgeld mehr (auch beim Angeln im Stehen). Die Mod warnt nach `afkWarningMinutes` Minuten ohne Bewegung (Standard 4), wenn man gerade einen Job macht oder kurz vorher einen gemacht hat (optional mit Ton).
 - **Kurzschreibweise:** `1k`, `2,5m`, `1mrd` werden bei `/pay`, `/bank` und im Amboss (Eingabefelder des Servers) zur vollen Zahl.
 - **Sign-Schutz:** `/sign <Text>` wird erst gesendet, wenn man im Chat auf [ BESTÄTIGEN ] klickt; vorher zeigt die Mod Item und Vorschau mit Farbcodes (&a, &l, &#RRGGBB).
 - **Rename-Schutz:** dasselbe für `/rename <Name>`.

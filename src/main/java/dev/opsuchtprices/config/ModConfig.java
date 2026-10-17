@@ -107,7 +107,7 @@ public final class ModConfig {
     public boolean invFullWarning = true;
     public int invFullWarningSeconds = 3;
     public boolean invFullWarningSound = false;
-    /** AFK-Warnung: nach einem Job X Minuten ohne Bewegung und ohne Job-Meldung -> grosse Einblendung, optional mit Ton. */
+    /** AFK-Warnung: X Minuten ohne Bewegung während/nach einem Job (OP SUCHT: ab 5 Min. kein Jobgeld), optional mit Ton. */
     public boolean afkWarning = true;
     public int afkWarningMinutes = 4;
     public boolean afkWarningSound = false;
