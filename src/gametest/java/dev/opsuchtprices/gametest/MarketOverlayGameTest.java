@@ -411,7 +411,7 @@ public class MarketOverlayGameTest implements FabricClientGameTest {
             // /opa speed: Diagnose zeigt die Testitems
             java.util.List<String> diag = ctx.computeOnClient(mc -> dev.opsuchtprices.client.SpeedDiagnosis.lines(mc.player));
             String diagText = String.join("\n", diag);
-            if (!diagText.contains("Speed-Anzeige: +120% (Items +80%, Schnelligkeit Stufe 2 x1 = +40%)") || !diagText.contains("Attribut minecraft:movement_speed")) {
+            if (!diagText.contains("Speed-Anzeige: +120% (Items +80%, Schnelligkeit Stufe 2 als +40% auf die Grundgeschwindigkeit)") || !diagText.contains("Attribut minecraft:movement_speed")) {
                 throw new AssertionError("Speed-Diagnose unvollständig:\n" + diagText);
             }
             System.out.println("OVERLAY-TEST ok: /opa speed Diagnose (" + diag.size() + " Zeilen)");

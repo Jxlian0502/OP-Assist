@@ -47,18 +47,19 @@ class SpeedMathTest {
         java.nio.file.Files.deleteIfExists(f);
     }
 
-    /** Echte Messung (17.10.): Speed Boots II (+0,1 fest), Bergarbeiter Helm (+25 %), Schnelligkeit II, OPMOD zeigt +230 %. */
+    /** Zwei echte Messungen im Spiel (17.10.) mit dem jeweiligen Wert der OPMOD. */
     @Test
-    void matchesOpmodMeasurement() {
-        double items = SpeedMath.percent(BASE, List.of(new Mod(Op.ADD_VALUE, 0.1), new Mod(Op.ADD_MULTIPLIED_BASE, 0.25)));
-        assertEquals(150, items, 1e-9);
-        int mult = SpeedMath.effectMultiplier(List.of("➜ Effekt: x2 Speed Effekt", "§7Andere Zeile"));
-        assertEquals(2, mult);
-        assertEquals("+230%", SpeedMath.format(SpeedMath.opSuchtPercent(items, 2, mult)));
-        // ohne Effekt bleibt es beim Item-Speed, ohne x2-Item zählt der Effekt einfach
-        assertEquals("+150%", SpeedMath.format(SpeedMath.opSuchtPercent(items, 0, mult)));
-        assertEquals("+190%", SpeedMath.format(SpeedMath.opSuchtPercent(items, 2, 1)));
-        assertEquals(1, SpeedMath.effectMultiplier(List.of("➥ Effekt: +25% Geschwindigkeit (Kopf)")));
+    void matchesBothOpmodMeasurements() {
+        // Speed Boots II (+0,1 fest) + Bergarbeiter Helm (+25 %) + Schnelligkeit II -> OPMOD +230 %
+        List<Mod> m1 = List.of(new Mod(Op.ADD_VALUE, 0.1), new Mod(Op.ADD_MULTIPLIED_BASE, 0.25));
+        assertEquals("+150%", SpeedMath.format(SpeedMath.percent(BASE, m1)));
+        assertEquals("+230%", SpeedMath.format(SpeedMath.opSuchtPercent(BASE, m1, 2)));
+        // SOMMER Totem (+0,1 fest) + Osterhasen Pfote V2 (+160 %) + Schnelligkeit II -> OPMOD +500 %
+        List<Mod> m2 = List.of(new Mod(Op.ADD_VALUE, 0.1), new Mod(Op.ADD_MULTIPLIED_BASE, 1.6));
+        assertEquals("+420%", SpeedMath.format(SpeedMath.percent(BASE, m2)));
+        assertEquals("+500%", SpeedMath.format(SpeedMath.opSuchtPercent(BASE, m2, 2)));
+        // ohne Effekt = nur Items
+        assertEquals("+420%", SpeedMath.format(SpeedMath.opSuchtPercent(BASE, m2, 0)));
     }
 
     @Test

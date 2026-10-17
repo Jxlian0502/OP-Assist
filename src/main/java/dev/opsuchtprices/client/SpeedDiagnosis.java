@@ -33,10 +33,10 @@ public final class SpeedDiagnosis {
         List<String> out = new ArrayList<>();
         double base = p.getAttributeBaseValue(Attributes.MOVEMENT_SPEED);
         double total = p.getAttributeValue(Attributes.MOVEMENT_SPEED);
-        int lvl = InventoryButtons.speedEffectLevel(p), mult = InventoryButtons.effectMultiplier(p);
+        int lvl = InventoryButtons.speedEffectLevel(p);
         out.add("Speed-Anzeige: " + SpeedMath.format(InventoryButtons.speedPercent(p)) + " (Items "
-                + SpeedMath.format(InventoryButtons.itemSpeedPercent(p)) + ", Schnelligkeit Stufe " + lvl + " x" + mult
-                + " = " + SpeedMath.format(SpeedMath.effectPercent(lvl, mult)) + ")");
+                + SpeedMath.format(InventoryButtons.itemSpeedPercent(p)) + ", Schnelligkeit Stufe " + lvl
+                + " als +" + (lvl * 20) + "% auf die Grundgeschwindigkeit)");
         out.add(String.format(Locale.ROOT, "Minecraft gesamt: %s (Basis %.4f, aktuell %.4f, sprintet: %s)",
                 SpeedMath.format(base > 0 ? (total / base - 1) * 100 : 0), base, total, p.isSprinting() ? "ja" : "nein"));
 

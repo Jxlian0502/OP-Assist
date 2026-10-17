@@ -161,7 +161,7 @@ public final class InventoryButtons {
             if (overSpeed(screen, left, top, mx, my, font) && hovered < 0 && !dragging) {
                 g.setTooltipForNextFrame(font, List.of(
                         Component.literal("Speed aus Items (Hand, Nebenhand, Rüstung)").getVisualOrderText(),
-                        Component.literal("plus Schnelligkeits-Effekt (x2 mit Speed Boots)").withStyle(ChatFormatting.GRAY).getVisualOrderText(),
+                        Component.literal("plus Schnelligkeits-Effekt (+20 % pro Stufe)").withStyle(ChatFormatting.GRAY).getVisualOrderText(),
                         Component.literal("Ziehen: Anzeige verschieben").withStyle(ChatFormatting.DARK_GRAY).getVisualOrderText()),
                         mx, my);
             }
@@ -189,11 +189,12 @@ public final class InventoryButtons {
             EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET};
 
     /**
-     * Angezeigter Speed wie bei OP SUCHT (gleicher Wert wie die OPMOD): Item-Speed plus Schnelligkeits-Effekt,
-     * der Effekt mal Faktor aus "x2 Speed Effekt"-Items (z. B. Speed Boots).
+     * Angezeigter Speed wie bei OP SUCHT (gleicher Wert wie die OPMOD): Item-Attribute nach Minecraft-Formel,
+     * Schnelligkeits-Effekt als weiterer Prozent-Bonus auf die Grundgeschwindigkeit.
      */
     public static double speedPercent(Player player) {
-        return SpeedMath.opSuchtPercent(itemSpeedPercent(player), speedEffectLevel(player), effectMultiplier(player));
+        return SpeedMath.opSuchtPercent(player.getAttributeBaseValue(Attributes.MOVEMENT_SPEED), itemSpeedMods(player),
+                speedEffectLevel(player));
     }
 
     /** Stufe des Schnelligkeits-Effekts (0 = keiner). */
@@ -202,18 +203,13 @@ public final class InventoryButtons {
         return e == null ? 0 : e.getAmplifier() + 1;
     }
 
-    /** Faktor für den Schnelligkeits-Effekt aus der Lore der getragenen/gehaltenen Items ("x2 Speed Effekt"). */
-    public static int effectMultiplier(Player player) {
-        List<String> lines = new ArrayList<>();
-        for (EquipmentSlot slot : SLOTS) {
-            var lore = player.getItemBySlot(slot).get(DataComponents.LORE);
-            if (lore != null) for (Component c : lore.lines()) lines.add(c.getString());
-        }
-        return SpeedMath.effectMultiplier(lines);
+    /** Speed-Bonus in Prozent nur aus den Item-Attributen (ohne Effekte). */
+    public static double itemSpeedPercent(Player player) {
+        return SpeedMath.percent(player.getAttributeBaseValue(Attributes.MOVEMENT_SPEED), itemSpeedMods(player));
     }
 
-    /** Speed-Bonus in Prozent nur aus den Bewegungsgeschwindigkeits-Attributen der getragenen/gehaltenen Items. */
-    public static double itemSpeedPercent(Player player) {
+    /** Bewegungsgeschwindigkeits-Attribute der Items in Haupthand, Nebenhand und Rüstung. */
+    static List<SpeedMath.Mod> itemSpeedMods(Player player) {
         List<SpeedMath.Mod> mods = new ArrayList<>();
         for (EquipmentSlot slot : SLOTS) {
             ItemStack stack = player.getItemBySlot(slot);
@@ -230,7 +226,7 @@ public final class InventoryButtons {
                 mods.add(new SpeedMath.Mod(op, m.amount()));
             }
         }
-        return SpeedMath.percent(player.getAttributeBaseValue(Attributes.MOVEMENT_SPEED), mods);
+        return mods;
     }
 
     // ---------- Maus: Klick = Befehl, Ziehen = Verschieben ----------
