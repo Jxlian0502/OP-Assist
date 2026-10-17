@@ -124,3 +124,12 @@ Die Daten bleiben in `.minecraft\config\opsuchtprices\`.
 Die Mod prüft beim Start `dist/latest.json` in diesem Repository (https://github.com/Jxlian0502/OP-Assist) und lädt eine neuere `dist/op-assistent-<version>.jar` herunter (Prüfsumme SHA-256 + Mod-ID/Version werden kontrolliert). Installiert wird beim Beenden von Minecraft; beim nächsten Start läuft die neue Version. Abschalten: `"autoUpdate": false` in der config.json.
 
 **Download der aktuellen Version:** [`dist/`](dist/) – die .jar in den mods-Ordner legen.
+
+Inventar-Knöpfe und Speed-Anzeige (ab 1.22.0)
+
+Im eigenen Inventar (Taste E) erscheint eine Knopfleiste: Bank (`/bank`), Auktionshaus (`/ah`), Markt (`/markt`), Quests (`/quest`), Shards (`/shards`), Tresor (`/tresor`), Enderkiste (`/ec`). Daneben steht der Speed-Bonus, z. B. „Speed +230%“.
+
+- Klick auf einen Knopf führt den Befehl aus. Leiste und Speed-Anzeige lassen sich mit gedrückter Maustaste per Drag & Drop frei verschieben; die Position bleibt gespeichert und hängt an der Inventar-Ecke.
+- Der Speed wird aus den Bewegungsgeschwindigkeits-Werten der Items in Haupthand, Nebenhand und Rüstung berechnet (gleiche Formel wie Minecraft, ohne Tränke).
+- Config: `inventoryButtons`, `inventorySpeed`, Positionen `inventoryButtonsX/Y`, `inventorySpeedX/Y`, und `inventoryButtonList` (Item, Name und Befehl jedes Knopfs, frei änderbar).
+- Eigene Umsetzung, kein Code aus anderen Mods.

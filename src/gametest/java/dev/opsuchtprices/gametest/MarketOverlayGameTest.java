@@ -328,6 +328,62 @@ public class MarketOverlayGameTest implements FabricClientGameTest {
                 throw new AssertionError("Untertitel falsch: " + sub);
             }
             System.out.println("OVERLAY-TEST ok: Job-Geld-Limit als Titel eingeblendet (" + sub + ")");
+
+            // Inventar: Knopfleiste + Speed-Anzeige. Speed-Items: Stiefel +50 %, Axt in der Hand +30 % -> +80 %
+            sp.getServer().runCommand("item replace entity @p armor.feet with minecraft:leather_boots[minecraft:attribute_modifiers="
+                    + "[{type:\"minecraft:movement_speed\",amount:0.5,operation:\"add_multiplied_base\",slot:\"feet\",id:\"test:boots\"}]]");
+            sp.getServer().runCommand("item replace entity @p weapon.mainhand with minecraft:iron_axe[minecraft:attribute_modifiers="
+                    + "[{type:\"minecraft:movement_speed\",amount:0.3,operation:\"add_multiplied_base\",slot:\"mainhand\",id:\"test:axe\"}]]");
+            ctx.waitTicks(10);
+            boolean[] saved = {false};
+            dev.opsuchtprices.client.InventoryButtons.init(cfg, () -> true, () -> saved[0] = true);
+            ctx.runOnClient(mc -> mc.setScreen(new net.minecraft.client.gui.screens.inventory.InventoryScreen(mc.player)));
+            ctx.waitTicks(10);
+            String speed = ctx.computeOnClient(mc -> dev.opsuchtprices.util.SpeedMath.format(
+                    dev.opsuchtprices.client.InventoryButtons.speedPercent(mc.player)));
+            if (!"+80%".equals(speed)) throw new AssertionError("Speed falsch: " + speed);
+            double gs = ctx.computeOnClient(mc -> mc.getWindow().getGuiScale());
+            int[] b0 = ctx.computeOnClient(mc -> dev.opsuchtprices.client.InventoryButtons.buttonCenter(mc.screen, 0));
+            ctx.getInput().setCursorPos(b0[0] * gs, b0[1] * gs);
+            ctx.waitTicks(3);
+            ctx.takeScreenshot("inventar-knoepfe");
+            // Klick auf "Bank" -> /bank
+            dev.opsuchtprices.client.InventoryButtons.lastCommand = null;
+            ctx.getInput().pressMouse(0);
+            ctx.waitTicks(3);
+            if (!"bank".equals(dev.opsuchtprices.client.InventoryButtons.lastCommand)) {
+                throw new AssertionError("Klick auf Bank-Knopf: " + dev.opsuchtprices.client.InventoryButtons.lastCommand);
+            }
+            System.out.println("OVERLAY-TEST ok: Inventar-Knopf Bank -> /bank, Speed " + speed);
+            // Leiste per Drag & Drop verschieben: kein Befehl, Position gespeichert
+            ctx.runOnClient(mc -> mc.setScreen(new net.minecraft.client.gui.screens.inventory.InventoryScreen(mc.player)));
+            ctx.waitTicks(5);
+            dev.opsuchtprices.client.InventoryButtons.lastCommand = null;
+            int ox = cfg.inventoryButtonsX, oy = cfg.inventoryButtonsY;
+            int[] b2 = ctx.computeOnClient(mc -> dev.opsuchtprices.client.InventoryButtons.buttonCenter(mc.screen, 2));
+            ctx.getInput().setCursorPos(b2[0] * gs, b2[1] * gs);
+            ctx.waitTicks(2);
+            ctx.getInput().holdMouse(0);
+            ctx.waitTicks(2);
+            ctx.getInput().setCursorPos((b2[0] + 20) * gs, (b2[1] + 60) * gs);
+            ctx.waitTicks(2);
+            ctx.getInput().setCursorPos((b2[0] + 40) * gs, (b2[1] + 125) * gs);
+            ctx.waitTicks(2);
+            ctx.getInput().releaseMouse(0);
+            ctx.waitTicks(3);
+            ctx.getInput().setCursorPos(5, 5);
+            ctx.waitTicks(2);
+            ctx.takeScreenshot("inventar-knoepfe-verschoben");
+            if (dev.opsuchtprices.client.InventoryButtons.lastCommand != null || !saved[0]
+                    || Math.abs(cfg.inventoryButtonsX - ox - 40) > 2 || Math.abs(cfg.inventoryButtonsY - oy - 125) > 2) {
+                throw new AssertionError("Verschieben falsch: " + cfg.inventoryButtonsX + "," + cfg.inventoryButtonsY
+                        + " Befehl=" + dev.opsuchtprices.client.InventoryButtons.lastCommand + " gespeichert=" + saved[0]);
+            }
+            System.out.println("OVERLAY-TEST ok: Inventar-Leiste per Drag & Drop verschoben (" + ox + "," + oy + " -> "
+                    + cfg.inventoryButtonsX + "," + cfg.inventoryButtonsY + "), kein Befehl ausgelöst");
+            // Nur im eigenen Inventar, nicht in anderen Menüs (z. B. Werkbank/Truhe)
+            ctx.runOnClient(mc -> mc.setScreen(null));
+            ctx.waitTicks(2);
         }
 
         ctx.setScreen(() -> new net.minecraft.client.gui.screens.TitleScreen());

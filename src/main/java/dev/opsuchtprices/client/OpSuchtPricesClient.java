@@ -120,6 +120,8 @@ public final class OpSuchtPricesClient implements ClientModInitializer {
                 System::currentTimeMillis, config.jobAutoPauseSeconds * 1000L);
         // Das Actionbar-Format ist eindeutig genug, daher unabhängig von der Server-Erkennung
         JobHud.init(jobs, config, () -> true);
+        // Knopfleiste und Speed-Anzeige im eigenen Inventar (per Drag & Drop verschiebbar)
+        InventoryButtons.init(config, () -> !config.onlyOnOpSucht || onOpSucht, () -> config.save(dir.resolve("config.json")));
         configRef = config;
         configFile = dir.resolve("config.json");
         jobsRef = jobs;

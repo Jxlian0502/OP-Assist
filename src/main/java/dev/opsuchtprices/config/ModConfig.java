@@ -69,6 +69,39 @@ public final class ModConfig {
     public boolean jobShowShards = true;
     /** Info im Chat, wenn das Job-Geld-Limit (1,5 Mio. $/h) erreicht ist, und wenn es wieder vorbei ist. */
     public boolean jobMoneyLimitInfo = true;
+
+    /** Knopfleiste im Inventar (nur im eigenen Inventar, Taste E). Position relativ zur linken oberen Inventar-Ecke. */
+    public boolean inventoryButtons = true;
+    public int inventoryButtonsX = 0;
+    public int inventoryButtonsY = -24;
+    /** Knöpfe: Item-Symbol, Name, Befehl (ohne "/"). Reihenfolge = Reihenfolge in der Leiste. */
+    public List<InventoryButton> inventoryButtonList = new ArrayList<>(List.of(
+            new InventoryButton("minecraft:chest", "Bank", "bank"),
+            new InventoryButton("minecraft:gold_block", "Auktionshaus", "ah"),
+            new InventoryButton("minecraft:gold_ingot", "Markt", "markt"),
+            new InventoryButton("minecraft:book", "Quests", "quest"),
+            new InventoryButton("minecraft:amethyst_shard", "Shards", "shards"),
+            new InventoryButton("minecraft:vault", "Tresor", "tresor"),
+            new InventoryButton("minecraft:ender_chest", "Enderkiste", "ec")));
+    /** Speed-Anzeige im Inventar (Bonus aus Items in Hand, Nebenhand und Rüstung). Position wie oben. */
+    public boolean inventorySpeed = true;
+    public int inventorySpeedX = -64;
+    public int inventorySpeedY = 8;
+
+    /** Ein Knopf der Inventar-Leiste. */
+    public static final class InventoryButton {
+        public String item;
+        public String label;
+        public String command;
+
+        public InventoryButton() {}
+
+        public InventoryButton(String item, String label, String command) {
+            this.item = item;
+            this.label = label;
+            this.command = command;
+        }
+    }
     /** Chatscanner: markiert Nachrichten, die derselbe Spieler im Zeitfenster schon einmal geschrieben hat. */
     public boolean chatScanner = true;
     /** Zeitfenster in Minuten. */
@@ -92,6 +125,8 @@ public final class ModConfig {
         maxSalesPerItem = Math.max(1, Math.min(maxSalesPerItem, 1000));
         if (priceServerUrl == null) priceServerUrl = "";
         priceRefreshSeconds = Math.max(15, Math.min(priceRefreshSeconds, 3600));
+        if (inventoryButtonList == null) inventoryButtonList = new ModConfig().inventoryButtonList;
+        inventoryButtonList.removeIf(b -> b == null || b.command == null || b.command.isBlank());
         // Alte Standardwährung aus Version 1.1.0 automatisch auf $ umstellen
         if (currencyLabel == null || currencyLabel.equalsIgnoreCase("Coins")) currencyLabel = "$";
         if (streamUrl == null || streamUrl.isBlank()) streamUrl = "https://api.opsucht.net/auctions/stream";
