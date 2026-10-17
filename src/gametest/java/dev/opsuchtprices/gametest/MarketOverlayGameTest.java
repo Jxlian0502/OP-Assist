@@ -252,6 +252,49 @@ public class MarketOverlayGameTest implements FabricClientGameTest {
         }
         System.out.println("OVERLAY-TEST ok: Drag & Drop -> " + cfg.jobHudX + "," + cfg.jobHudY);
 
+        // HUD überdeckt weder Menüs (Markt-Overlay, Inventar …) noch die Tabliste; im Chat bleibt es sichtbar
+        String hudErr = ctx.computeOnClient(mc -> {
+            var chat = new net.minecraft.client.gui.screens.ChatScreen("", false);
+            var menu = new JobHudTestScreen();
+            if (dev.opsuchtprices.client.JobHud.hiddenByOverlay(null, false, cfg)) return "HUD ohne Menü ausgeblendet";
+            if (!dev.opsuchtprices.client.JobHud.hiddenByOverlay(null, true, cfg)) return "HUD bei offener Tabliste sichtbar";
+            if (dev.opsuchtprices.client.JobHud.hiddenByOverlay(chat, false, cfg)) return "HUD im Chat ausgeblendet";
+            if (!dev.opsuchtprices.client.JobHud.hiddenByOverlay(menu, false, cfg)) return "HUD über offenem Menü sichtbar";
+            cfg.jobHideInMenus = false;
+            cfg.jobHideWithTabList = false;
+            boolean ignored = dev.opsuchtprices.client.JobHud.hiddenByOverlay(menu, true, cfg);
+            cfg.jobHideInMenus = true;
+            cfg.jobHideWithTabList = true;
+            return ignored ? "Optionen jobHideInMenus/jobHideWithTabList werden ignoriert" : null;
+        });
+        if (hudErr != null) throw new AssertionError(hudErr);
+        System.out.println("OVERLAY-TEST ok: HUD aus bei Menü und Tabliste, an im Chat");
+
+        // AH-Preise vom echten Preis-Server (Standard-Adresse aus der Config), wie auf jedem PC ohne Einrichtung
+        String[] priceState = ctx.computeOnClient(mc -> {
+            var store = new dev.opsuchtprices.cache.SalesStore(50);
+            var src = new dev.opsuchtprices.cache.HttpSalesSource(store, java.net.http.HttpClient.newHttpClient(),
+                    new dev.opsuchtprices.config.ModConfig().priceServerUrl, 50, 60);
+            src.tick(); // komplett laden
+            src.tick(); // neue Verkäufe nachholen
+            String sample = store.overview().isEmpty() ? "-" : store.overview().get(0).label() + " = "
+                    + store.overview().get(0).summary().last().totalPrice();
+            return new String[]{src.status(), String.valueOf(store.totalSales()), sample};
+        });
+        System.out.println("OVERLAY-TEST info: Preis-Server -> " + priceState[0] + " | neuester: " + priceState[2]);
+        if (!priceState[0].startsWith("verbunden") || Integer.parseInt(priceState[1]) < 1000) {
+            throw new AssertionError("Preis-Server liefert keine Preise: " + priceState[0]);
+        }
+        // Unerreichbarer Server: kein Absturz, verständlicher Status
+        String offline = ctx.computeOnClient(mc -> {
+            var src = new dev.opsuchtprices.cache.HttpSalesSource(new dev.opsuchtprices.cache.SalesStore(50),
+                    java.net.http.HttpClient.newHttpClient(), "http://127.0.0.1:1", 50, 60);
+            src.tick();
+            return src.status();
+        });
+        if (!offline.startsWith("nicht erreichbar")) throw new AssertionError("Offline-Status falsch: " + offline);
+        System.out.println("OVERLAY-TEST ok: AH-Preise vom Preis-Server (" + priceState[1] + " Verkäufe), offline ohne Absturz");
+
         ctx.setScreen(() -> new net.minecraft.client.gui.screens.TitleScreen());
         System.out.println("OVERLAY-TEST OK");
     }

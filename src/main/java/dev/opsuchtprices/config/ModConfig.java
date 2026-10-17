@@ -36,6 +36,13 @@ public final class ModConfig {
     public int marketRefreshSeconds = 60;
     /** So viele Verkäufe pro Item werden gespeichert (Basis für den Durchschnitt). */
     public int maxSalesPerItem = 50;
+    /**
+     * Preis-Server des AH-Sammlers: einzige Quelle der AH-Verkäufe für Tooltip und Liste.
+     * Funktioniert ohne Zugangsdaten auf jedem PC.
+     */
+    public String priceServerUrl = "http://217.160.209.120";
+    /** So oft werden neue Verkäufe vom Preis-Server geholt (Sekunden). */
+    public int priceRefreshSeconds = 60;
     public boolean debugLogging = false;
     /** Automatische Updates über GitHub-Releases. */
     public boolean autoUpdate = true;
@@ -52,6 +59,10 @@ public final class ModConfig {
     public int jobHideAfterMinutes = 5;
     /** Job-Actionbar des Servers ausblenden (das HUD zeigt dieselben Werte). */
     public boolean jobHideActionBar = false;
+    /** HUD ausblenden, solange ein Menü offen ist (Markt-Overlay, Inventar, Truhen; nicht im Chat). */
+    public boolean jobHideInMenus = true;
+    /** HUD ausblenden, solange die Tabliste offen ist (Tab gedrückt). */
+    public boolean jobHideWithTabList = true;
     /** XP-Zähler: zählt bis zu diesem Wert, dann beginnt er wieder bei 0 (0 = Zähler aus). */
     public int jobXpCounterStep = 100_000;
     /** Shard-Wert des Inventars im Jobtracker anzeigen (Kurse aus der API). */
@@ -77,6 +88,8 @@ public final class ModConfig {
 
     public ModConfig sanitize() {
         maxSalesPerItem = Math.max(1, Math.min(maxSalesPerItem, 1000));
+        if (priceServerUrl == null) priceServerUrl = "";
+        priceRefreshSeconds = Math.max(15, Math.min(priceRefreshSeconds, 3600));
         // Alte Standardwährung aus Version 1.1.0 automatisch auf $ umstellen
         if (currencyLabel == null || currencyLabel.equalsIgnoreCase("Coins")) currencyLabel = "$";
         if (streamUrl == null || streamUrl.isBlank()) streamUrl = "https://api.opsucht.net/auctions/stream";

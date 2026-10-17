@@ -47,8 +47,9 @@ public final class OpSuchtPricesClient implements ClientModInitializer {
         ModConfig config = ModConfig.load(dir.resolve("config.json"));
         ModLog.setDebug(config.debugLogging);
 
-        Path salesFile = dir.resolve("sales.json");
-        SalesStore sales = SalesStore.load(salesFile, config.maxSalesPerItem);
+        // AH-Verkäufe kommen ausschliesslich vom Preis-Server des AH-Sammlers (der sie rund um die Uhr in
+        // der Datenbank sammelt). Kein eigener Stream und keine lokale sales.json; der Speicher ist nur Zwischenspeicher.
+        SalesStore sales = new SalesStore(config.maxSalesPerItem);
         HttpClient http = HttpClient.newBuilder()
                 .connectTimeout(Duration.ofSeconds(15))
                 .followRedirects(HttpClient.Redirect.NORMAL)
@@ -56,9 +57,13 @@ public final class OpSuchtPricesClient implements ClientModInitializer {
 
         RemoteIcons remoteIcons = new RemoteIcons(http, dir.resolve("icons"));
 
-        SaleTracker tracker = new SaleTracker(sales, salesFile, Clock.systemUTC(),
-                () -> config.enabled && (!config.onlyOnOpSucht || onOpSucht),
-                handler -> new AuctionStreamClient(http, config.streamUrl, handler));
+        SaleTracker tracker = new SaleTracker(sales, null, Clock.systemUTC(),
+                () -> config.enabled && (!config.onlyOnOpSucht || onOpSucht), null);
+        dev.opsuchtprices.cache.HttpSalesSource database = new dev.opsuchtprices.cache.HttpSalesSource(
+                sales, http, config.priceServerUrl, config.maxSalesPerItem, config.priceRefreshSeconds);
+        tracker.setDatabaseStatus(database::status);
+        if (config.enabled) database.start();
+        databaseRef = database;
 
         tracker.setActiveAuctionsFetcher(() -> {
             java.net.http.HttpResponse<String> resp = http.send(
@@ -211,6 +216,7 @@ public final class OpSuchtPricesClient implements ClientModInitializer {
             if (updater != null) updater.installOnExit(dir.resolve("update.log"));
             xpCounter.saveIfDirty();
             tracker.stop();
+            database.stop();
             market.shutdown();
         });
 
@@ -359,13 +365,14 @@ public final class OpSuchtPricesClient implements ClientModInitializer {
         net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.GAME.register(GuiRecorder::onServerMessage);
         net.fabricmc.fabric.api.client.message.v1.ClientReceiveMessageEvents.GAME.register(MarketOverlay::onServerMessage);
 
-        ModLog.info("OP-Assistent (by Jxlian0502) geladen, Verkäufe werden in {} gespeichert", salesFile);
+        ModLog.info("OP-Assistent (by Jxlian0502) geladen, AH-Preise vom Preis-Server ({})", database.status());
     }
 
     private static volatile String pendingUpdateMessage;
     private static final long STARTED_AT = System.currentTimeMillis();
     private static final long AUTO_QUIT_MS = Long.getLong("opsuchtprices.autoQuitSeconds", 0L) * 1000L;
     private static ModConfig configRef;
+    private static dev.opsuchtprices.cache.HttpSalesSource databaseRef;
     private static Path configFile;
     private static dev.opsuchtprices.job.JobTracker jobsRef;
 

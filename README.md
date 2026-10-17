@@ -9,7 +9,16 @@ Durchschnittspreis: 120.000$ (2 Verkäufe)
 
 Hat ein Item noch keinen erfassten Verkauf, steht dort „Noch keine AH-Verkäufe erfasst".
 
-## Installation
+## AH-Preise vom Preis-Server (ab 1.21.0)
+
+Die Tooltip-Preise und `/opa liste` kommen ab 1.21.0 **für alle Nutzer vom gemeinsamen Preis-Server** (`http://217.160.209.120`). Dort sammelt der *OP SUCHT AH-Sammler* rund um die Uhr jeden AH-Verkauf in einer MongoDB, und eine rein lesende Schnittstelle gibt die Preise heraus. Nichts einzurichten, kein Passwort in der Mod.
+
+- Beim Start lädt die Mod die neuesten `maxSalesPerItem` (max. 50) Verkäufe je Item, danach alle `priceRefreshSeconds` (Standard 60) die neuen. Tooltips lesen nur aus dem Speicher, das Spiel wird nie durch das Netzwerk gebremst.
+- Ist der Server nicht erreichbar, bleiben die zuletzt geladenen Preise sichtbar. `/opa` zeigt den Status.
+- Die Mod hört den Auktions-Stream nicht mehr selbst mit und speichert keine `sales.json` mehr.
+- Schnittstelle: `GET /v1/sales/latest?n=50`, `GET /v1/sales/since?t=<ms>`, `GET /v1/health` (Format: `PriceApiJson`).
+
+Installation
 
 1. Fabric Loader 0.19.5+ für 1.21.11 installieren: https://fabricmc.net/use/
 2. Fabric API für 1.21.11 in `%appdata%\.minecraft\mods` legen.
@@ -81,6 +90,7 @@ Job und Level, Fortschrittsbalken, aktive Zeit, Geld und Geld/h, XP und XP/h, ge
 
 - Gezählt wird pro Job und pro Sitzung (bis zum Neustart oder `/opa job reset`).
 - Die Zeit pausiert nach 60 s ohne Job-Meldung (`jobAutoPauseSeconds`), das HUD verschwindet nach 5 Min. (`jobHideAfterMinutes`, 0 = nie).
+- Ab 1.19.2 überdeckt das HUD nichts mehr: Es blendet sich aus, solange ein Menü offen ist (Markt-Overlay, Inventar, Truhen; im Chat bleibt es sichtbar, `jobHideInMenus`) und solange Tab gedrückt ist (Tabliste, `jobHideWithTabList`). Beides ist standardmässig an.
 - Jede Job-Actionbar zählt einzeln, genau wie in der OPMOD (bei Baumfäller-Äxten schickt der Server eine Meldung pro Block).
 - Befehle: `/opa job` (Stand im Chat), `/opa job reset`, `/opa job toggle` (an/aus), `/opa job actionbar an|aus`. Position per Drag & Drop in den Einstellungen.
 - Zähllogik übernommen vom Jobtracker der OPMOD (MIT-Lizenz, Copyright (c) 2025 Geldbedarf & CalledCracki, siehe `licenses/OPMOD-LICENSE.txt` in der .jar).

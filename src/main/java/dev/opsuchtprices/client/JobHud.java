@@ -105,6 +105,7 @@ public final class JobHud {
     public static void render(GuiGraphics g, DeltaTracker delta) {
         Minecraft mc = Minecraft.getInstance();
         if (tracker == null || config == null || !config.jobTracker || mc.options.hideGui || !active.getAsBoolean()) return;
+        if (hiddenByOverlay(mc, config)) return;
         JobTracker.Stats s = tracker.current();
         if (s == null) return;
         if (config.jobHideAfterMinutes > 0 && tracker.sinceLastEventMs(s) > config.jobHideAfterMinutes * 60_000L) return;
@@ -113,6 +114,21 @@ public final class JobHud {
         int y = Math.max(0, Math.min(config.jobHudY, g.guiHeight() - lastSize[1]));
         int[] size = renderPanel(g, x, y, tracker);
         if (size != null) lastSize = size;
+    }
+
+    /**
+     * true, wenn das HUD gerade nicht gezeichnet werden soll: Tabliste offen (Tab gedrückt) oder
+     * ein Menü offen (Markt-Overlay, Inventar, Truhe …). Im Chat bleibt das HUD sichtbar.
+     */
+    static boolean hiddenByOverlay(Minecraft mc, ModConfig cfg) {
+        return hiddenByOverlay(mc.screen, mc.options.keyPlayerList.isDown(), cfg);
+    }
+
+    /** Entscheidung ohne Minecraft-Zustand (auch für Tests). */
+    public static boolean hiddenByOverlay(net.minecraft.client.gui.screens.Screen screen, boolean tabListDown, ModConfig cfg) {
+        if (cfg.jobHideWithTabList && tabListDown) return true;
+        return cfg.jobHideInMenus && screen != null
+                && !(screen instanceof net.minecraft.client.gui.screens.ChatScreen);
     }
 
     private static int[] lastSize = {120, 100};

@@ -64,6 +64,16 @@ public final class SalesStore {
         return true;
     }
 
+    /** Ersetzt alle Verkäufe auf einmal (z. B. nach dem Laden vom Preis-Server). Ältere zuerst einfügen. */
+    public synchronized void replaceAll(List<SaleRecord> sales) {
+        byKey.clear();
+        knownUids.clear();
+        List<SaleRecord> sorted = new ArrayList<>(sales);
+        sorted.sort((a, b) -> a.soldAt().compareTo(b.soldAt()));
+        for (SaleRecord r : sorted) record(r);
+        dirty = false;
+    }
+
     /** Letzter Verkauf (nach Zeitpunkt) und Durchschnitt der gespeicherten Verkäufe. */
     public synchronized Optional<Summary> summary(String itemKey) {
         Deque<SaleRecord> dq = byKey.get(itemKey);
@@ -151,7 +161,7 @@ public final class SalesStore {
     // ---------- Persistenz ----------
 
     public synchronized void saveIfDirty(Path file) {
-        if (!dirty) return;
+        if (!dirty || file == null) return; // file == null: Daten kommen vom Preis-Server, lokal nichts speichern
         try {
             AtomicFiles.writeString(file, toJson());
             dirty = false;

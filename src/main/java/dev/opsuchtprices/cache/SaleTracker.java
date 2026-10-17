@@ -134,8 +134,19 @@ public final class SaleTracker {
         return clock;
     }
 
+    /** Liefert den Status des Preis-Servers, wenn die Verkäufe von dort kommen. */
+    private volatile java.util.function.Supplier<String> databaseStatus;
+
+    public void setDatabaseStatus(java.util.function.Supplier<String> status) {
+        this.databaseStatus = status;
+    }
+
     /** Kurzer Status für den Befehl /opa. */
     public String status() {
+        java.util.function.Supplier<String> db = databaseStatus;
+        if (db != null) {
+            return "AH-Preise vom Preis-Server: " + db.get() + " | Liste: /opa liste";
+        }
         AuctionStreamClient s = stream;
         String streamInfo = s == null ? "aus (nicht auf OP SUCHT)"
                 : s.state() + ", " + s.eventsReceived() + " Ereignisse"
