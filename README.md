@@ -91,7 +91,7 @@ Job und Level, Fortschrittsbalken, aktive Zeit, Geld und Geld/h, XP und XP/h, ge
 - Gezählt wird pro Job und pro Sitzung (bis zum Neustart oder `/opa job reset`).
 - Die Zeit pausiert nach 60 s ohne Job-Meldung (`jobAutoPauseSeconds`), das HUD verschwindet nach 5 Min. (`jobHideAfterMinutes`, 0 = nie).
 - Ab 1.19.2 überdeckt das HUD nichts mehr: Es blendet sich aus, solange ein Menü offen ist (Markt-Overlay, Inventar, Truhen; im Chat bleibt es sichtbar, `jobHideInMenus`) und solange Tab gedrückt ist (Tabliste, `jobHideWithTabList`). Beides ist standardmässig an.
-- Ab 1.21.1: Meldet der Server „Du hast dein Job-Geld-Limit erreicht, weiter geht es in X Minuten!“ (max. 1,5 Mio. $ pro Stunde aus Jobs), schreibt die Mod einmal eine Info mit der Uhrzeit, ab der es wieder Geld gibt, und eine zweite, sobald das Limit vorbei ist (`jobMoneyLimitInfo`).
+- Ab 1.21.1: Meldet der Server „Du hast dein Job-Geld-Limit erreicht, weiter geht es in X Minuten!“ (max. 1,5 Mio. $ pro Stunde aus Jobs), blendet die Mod wie beim Jobschatz gross „JOB-GELD-LIMIT“ mit der Uhrzeit ein, ab der es wieder Geld gibt (dazu eine Chat-Zeile), und „LIMIT VORBEI“, sobald es vorbei ist (`jobMoneyLimitInfo`).
 - Jede Job-Actionbar zählt einzeln, genau wie in der OPMOD (bei Baumfäller-Äxten schickt der Server eine Meldung pro Block).
 - Befehle: `/opa job` (Stand im Chat), `/opa job reset`, `/opa job toggle` (an/aus), `/opa job actionbar an|aus`. Position per Drag & Drop in den Einstellungen.
 - Zähllogik übernommen vom Jobtracker der OPMOD (MIT-Lizenz, Copyright (c) 2025 Geldbedarf & CalledCracki, siehe `licenses/OPMOD-LICENSE.txt` in der .jar).

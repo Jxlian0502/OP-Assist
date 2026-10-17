@@ -311,6 +311,25 @@ public class MarketOverlayGameTest implements FabricClientGameTest {
         }
         System.out.println("OVERLAY-TEST ok: Job-Geld-Limit-Info einmal, ohne Spam");
 
+        // Einblendung in einer echten Welt ansehen (Titel wie "JOBSCHATZ GEFUNDEN")
+        try (var sp = ctx.worldBuilder().create()) {
+            sp.getClientWorld().waitForChunksRender();
+            // wie im echten Spiel: Jobtracker oben links (Standard), Chat ohne die Testnachrichten von oben
+            cfg.jobHudX = 4;
+            cfg.jobHudY = 4;
+            ctx.runOnClient(mc -> mc.gui.getChat().clearMessages(false));
+            ctx.runOnClient(mc -> dev.opsuchtprices.client.OpSuchtPricesClient.onMoneyLimitChat(
+                    "§4OPSUCHT §8» §cDu hast dein Job-Geld-Limit erreicht, weiter geht es in 45 Minuten!",
+                    System.currentTimeMillis()));
+            ctx.waitTicks(25);
+            ctx.takeScreenshot("job-geld-limit-titel");
+            String sub = dev.opsuchtprices.client.OpSuchtPricesClient.lastLimitSubtitle;
+            if (sub == null || !sub.startsWith("Wieder Geld ab") || !sub.contains("(in 45 Min.)")) {
+                throw new AssertionError("Untertitel falsch: " + sub);
+            }
+            System.out.println("OVERLAY-TEST ok: Job-Geld-Limit als Titel eingeblendet (" + sub + ")");
+        }
+
         ctx.setScreen(() -> new net.minecraft.client.gui.screens.TitleScreen());
         System.out.println("OVERLAY-TEST OK");
     }

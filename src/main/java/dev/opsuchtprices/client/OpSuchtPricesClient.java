@@ -197,6 +197,9 @@ public final class OpSuchtPricesClient implements ClientModInitializer {
             if (MONEY_LIMIT.pollReset(System.currentTimeMillis()) && config.jobMoneyLimitInfo && client.player != null) {
                 client.player.displayClientMessage(Component.literal("✔ Job-Geld-Limit vorbei – du verdienst wieder Geld.")
                         .withStyle(ChatFormatting.AQUA), false);
+                showTitle(client, Component.literal("LIMIT VORBEI").withStyle(ChatFormatting.GREEN, ChatFormatting.BOLD),
+                        Component.literal("Du verdienst wieder Geld").withStyle(ChatFormatting.GRAY),
+                        net.minecraft.sounds.SoundEvents.PLAYER_LEVELUP, 1.0f);
             }
             MarketOverlay.tick(client);
             StatsTracker.tick(client);
@@ -396,11 +399,35 @@ public final class OpSuchtPricesClient implements ClientModInitializer {
                         + " (in " + Math.max(1, Math.round((resetAt - now) / 60_000.0)) + " Min.)"
                 : "";
         String info = "⚠ Job-Geld-Limit erreicht (max. " + dev.opsuchtprices.job.MoneyLimit.LIMIT_TEXT + ")" + until + ".";
+        // Untertitel wie beim Jobschatz: kurz und gut lesbar
+        String subtitle = resetAt > 0
+                ? "Wieder Geld ab " + java.time.Instant.ofEpochMilli(resetAt).atZone(java.time.ZoneId.systemDefault())
+                        .toLocalTime().format(java.time.format.DateTimeFormatter.ofPattern("HH:mm")) + " Uhr (in "
+                        + Math.max(1, Math.round((resetAt - now) / 60_000.0)) + " Min.)"
+                : "Max. " + dev.opsuchtprices.job.MoneyLimit.LIMIT_TEXT;
+        lastLimitSubtitle = subtitle;
         Minecraft mc = Minecraft.getInstance();
         mc.execute(() -> {
             if (mc.player != null) mc.player.displayClientMessage(Component.literal(info).withStyle(ChatFormatting.AQUA), false);
+            showTitle(mc, Component.literal("JOB-GELD-LIMIT").withStyle(ChatFormatting.GOLD, ChatFormatting.BOLD),
+                    Component.literal(subtitle).withStyle(ChatFormatting.GRAY),
+                    net.minecraft.sounds.SoundEvents.VILLAGER_NO, 1.0f);
         });
         return info;
+    }
+
+    /** Untertitel der letzten Limit-Einblendung (für Tests). */
+    public static volatile String lastLimitSubtitle;
+
+    /** Grosse Einblendung in der Bildschirmmitte (wie "JOBSCHATZ GEFUNDEN") mit Ton. */
+    private static void showTitle(Minecraft mc, Component title, Component subtitle,
+                                  net.minecraft.sounds.SoundEvent sound, float pitch) {
+        mc.gui.setTimes(10, 70, 20);
+        mc.gui.setSubtitle(subtitle);
+        mc.gui.setTitle(title);
+        if (sound != null) {
+            mc.getSoundManager().play(net.minecraft.client.resources.sounds.SimpleSoundInstance.forUI(sound, pitch));
+        }
     }
     private static dev.opsuchtprices.cache.HttpSalesSource databaseRef;
     private static Path configFile;
