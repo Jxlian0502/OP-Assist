@@ -1,0 +1,41 @@
+OP-Assist (OP-Assistent)
+Copyright (c) 2026 Julian (GitHub: Jxlian0502). Alle Rechte vorbehalten. / All rights reserved.
+
+Gilt ab Version 1.24.4 für den gesamten Quellcode, die kompilierten Dateien (.jar), Texte, Grafiken und
+sonstigen Bestandteile dieses Repositorys ("die Software"), soweit unten nichts anderes steht.
+
+1. Eigentum
+   Sämtliche Urheber-, Nutzungs- und Eigentumsrechte an der Software liegen ausschliesslich bei Julian
+   (Jxlian0502). Diese Lizenz überträgt keine Rechte, ausser dem in Abschnitt 2 ausdrücklich genannten.
+
+2. Erlaubt
+   Die offizielle, unveränderte .jar-Datei aus diesem Repository darf privat und kostenlos als Mod in
+   Minecraft benutzt werden. Den Quellcode anzusehen ist erlaubt, soweit GitHub dies technisch zulässt.
+
+3. Verboten (ohne vorherige schriftliche Erlaubnis des Rechteinhabers)
+   a) den Code oder Teile davon zu kopieren, zu verändern, in andere Projekte zu übernehmen, zu
+      veröffentlichen, weiterzugeben, zu verkaufen oder unterzulizenzieren;
+   b) die Software zu dekompilieren oder nachzubauen, um ihren Code weiterzuverwenden;
+   c) veränderte oder umbenannte Fassungen der Software zu verbreiten.
+
+4. Künstliche Intelligenz / Text und Data Mining
+   Niemandem – weder Menschen noch Unternehmen noch automatisierten Systemen – ist es erlaubt, die
+   Software oder Teile davon
+   a) zum Training, Feintuning, Testen oder Bewerten von KI-Modellen (z. B. Sprachmodellen, Code-Assistenten)
+      zu verwenden;
+   b) in Datensätze für KI aufzunehmen, zu crawlen, zu scrapen oder automatisiert auszuwerten;
+   c) in KI-Werkzeuge einzugeben, um daraus Code, Zusammenfassungen oder Nachbauten zu erzeugen.
+   Der Rechteinhaber behält sich die Nutzung für Text und Data Mining ausdrücklich vor
+   (Nutzungsvorbehalt nach § 44b Abs. 3 UrhG und Art. 4 Abs. 3 der Richtlinie (EU) 2019/790).
+
+5. Ausnahme: Teile anderer Urheber
+   Die Zähllogik in src/main/java/dev/opsuchtprices/job/JobTracker.java folgt dem Jobtracker der OPMOD
+   (Copyright (c) 2025 Geldbedarf & CalledCracki) und bleibt insoweit unter deren MIT-Lizenz, siehe
+   src/main/resources/licenses/OPMOD-LICENSE.txt. Bibliotheken und Werkzeuge Dritter (Fabric, Gradle-Wrapper
+   usw.) stehen unter ihren eigenen Lizenzen.
+
+6. Haftung
+   Die Software wird ohne jede Gewährleistung bereitgestellt, so wie sie ist. Der Rechteinhaber haftet
+   nicht für Schäden, die durch ihre Nutzung entstehen, soweit gesetzlich zulässig.
+
+Anfragen zu weiteren Nutzungsrechten: über GitHub an Jxlian0502.
