@@ -269,6 +269,19 @@ public final class OpSuchtPricesClient implements ClientModInitializer {
                                                     .withClickEvent(new net.minecraft.network.chat.ClickEvent.OpenFile(f.getParent())))));
                                     return 1;
                                 })))
+                        .then(literal("speed").executes(ctx -> {
+                            Minecraft mc = Minecraft.getInstance();
+                            if (mc.player == null) return 0;
+                            java.util.List<String> lines = SpeedDiagnosis.lines(mc.player);
+                            for (String l : lines) ctx.getSource().sendFeedback(Component.literal(l).withStyle(ChatFormatting.GRAY));
+                            try {
+                                java.nio.file.Files.write(dir.resolve("speed-diagnose.txt"), lines, java.nio.charset.StandardCharsets.UTF_8);
+                                ctx.getSource().sendFeedback(Component.literal("Gespeichert in config/opsuchtprices/speed-diagnose.txt").withStyle(ChatFormatting.GREEN));
+                            } catch (java.io.IOException e) {
+                                ModLog.warn("Speed-Diagnose nicht gespeichert: {}", e.toString());
+                            }
+                            return 1;
+                        }))
                         .then(literal("job")
                                 .executes(ctx -> {
                                     var cur = jobs.current();

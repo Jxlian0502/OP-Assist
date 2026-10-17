@@ -295,6 +295,27 @@ public class MarketOverlayGameTest implements FabricClientGameTest {
         if (!offline.startsWith("nicht erreichbar")) throw new AssertionError("Offline-Status falsch: " + offline);
         System.out.println("OVERLAY-TEST ok: AH-Preise vom Preis-Server (" + priceState[1] + " Verkäufe), offline ohne Absturz");
 
+        // Jobtracker-Anzeige: "Zeit bis Level-Up" ausschalten -> Zeile weg, Panel kürzer
+        ctx.runOnClient(mc -> mc.setScreen(new dev.opsuchtprices.client.JobHudDisplayScreen(null, cfg, () -> {})));
+        ctx.waitTicks(3);
+        ctx.clickScreenButton("Zeit bis Level-Up: AN");
+        ctx.waitTicks(2);
+        ctx.takeScreenshot("jobtracker-anzeige-einstellungen");
+        if (cfg.jobShowLevelUp) throw new AssertionError("Level-Up nicht ausgeschaltet");
+        cfg.jobShowLevelUp = true;
+        ctx.runOnClient(mc -> mc.setScreen(new JobHudTestScreen()));
+        ctx.waitTicks(3);
+        int fullH = ctx.computeOnClient(mc -> dev.opsuchtprices.client.JobHud.lastPanelHeight());
+        cfg.jobShowLevelUp = false;
+        cfg.jobShowProgress = false;
+        ctx.waitTicks(3);
+        int shortH = ctx.computeOnClient(mc -> dev.opsuchtprices.client.JobHud.lastPanelHeight());
+        ctx.takeScreenshot("jobtracker-ohne-levelup-und-balken");
+        if (shortH != fullH - 20) throw new AssertionError("Panel-Höhe falsch: " + fullH + " -> " + shortH);
+        cfg.jobShowLevelUp = true;
+        cfg.jobShowProgress = true;
+        System.out.println("OVERLAY-TEST ok: Jobtracker-Zeilen abschaltbar (Höhe " + fullH + " -> " + shortH + ")");
+
         // Job-Geld-Limit: echter Wortlaut vom Server -> eine Info, Wiederholungen ohne Spam
         String[] limit = ctx.computeOnClient(mc -> {
             long now = System.currentTimeMillis();
@@ -359,7 +380,8 @@ public class MarketOverlayGameTest implements FabricClientGameTest {
             ctx.runOnClient(mc -> mc.setScreen(new net.minecraft.client.gui.screens.inventory.InventoryScreen(mc.player)));
             ctx.waitTicks(5);
             dev.opsuchtprices.client.InventoryButtons.lastCommand = null;
-            int ox = cfg.inventoryButtonsX, oy = cfg.inventoryButtonsY;
+            int ox = cfg.inventoryButtonsX + 2 * 22, oy = cfg.inventoryButtonsY; // Standardplatz von Knopf 3
+            int[] b1Before = ctx.computeOnClient(mc -> dev.opsuchtprices.client.InventoryButtons.buttonCenter(mc.screen, 1));
             int[] b2 = ctx.computeOnClient(mc -> dev.opsuchtprices.client.InventoryButtons.buttonCenter(mc.screen, 2));
             ctx.getInput().setCursorPos(b2[0] * gs, b2[1] * gs);
             ctx.waitTicks(2);
@@ -374,13 +396,24 @@ public class MarketOverlayGameTest implements FabricClientGameTest {
             ctx.getInput().setCursorPos(5, 5);
             ctx.waitTicks(2);
             ctx.takeScreenshot("inventar-knoepfe-verschoben");
-            if (dev.opsuchtprices.client.InventoryButtons.lastCommand != null || !saved[0]
-                    || Math.abs(cfg.inventoryButtonsX - ox - 40) > 2 || Math.abs(cfg.inventoryButtonsY - oy - 125) > 2) {
-                throw new AssertionError("Verschieben falsch: " + cfg.inventoryButtonsX + "," + cfg.inventoryButtonsY
+            var moved = cfg.inventoryButtonList.get(2);
+            int[] b1After = ctx.computeOnClient(mc -> dev.opsuchtprices.client.InventoryButtons.buttonCenter(mc.screen, 1));
+            if (dev.opsuchtprices.client.InventoryButtons.lastCommand != null || !saved[0] || moved.x == null
+                    || Math.abs(moved.x - ox - 40) > 2 || Math.abs(moved.y - oy - 125) > 2
+                    || !java.util.Arrays.equals(b1Before, b1After) || cfg.inventoryButtonList.get(1).x != null) {
+                throw new AssertionError("Verschieben falsch: Knopf3=" + moved.x + "," + moved.y + " Knopf2 vorher/nachher="
+                        + java.util.Arrays.toString(b1Before) + "/" + java.util.Arrays.toString(b1After)
                         + " Befehl=" + dev.opsuchtprices.client.InventoryButtons.lastCommand + " gespeichert=" + saved[0]);
             }
-            System.out.println("OVERLAY-TEST ok: Inventar-Leiste per Drag & Drop verschoben (" + ox + "," + oy + " -> "
-                    + cfg.inventoryButtonsX + "," + cfg.inventoryButtonsY + "), kein Befehl ausgelöst");
+            System.out.println("OVERLAY-TEST ok: einzelner Inventar-Knopf per Drag & Drop verschoben (" + ox + "," + oy + " -> "
+                    + moved.x + "," + moved.y + "), andere Knöpfe unverändert, kein Befehl ausgelöst");
+            // /opa speed: Diagnose zeigt die Testitems
+            java.util.List<String> diag = ctx.computeOnClient(mc -> dev.opsuchtprices.client.SpeedDiagnosis.lines(mc.player));
+            String diagText = String.join("\n", diag);
+            if (!diagText.contains("Speed-Anzeige (nur Item-Attribute): +80%") || !diagText.contains("Attribut minecraft:movement_speed")) {
+                throw new AssertionError("Speed-Diagnose unvollständig:\n" + diagText);
+            }
+            System.out.println("OVERLAY-TEST ok: /opa speed Diagnose (" + diag.size() + " Zeilen)");
             // Nur im eigenen Inventar, nicht in anderen Menüs (z. B. Werkbank/Truhe)
             ctx.runOnClient(mc -> mc.setScreen(null));
             ctx.waitTicks(2);

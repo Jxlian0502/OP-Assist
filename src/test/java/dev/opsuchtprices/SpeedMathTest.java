@@ -36,6 +36,18 @@ class SpeedMathTest {
     }
 
     @Test
+    void shardButtonUsesMerchantAndOldConfigIsMigrated() throws Exception {
+        var cfg = new dev.opsuchtprices.config.ModConfig();
+        assertEquals(1, cfg.inventoryButtonList.stream().filter(b -> b.command.equals("merchant")).count());
+        java.nio.file.Path f = java.nio.file.Files.createTempFile("cfg", ".json");
+        java.nio.file.Files.writeString(f, "{\"inventoryButtonList\":[{\"item\":\"minecraft:amethyst_shard\",\"label\":\"Shards\",\"command\":\"shards\"}]}");
+        var loaded = dev.opsuchtprices.config.ModConfig.load(f);
+        assertEquals("merchant", loaded.inventoryButtonList.get(0).command);
+        assertEquals("Shardhändler", loaded.inventoryButtonList.get(0).label);
+        java.nio.file.Files.deleteIfExists(f);
+    }
+
+    @Test
     void slownessIsNegative() {
         assertEquals("-15%", SpeedMath.format(SpeedMath.percent(BASE, List.of(new Mod(Op.ADD_MULTIPLIED_TOTAL, -0.15)))));
     }

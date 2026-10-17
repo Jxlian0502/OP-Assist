@@ -52,9 +52,11 @@ public final class SettingsScreen extends Screen {
         addRenderableWidget(Button.builder(Component.literal("Jobtracker: " + (config.jobTracker ? "AN" : "AUS")), b -> {
             config.jobTracker = !config.jobTracker;
             b.setMessage(Component.literal("Jobtracker: " + (config.jobTracker ? "AN" : "AUS")));
-        }).bounds(cx - 155, y, 150, 20).build());
-        addRenderableWidget(Button.builder(Component.literal("Jobtracker verschieben…"),
-                b -> minecraft.setScreen(new JobHudMoveScreen(this, config, save))).bounds(cx + 5, y, 150, 20).build());
+        }).bounds(cx - 155, y, 100, 20).build());
+        addRenderableWidget(Button.builder(Component.literal("Anzeige…"),
+                b -> minecraft.setScreen(new JobHudDisplayScreen(this, config, save))).bounds(cx - 50, y, 100, 20).build());
+        addRenderableWidget(Button.builder(Component.literal("Verschieben…"),
+                b -> minecraft.setScreen(new JobHudMoveScreen(this, config, save))).bounds(cx + 55, y, 100, 20).build());
 
         y += 26;
         addRenderableWidget(Button.builder(Component.literal("Job-Actionbar: " + (config.jobHideActionBar ? "AUS" : "AN")), b -> {

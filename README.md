@@ -127,9 +127,13 @@ Die Mod prüft beim Start `dist/latest.json` in diesem Repository (https://githu
 
 Inventar-Knöpfe und Speed-Anzeige (ab 1.22.0)
 
-Im eigenen Inventar (Taste E) erscheint eine Knopfleiste: Bank (`/bank`), Auktionshaus (`/ah`), Markt (`/markt`), Quests (`/quest`), Shards (`/shards`), Tresor (`/tresor`), Enderkiste (`/ec`). Daneben steht der Speed-Bonus, z. B. „Speed +230%“.
+Im eigenen Inventar (Taste E) erscheint eine Knopfleiste: Bank (`/bank`), Auktionshaus (`/ah`), Markt (`/markt`), Quests (`/quest`), Shardhändler (`/merchant`), Tresor (`/tresor`), Enderkiste (`/ec`). Daneben steht der Speed-Bonus, z. B. „Speed +230%“.
 
-- Klick auf einen Knopf führt den Befehl aus. Leiste und Speed-Anzeige lassen sich mit gedrückter Maustaste per Drag & Drop frei verschieben; die Position bleibt gespeichert und hängt an der Inventar-Ecke.
+- Klick auf einen Knopf führt den Befehl aus. Jeder Knopf und die Speed-Anzeige lassen sich einzeln mit gedrückter Maustaste per Drag & Drop frei verschieben; die Positionen bleiben gespeichert und hängen an der Inventar-Ecke. `/opa speed` zeigt, woraus sich der Speed zusammensetzt.
 - Der Speed wird aus den Bewegungsgeschwindigkeits-Werten der Items in Haupthand, Nebenhand und Rüstung berechnet (gleiche Formel wie Minecraft, ohne Tränke).
 - Config: `inventoryButtons`, `inventorySpeed`, Positionen `inventoryButtonsX/Y`, `inventorySpeedX/Y`, und `inventoryButtonList` (Item, Name und Befehl jedes Knopfs, frei änderbar).
 - Eigene Umsetzung, kein Code aus anderen Mods.
+
+Jobtracker-Anzeige einstellen (ab 1.23.0)
+
+Einstellungen → Jobtracker „Anzeige…“: Fortschrittsbalken, Zeit, Geld, Geld/h, XP, XP/h, Zeit bis Level-Up, Shards und Jobschatz lassen sich einzeln ein- und ausschalten (Config: `jobShowProgress`, `jobShowTime`, `jobShowMoney`, `jobShowMoneyPerHour`, `jobShowXp`, `jobShowXpPerHour`, `jobShowLevelUp`, `jobShowShards`, `jobShowTreasure`).

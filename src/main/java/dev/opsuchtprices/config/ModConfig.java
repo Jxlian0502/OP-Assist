@@ -67,10 +67,19 @@ public final class ModConfig {
     public int jobXpCounterStep = 100_000;
     /** Shard-Wert des Inventars im Jobtracker anzeigen (Kurse aus der API). */
     public boolean jobShowShards = true;
+    /** Welche Zeilen der Jobtracker anzeigt (einstellbar unter Einstellungen → Jobtracker-Anzeige). */
+    public boolean jobShowProgress = true;
+    public boolean jobShowTime = true;
+    public boolean jobShowMoney = true;
+    public boolean jobShowMoneyPerHour = true;
+    public boolean jobShowXp = true;
+    public boolean jobShowXpPerHour = true;
+    public boolean jobShowLevelUp = true;
+    public boolean jobShowTreasure = true;
     /** Info im Chat, wenn das Job-Geld-Limit (1,5 Mio. $/h) erreicht ist, und wenn es wieder vorbei ist. */
     public boolean jobMoneyLimitInfo = true;
 
-    /** Knopfleiste im Inventar (nur im eigenen Inventar, Taste E). Position relativ zur linken oberen Inventar-Ecke. */
+    /** Knöpfe im Inventar (nur im eigenen Inventar, Taste E). inventoryButtonsX/Y = Start der Standardreihe; jeder Knopf kann eigene x/y haben. */
     public boolean inventoryButtons = true;
     public int inventoryButtonsX = 0;
     public int inventoryButtonsY = -24;
@@ -80,7 +89,7 @@ public final class ModConfig {
             new InventoryButton("minecraft:gold_block", "Auktionshaus", "ah"),
             new InventoryButton("minecraft:gold_ingot", "Markt", "markt"),
             new InventoryButton("minecraft:book", "Quests", "quest"),
-            new InventoryButton("minecraft:amethyst_shard", "Shards", "shards"),
+            new InventoryButton("minecraft:amethyst_shard", "Shardhändler", "merchant"),
             new InventoryButton("minecraft:vault", "Tresor", "tresor"),
             new InventoryButton("minecraft:ender_chest", "Enderkiste", "ec")));
     /** Speed-Anzeige im Inventar (Bonus aus Items in Hand, Nebenhand und Rüstung). Position wie oben. */
@@ -93,6 +102,9 @@ public final class ModConfig {
         public String item;
         public String label;
         public String command;
+        /** Eigene Position relativ zur Inventar-Ecke (null = Platz in der Standardreihe). */
+        public Integer x;
+        public Integer y;
 
         public InventoryButton() {}
 
@@ -127,6 +139,13 @@ public final class ModConfig {
         priceRefreshSeconds = Math.max(15, Math.min(priceRefreshSeconds, 3600));
         if (inventoryButtonList == null) inventoryButtonList = new ModConfig().inventoryButtonList;
         inventoryButtonList.removeIf(b -> b == null || b.command == null || b.command.isBlank());
+        // 1.22.0 hatte den Shard-Befehl geraten (/shards); richtig ist /merchant
+        for (InventoryButton b : inventoryButtonList) {
+            if ("shards".equalsIgnoreCase(b.command.trim()) || "/shards".equalsIgnoreCase(b.command.trim())) {
+                b.command = "merchant";
+                if ("Shards".equals(b.label)) b.label = "Shardhändler";
+            }
+        }
         // Alte Standardwährung aus Version 1.1.0 automatisch auf $ umstellen
         if (currencyLabel == null || currencyLabel.equalsIgnoreCase("Coins")) currencyLabel = "$";
         if (streamUrl == null || streamUrl.isBlank()) streamUrl = "https://api.opsucht.net/auctions/stream";

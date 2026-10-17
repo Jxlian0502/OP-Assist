@@ -132,6 +132,12 @@ public final class JobHud {
     }
 
     private static int[] lastSize = {120, 100};
+    private static volatile int lastPanelH;
+
+    /** Höhe des zuletzt gezeichneten Panels (für Tests). */
+    public static int lastPanelHeight() {
+        return lastPanelH;
+    }
 
     /** Zeichnet das Panel an x/y (auch für Tests). */
     public static void renderPanel(GuiGraphics g, int x, int y) {
@@ -148,16 +154,16 @@ public final class JobHud {
 
         String title = s.job + " · Level " + s.level;
         List<String[]> rows = new ArrayList<>();
-        rows.add(new String[]{"Zeit", duration(t.activeMs(s)) + (paused ? " (Pause)" : "")});
-        rows.add(new String[]{"Geld", "+" + PriceFormat.exact(s.money, cur)});
+        if (on(c -> c.jobShowTime)) rows.add(new String[]{"Zeit", duration(t.activeMs(s)) + (paused ? " (Pause)" : "")});
+        if (on(c -> c.jobShowMoney)) rows.add(new String[]{"Geld", "+" + PriceFormat.exact(s.money, cur)});
         refreshRates(t, s);
         Double mph = cachedMph;
-        rows.add(new String[]{"Geld/h", mph == null ? "…" : PriceFormat.price(mph, cur)});
-        rows.add(new String[]{"XP", "+" + PriceFormat.exact(s.xp, "")});
+        if (on(c -> c.jobShowMoneyPerHour)) rows.add(new String[]{"Geld/h", mph == null ? "…" : PriceFormat.price(mph, cur)});
+        if (on(c -> c.jobShowXp)) rows.add(new String[]{"XP", "+" + PriceFormat.exact(s.xp, "")});
         Double xph = cachedXph;
-        rows.add(new String[]{"XP/h", xph == null ? "…" : PriceFormat.number(xph)});
+        if (on(c -> c.jobShowXpPerHour)) rows.add(new String[]{"XP/h", xph == null ? "…" : PriceFormat.number(xph)});
         Long lvl = t.timeToLevelUpMs(s);
-        rows.add(new String[]{"Level-Up", lvl == null ? "…" : "~" + shortDuration(lvl)});
+        if (on(c -> c.jobShowLevelUp)) rows.add(new String[]{"Level-Up", lvl == null ? "…" : "~" + shortDuration(lvl)});
         if (config == null || config.jobShowShards) {
             if (ShardValue.ready()) {
                 rows.add(new String[]{"Shards (Inv.)", PriceFormat.exact(ShardValue.total("opshards"), "")});
@@ -176,14 +182,15 @@ public final class JobHud {
         int w = Math.max(20 + font.width(title), labelW + 10 + valueW) + 8;
         w = Math.max(w, 120);
         int lineH = 10;
-        boolean showCounter = counter != null && (config == null || config.jobXpCounterStep > 0);
+        boolean showCounter = counter != null && (config == null || config.jobXpCounterStep > 0) && on(c -> c.jobShowTreasure);
+        boolean showBar = on(c -> c.jobShowProgress);
         String cLabel = null, cValue = null;
         if (showCounter) {
             cLabel = "Jobschatz";
             cValue = PriceFormat.number(Math.floor(counter.current())) + " / " + PriceFormat.number(counter.step());
             w = Math.max(w, font.width(cLabel) + 10 + font.width(cValue) + 8);
         }
-        int h = 4 + 16 + 10 + rows.size() * lineH + 3 + (showCounter ? 26 : 0);
+        int h = 4 + 16 + (showBar ? 10 : 0) + rows.size() * lineH + 3 + (showCounter ? 26 : 0);
 
         g.fill(x, y, x + w, y + h, C_BG);
         Item icon = ICONS.getOrDefault(s.job.toLowerCase(Locale.ROOT), Items.EXPERIENCE_BOTTLE);
@@ -191,14 +198,16 @@ public final class JobHud {
         g.drawString(font, title, x + 22, y + 6, C_TITLE);
 
         // Fortschrittsbalken
-        int by = y + 20, bx = x + 4, bw = w - 8 - font.width("100,00 %") - 4;
-        double pct = s.percent == null ? 0 : Math.max(0, Math.min(100, s.percent));
-        g.fill(bx, by + 1, bx + bw, by + 6, 0x60FFFFFF);
-        g.fill(bx, by + 1, bx + (int) Math.round(bw * pct / 100.0), by + 6, C_MONEY);
-        String p = s.percent == null ? "–" : PriceFormat.exact(s.percent, "") + " %";
-        g.drawString(font, p, x + w - 4 - font.width(p), by, C_TEXT);
+        if (showBar) {
+            int by = y + 20, bx = x + 4, bw = w - 8 - font.width("100,00 %") - 4;
+            double pct = s.percent == null ? 0 : Math.max(0, Math.min(100, s.percent));
+            g.fill(bx, by + 1, bx + bw, by + 6, 0x60FFFFFF);
+            g.fill(bx, by + 1, bx + (int) Math.round(bw * pct / 100.0), by + 6, C_MONEY);
+            String p = s.percent == null ? "–" : PriceFormat.exact(s.percent, "") + " %";
+            g.drawString(font, p, x + w - 4 - font.width(p), by, C_TEXT);
+        }
 
-        int ly = y + 31;
+        int ly = y + (showBar ? 31 : 21);
         for (String[] r : rows) {
             int col = switch (r[0]) {
                 case "Geld", "Geld/h" -> C_MONEY;
@@ -225,6 +234,7 @@ public final class JobHud {
             g.drawString(font, r, x + w - 4 - font.width(r), cy, C_TEXT);
         }
 
+        lastPanelH = h;
         return new int[]{w, h};
     }
 
@@ -244,6 +254,11 @@ public final class JobHud {
         ratesTracker = t;
         cachedMph = t.perHour(s, s.money);
         cachedXph = t.perHour(s, s.xp);
+    }
+
+    /** true, wenn die Zeile angezeigt werden soll (ohne Config, z. B. in Tests: alles an). */
+    private static boolean on(java.util.function.Predicate<ModConfig> show) {
+        return config == null || show.test(config);
     }
 
     /** 1:02:03 oder 12:34. */

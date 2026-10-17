@@ -42,7 +42,7 @@ public final class InventoryButtons {
     private static BooleanSupplier active = () -> true;
     private static Runnable save = () -> {};
 
-    private enum Target { BAR, SPEED }
+    private enum Target { BUTTON, SPEED }
 
     private static Target pressed;
     private static int pressedButton = -1;
@@ -55,7 +55,7 @@ public final class InventoryButtons {
 
     /** Mitte des Knopfs i in GUI-Koordinaten (für Tests). */
     public static int[] buttonCenter(Screen s, int i) {
-        return new int[]{barX(s, lastLeft) + i * (SIZE + GAP) + SIZE / 2, barY(s, lastTop) + SIZE / 2};
+        return new int[]{buttonX(s, lastLeft, i) + SIZE / 2, buttonY(s, lastTop, i) + SIZE / 2};
     }
 
     /** Zuletzt ausgeführter Befehl (für Tests). */
@@ -78,16 +78,23 @@ public final class InventoryButtons {
         return config.inventoryButtonList == null ? 0 : config.inventoryButtonList.size();
     }
 
-    private static int barW() {
-        return Math.max(0, count() * (SIZE + GAP) - GAP);
+    /** Position des Knopfs relativ zur Inventar-Ecke: eigene Position oder Platz in der Standardreihe. */
+    static int offX(int i) {
+        ModConfig.InventoryButton b = config.inventoryButtonList.get(i);
+        return b.x != null ? b.x : config.inventoryButtonsX + i * (SIZE + GAP);
     }
 
-    static int barX(Screen s, int left) {
-        return clamp(left + config.inventoryButtonsX, 0, s.width - barW());
+    static int offY(int i) {
+        ModConfig.InventoryButton b = config.inventoryButtonList.get(i);
+        return b.y != null ? b.y : config.inventoryButtonsY;
     }
 
-    static int barY(Screen s, int top) {
-        return clamp(top + config.inventoryButtonsY, 0, s.height - SIZE);
+    static int buttonX(Screen s, int left, int i) {
+        return clamp(left + offX(i), 0, s.width - SIZE);
+    }
+
+    static int buttonY(Screen s, int top, int i) {
+        return clamp(top + offY(i), 0, s.height - SIZE);
     }
 
     private static int speedW(Font font) {
@@ -109,10 +116,12 @@ public final class InventoryButtons {
     /** Index des Knopfs unter der Maus oder -1. */
     private static int buttonAt(Screen s, int left, int top, double mx, double my) {
         if (!config.inventoryButtons) return -1;
-        int x = barX(s, left), y = barY(s, top);
-        if (my < y || my >= y + SIZE || mx < x || mx >= x + barW()) return -1;
-        int i = (int) ((mx - x) / (SIZE + GAP));
-        return mx - x - i * (SIZE + GAP) < SIZE && i < count() ? i : -1;
+        // von hinten: bei überlappenden Knöpfen gewinnt der oben gezeichnete
+        for (int i = count() - 1; i >= 0; i--) {
+            int x = buttonX(s, left, i), y = buttonY(s, top, i);
+            if (mx >= x && mx < x + SIZE && my >= y && my < y + SIZE) return i;
+        }
+        return -1;
     }
 
     private static boolean overSpeed(Screen s, int left, int top, double mx, double my, Font font) {
@@ -131,22 +140,17 @@ public final class InventoryButtons {
         Font font = mc.font;
         int hovered = buttonAt(screen, left, top, mx, my);
         if (config.inventoryButtons) {
-            int x = barX(screen, left), y = barY(screen, top);
+            int draggedButton = dragging && pressed == Target.BUTTON ? pressedButton : -1;
             for (int i = 0; i < count(); i++) {
-                ModConfig.InventoryButton b = config.inventoryButtonList.get(i);
-                int bx = x + i * (SIZE + GAP);
-                boolean hot = i == hovered && !dragging;
-                g.fill(bx, y, bx + SIZE, y + SIZE, hot ? 0xFF5A5A6E : 0xFF2B2B35);
-                g.fill(bx, y, bx + SIZE, y + 1, 0xFF6E6E80);
-                g.fill(bx, y + SIZE - 1, bx + SIZE, y + SIZE, 0xFF15151B);
-                g.renderItem(icon(b.item), bx + 2, y + 2);
+                if (i != draggedButton) drawButton(g, screen, left, top, i, i == hovered && !dragging);
             }
+            if (draggedButton >= 0) drawButton(g, screen, left, top, draggedButton, true); // gezogener Knopf obenauf
             if (hovered >= 0 && !dragging) {
                 ModConfig.InventoryButton b = config.inventoryButtonList.get(hovered);
                 g.setTooltipForNextFrame(font, List.of(
                         Component.literal(b.label == null ? "/" + b.command : b.label).getVisualOrderText(),
                         Component.literal("Klick: /" + b.command).withStyle(ChatFormatting.GRAY).getVisualOrderText(),
-                        Component.literal("Ziehen: Leiste verschieben").withStyle(ChatFormatting.DARK_GRAY).getVisualOrderText()),
+                        Component.literal("Ziehen: Knopf verschieben").withStyle(ChatFormatting.DARK_GRAY).getVisualOrderText()),
                         mx, my);
             }
         }
@@ -161,6 +165,15 @@ public final class InventoryButtons {
                         mx, my);
             }
         }
+    }
+
+    private static void drawButton(GuiGraphics g, Screen screen, int left, int top, int i, boolean hot) {
+        ModConfig.InventoryButton b = config.inventoryButtonList.get(i);
+        int bx = buttonX(screen, left, i), y = buttonY(screen, top, i);
+        g.fill(bx, y, bx + SIZE, y + SIZE, hot ? 0xFF5A5A6E : 0xFF2B2B35);
+        g.fill(bx, y, bx + SIZE, y + 1, 0xFF6E6E80);
+        g.fill(bx, y + SIZE - 1, bx + SIZE, y + SIZE, 0xFF15151B);
+        g.renderItem(icon(b.item), bx + 2, y + 2);
     }
 
     private static ItemStack icon(String id) {
@@ -201,14 +214,14 @@ public final class InventoryButtons {
         if (!applies(screen) || button != 0) return false;
         Font font = Minecraft.getInstance().font;
         int i = buttonAt(screen, left, top, mx, my);
-        Target t = i >= 0 ? Target.BAR : overSpeed(screen, left, top, mx, my, font) ? Target.SPEED : null;
+        Target t = i >= 0 ? Target.BUTTON : overSpeed(screen, left, top, mx, my, font) ? Target.SPEED : null;
         if (t == null) return false;
         pressed = t;
         pressedButton = i;
         pressX = mx;
         pressY = my;
-        startOffX = t == Target.BAR ? config.inventoryButtonsX : config.inventorySpeedX;
-        startOffY = t == Target.BAR ? config.inventoryButtonsY : config.inventorySpeedY;
+        startOffX = t == Target.BUTTON ? offX(i) : config.inventorySpeedX;
+        startOffY = t == Target.BUTTON ? offY(i) : config.inventorySpeedY;
         dragging = false;
         return true;
     }
@@ -219,9 +232,10 @@ public final class InventoryButtons {
         if (dragging) {
             int nx = startOffX + (int) Math.round(mx - pressX);
             int ny = startOffY + (int) Math.round(my - pressY);
-            if (pressed == Target.BAR) {
-                config.inventoryButtonsX = nx;
-                config.inventoryButtonsY = ny;
+            if (pressed == Target.BUTTON) {
+                ModConfig.InventoryButton b = config.inventoryButtonList.get(pressedButton);
+                b.x = nx;
+                b.y = ny;
             } else {
                 config.inventorySpeedX = nx;
                 config.inventorySpeedY = ny;
@@ -240,7 +254,7 @@ public final class InventoryButtons {
         dragging = false;
         if (wasDrag) {
             save.run();
-        } else if (t == Target.BAR && i >= 0 && i == buttonAt(screen, left, top, mx, my)) {
+        } else if (t == Target.BUTTON && i >= 0 && i == buttonAt(screen, left, top, mx, my)) {
             run(config.inventoryButtonList.get(i).command);
         }
         return true;
