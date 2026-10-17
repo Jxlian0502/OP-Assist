@@ -160,7 +160,8 @@ public final class InventoryButtons {
             g.drawString(font, SpeedMath.format(speedPercent(mc.player)), x, y + 10, 0xFF7CDB6A);
             if (overSpeed(screen, left, top, mx, my, font) && hovered < 0 && !dragging) {
                 g.setTooltipForNextFrame(font, List.of(
-                        Component.literal("Speed aus Items in Hand, Nebenhand und Rüstung").getVisualOrderText(),
+                        Component.literal("Speed aus Items (Hand, Nebenhand, Rüstung)").getVisualOrderText(),
+                        Component.literal("plus Schnelligkeits-Effekt (x2 mit Speed Boots)").withStyle(ChatFormatting.GRAY).getVisualOrderText(),
                         Component.literal("Ziehen: Anzeige verschieben").withStyle(ChatFormatting.DARK_GRAY).getVisualOrderText()),
                         mx, my);
             }
@@ -187,8 +188,32 @@ public final class InventoryButtons {
     private static final EquipmentSlot[] SLOTS = {EquipmentSlot.MAINHAND, EquipmentSlot.OFFHAND,
             EquipmentSlot.HEAD, EquipmentSlot.CHEST, EquipmentSlot.LEGS, EquipmentSlot.FEET};
 
-    /** Speed-Bonus in Prozent aus den Bewegungsgeschwindigkeits-Attributen der getragenen/gehaltenen Items. */
+    /**
+     * Angezeigter Speed wie bei OP SUCHT (gleicher Wert wie die OPMOD): Item-Speed plus Schnelligkeits-Effekt,
+     * der Effekt mal Faktor aus "x2 Speed Effekt"-Items (z. B. Speed Boots).
+     */
     public static double speedPercent(Player player) {
+        return SpeedMath.opSuchtPercent(itemSpeedPercent(player), speedEffectLevel(player), effectMultiplier(player));
+    }
+
+    /** Stufe des Schnelligkeits-Effekts (0 = keiner). */
+    public static int speedEffectLevel(Player player) {
+        var e = player.getEffect(net.minecraft.world.effect.MobEffects.SPEED);
+        return e == null ? 0 : e.getAmplifier() + 1;
+    }
+
+    /** Faktor für den Schnelligkeits-Effekt aus der Lore der getragenen/gehaltenen Items ("x2 Speed Effekt"). */
+    public static int effectMultiplier(Player player) {
+        List<String> lines = new ArrayList<>();
+        for (EquipmentSlot slot : SLOTS) {
+            var lore = player.getItemBySlot(slot).get(DataComponents.LORE);
+            if (lore != null) for (Component c : lore.lines()) lines.add(c.getString());
+        }
+        return SpeedMath.effectMultiplier(lines);
+    }
+
+    /** Speed-Bonus in Prozent nur aus den Bewegungsgeschwindigkeits-Attributen der getragenen/gehaltenen Items. */
+    public static double itemSpeedPercent(Player player) {
         List<SpeedMath.Mod> mods = new ArrayList<>();
         for (EquipmentSlot slot : SLOTS) {
             ItemStack stack = player.getItemBySlot(slot);

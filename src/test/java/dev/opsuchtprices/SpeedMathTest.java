@@ -47,6 +47,20 @@ class SpeedMathTest {
         java.nio.file.Files.deleteIfExists(f);
     }
 
+    /** Echte Messung (17.10.): Speed Boots II (+0,1 fest), Bergarbeiter Helm (+25 %), Schnelligkeit II, OPMOD zeigt +230 %. */
+    @Test
+    void matchesOpmodMeasurement() {
+        double items = SpeedMath.percent(BASE, List.of(new Mod(Op.ADD_VALUE, 0.1), new Mod(Op.ADD_MULTIPLIED_BASE, 0.25)));
+        assertEquals(150, items, 1e-9);
+        int mult = SpeedMath.effectMultiplier(List.of("➜ Effekt: x2 Speed Effekt", "§7Andere Zeile"));
+        assertEquals(2, mult);
+        assertEquals("+230%", SpeedMath.format(SpeedMath.opSuchtPercent(items, 2, mult)));
+        // ohne Effekt bleibt es beim Item-Speed, ohne x2-Item zählt der Effekt einfach
+        assertEquals("+150%", SpeedMath.format(SpeedMath.opSuchtPercent(items, 0, mult)));
+        assertEquals("+190%", SpeedMath.format(SpeedMath.opSuchtPercent(items, 2, 1)));
+        assertEquals(1, SpeedMath.effectMultiplier(List.of("➥ Effekt: +25% Geschwindigkeit (Kopf)")));
+    }
+
     @Test
     void slownessIsNegative() {
         assertEquals("-15%", SpeedMath.format(SpeedMath.percent(BASE, List.of(new Mod(Op.ADD_MULTIPLIED_TOTAL, -0.15)))));

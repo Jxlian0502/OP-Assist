@@ -130,7 +130,7 @@ Inventar-Knöpfe und Speed-Anzeige (ab 1.22.0)
 Im eigenen Inventar (Taste E) erscheint eine Knopfleiste: Bank (`/bank`), Auktionshaus (`/ah`), Markt (`/markt`), Quests (`/quest`), Shardhändler (`/merchant`), Tresor (`/tresor`), Enderkiste (`/ec`). Daneben steht der Speed-Bonus, z. B. „Speed +230%“.
 
 - Klick auf einen Knopf führt den Befehl aus. Jeder Knopf und die Speed-Anzeige lassen sich einzeln mit gedrückter Maustaste per Drag & Drop frei verschieben; die Positionen bleiben gespeichert und hängen an der Inventar-Ecke. `/opa speed` zeigt, woraus sich der Speed zusammensetzt.
-- Der Speed wird aus den Bewegungsgeschwindigkeits-Werten der Items in Haupthand, Nebenhand und Rüstung berechnet (gleiche Formel wie Minecraft, ohne Tränke).
+- Der Speed wird wie in der OPMOD angezeigt: Speed der Items in Haupthand, Nebenhand und Rüstung (Minecraft-Formel) plus Schnelligkeits-Effekt (+20 % pro Stufe, doppelt mit „x2 Speed Effekt“-Items wie den Speed Boots).
 - Config: `inventoryButtons`, `inventorySpeed`, Positionen `inventoryButtonsX/Y`, `inventorySpeedX/Y`, und `inventoryButtonList` (Item, Name und Befehl jedes Knopfs, frei änderbar).
 - Eigene Umsetzung, kein Code aus anderen Mods.
 

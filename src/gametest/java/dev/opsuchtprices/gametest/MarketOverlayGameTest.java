@@ -355,6 +355,7 @@ public class MarketOverlayGameTest implements FabricClientGameTest {
                     + "[{type:\"minecraft:movement_speed\",amount:0.5,operation:\"add_multiplied_base\",slot:\"feet\",id:\"test:boots\"}]]");
             sp.getServer().runCommand("item replace entity @p weapon.mainhand with minecraft:iron_axe[minecraft:attribute_modifiers="
                     + "[{type:\"minecraft:movement_speed\",amount:0.3,operation:\"add_multiplied_base\",slot:\"mainhand\",id:\"test:axe\"}]]");
+            sp.getServer().runCommand("effect give @p minecraft:speed 120 1 true"); // Schnelligkeit II: +40 %
             ctx.waitTicks(10);
             boolean[] saved = {false};
             dev.opsuchtprices.client.InventoryButtons.init(cfg, () -> true, () -> saved[0] = true);
@@ -362,7 +363,7 @@ public class MarketOverlayGameTest implements FabricClientGameTest {
             ctx.waitTicks(10);
             String speed = ctx.computeOnClient(mc -> dev.opsuchtprices.util.SpeedMath.format(
                     dev.opsuchtprices.client.InventoryButtons.speedPercent(mc.player)));
-            if (!"+80%".equals(speed)) throw new AssertionError("Speed falsch: " + speed);
+            if (!"+120%".equals(speed)) throw new AssertionError("Speed falsch (erwartet Items +80 % + Schnelligkeit II +40 %): " + speed);
             double gs = ctx.computeOnClient(mc -> mc.getWindow().getGuiScale());
             int[] b0 = ctx.computeOnClient(mc -> dev.opsuchtprices.client.InventoryButtons.buttonCenter(mc.screen, 0));
             ctx.getInput().setCursorPos(b0[0] * gs, b0[1] * gs);
@@ -410,7 +411,7 @@ public class MarketOverlayGameTest implements FabricClientGameTest {
             // /opa speed: Diagnose zeigt die Testitems
             java.util.List<String> diag = ctx.computeOnClient(mc -> dev.opsuchtprices.client.SpeedDiagnosis.lines(mc.player));
             String diagText = String.join("\n", diag);
-            if (!diagText.contains("Speed-Anzeige (nur Item-Attribute): +80%") || !diagText.contains("Attribut minecraft:movement_speed")) {
+            if (!diagText.contains("Speed-Anzeige: +120% (Items +80%, Schnelligkeit Stufe 2 x1 = +40%)") || !diagText.contains("Attribut minecraft:movement_speed")) {
                 throw new AssertionError("Speed-Diagnose unvollständig:\n" + diagText);
             }
             System.out.println("OVERLAY-TEST ok: /opa speed Diagnose (" + diag.size() + " Zeilen)");
