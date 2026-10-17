@@ -6,7 +6,9 @@
 		"MultiPlayerGameModeMixin",
 		"AbstractContainerScreenMixin",
 		"ChatComponentMixin",
-		"GuiMixin"
+		"GuiMixin",
+		"AnvilScreenMixin",
+		"ScreenClickMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

@@ -93,6 +93,13 @@ public final class OpSuchtPricesClient implements ClientModInitializer {
                 Duration.ofSeconds(config.marketRefreshSeconds), Clock.systemUTC());
 
         MarketOverlay.init(market, config);
+        // Komfort: Inventar-voll- und AFK-Warnung, Schilder-Suche, verkaufbare Items, Behälter-Vorschau, Fehlklick-Schutz
+        QualityOfLife.init(config, () -> !config.onlyOnOpSucht || onOpSucht, market);
+        net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents.MODIFY_COMMAND.register(QualityOfLife::command);
+        net.fabricmc.fabric.api.client.message.v1.ClientSendMessageEvents.ALLOW_COMMAND.register(QualityOfLife::allowCommand);
+        net.fabricmc.fabric.api.client.rendering.v1.world.WorldRenderEvents.AFTER_ENTITIES.register(
+                ctx -> QualityOfLife.renderSignOutlines(ctx.matrices(), ctx.consumers()));
+        ItemTooltipCallback.EVENT.register((stack, tooltipContext, tooltipType, lines) -> QualityOfLife.appendTooltip(stack, lines));
 
         // Automatische Updates (nur in der fertigen .jar, nicht in der Entwicklungsumgebung)
         dev.opsuchtprices.update.UpdateChecker updater = createUpdater(http, config);
@@ -205,6 +212,7 @@ public final class OpSuchtPricesClient implements ClientModInitializer {
             }
             MarketOverlay.tick(client);
             StatsTracker.tick(client);
+            QualityOfLife.tick(client);
             ShardValue.tick(client, config.jobTracker && client.player != null);
             // Nur für Entwicklung: -Dopsuchtprices.debugScreen=true öffnet die Übersicht im Hauptmenü
             if (DEBUG_SCREEN && !debugShown && client.screen instanceof net.minecraft.client.gui.screens.TitleScreen) {
@@ -251,7 +259,7 @@ public final class OpSuchtPricesClient implements ClientModInitializer {
                                     ServerData sd = ctx.getSource().getClient().getCurrentServer();
                                     GuiRecorder.start(target, sd == null ? "-" : sd.ip);
                                     ctx.getSource().sendFeedback(Component.literal(GuiRecorder.isRecording()
-                                            ? "Aufnahme läuft. Klick dich jetzt normal durch /markt (Kategorie, Item, Kaufen, Verkaufen, Menge). Danach: /opa aufnahme stop"
+                                            ? "Aufnahme läuft: Menüs, Klicks und Chat-Meldungen werden mitgeschrieben. Mach jetzt im Spiel, was aufgenommen werden soll. Danach: /opa aufnahme stop"
                                             : "Aufnahme konnte nicht gestartet werden.").withStyle(ChatFormatting.YELLOW));
                                     return 1;
                                 }))
@@ -269,6 +277,50 @@ public final class OpSuchtPricesClient implements ClientModInitializer {
                                                     .withClickEvent(new net.minecraft.network.chat.ClickEvent.OpenFile(f.getParent())))));
                                     return 1;
                                 })))
+                        .then(literal("bestaetigen").then(argument("token", com.mojang.brigadier.arguments.IntegerArgumentType.integer()).executes(ctx -> {
+                            ctx.getSource().sendFeedback(Component.literal(QualityOfLife.confirmPending(
+                                    com.mojang.brigadier.arguments.IntegerArgumentType.getInteger(ctx, "token"))).withStyle(ChatFormatting.GREEN));
+                            return 1;
+                        })))
+                        .then(literal("abbrechen").then(argument("token", com.mojang.brigadier.arguments.IntegerArgumentType.integer()).executes(ctx -> {
+                            ctx.getSource().sendFeedback(Component.literal(QualityOfLife.cancelPending(
+                                    com.mojang.brigadier.arguments.IntegerArgumentType.getInteger(ctx, "token"))).withStyle(ChatFormatting.GRAY));
+                            return 1;
+                        })))
+                        .then(literal("schild")
+                                .executes(ctx -> {
+                                    QualityOfLife.clearSignSearch();
+                                    ctx.getSource().sendFeedback(Component.literal("Schilder-Suche beendet. Suchen: /opa schild <Text>").withStyle(ChatFormatting.GRAY));
+                                    return 1;
+                                })
+                                .then(argument("text", StringArgumentType.greedyString()).executes(ctx -> {
+                                    String q = StringArgumentType.getString(ctx, "text");
+                                    Minecraft mc = Minecraft.getInstance();
+                                    java.util.List<net.minecraft.core.BlockPos> hits = QualityOfLife.searchSigns(mc, q);
+                                    ctx.getSource().sendFeedback(Component.literal(hits.isEmpty() ? "Kein Schild mit „" + q + "“ in Sichtweite."
+                                            : hits.size() + " Schild(er) mit „" + q + "“ gefunden (2 Min. golden umrandet):").withStyle(hits.isEmpty() ? ChatFormatting.YELLOW : ChatFormatting.GREEN));
+                                    for (int i = 0; i < Math.min(10, hits.size()); i++) {
+                                        var b = hits.get(i);
+                                        int dist = mc.player == null ? 0 : (int) Math.sqrt(b.distSqr(mc.player.blockPosition()));
+                                        ctx.getSource().sendFeedback(Component.literal("  " + b.getX() + " " + b.getY() + " " + b.getZ() + "  (" + dist + " Blöcke)").withStyle(ChatFormatting.GRAY));
+                                    }
+                                    return 1;
+                                })))
+                        .then(literal("item").executes(ctx -> {
+                            Minecraft mc = Minecraft.getInstance();
+                            if (mc.player == null) return 0;
+                            var st = mc.player.getMainHandItem();
+                            java.util.List<String> out = new java.util.ArrayList<>();
+                            out.add("Item: " + st.getHoverName().getString() + " [" + st.getItemHolder().getRegisteredName() + "] x" + st.getCount());
+                            out.add("Komponenten: " + st.getComponentsPatch());
+                            try {
+                                java.nio.file.Files.write(dir.resolve("item-daten.txt"), out, java.nio.charset.StandardCharsets.UTF_8);
+                                ctx.getSource().sendFeedback(Component.literal("Daten des Items in der Hand gespeichert: config/opsuchtprices/item-daten.txt").withStyle(ChatFormatting.GREEN));
+                            } catch (java.io.IOException e) {
+                                ModLog.warn("Item-Daten nicht gespeichert: {}", e.toString());
+                            }
+                            return 1;
+                        }))
                         .then(literal("speed").executes(ctx -> {
                             Minecraft mc = Minecraft.getInstance();
                             if (mc.player == null) return 0;

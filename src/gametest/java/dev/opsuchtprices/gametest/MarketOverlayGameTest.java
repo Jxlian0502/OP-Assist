@@ -415,6 +415,116 @@ public class MarketOverlayGameTest implements FabricClientGameTest {
                 throw new AssertionError("Speed-Diagnose unvollständig:\n" + diagText);
             }
             System.out.println("OVERLAY-TEST ok: /opa speed Diagnose (" + diag.size() + " Zeilen)");
+
+            // ===== Komfort-Funktionen =====
+            String marketJson = "{\"Bergbau\":{\"DIAMOND_BLOCK\":[{\"orderSide\":\"BUY\",\"activeOrders\":432,\"price\":678.7},"
+                    + "{\"orderSide\":\"SELL\",\"activeOrders\":131,\"price\":600.1}]}}";
+            var testMarket = new dev.opsuchtprices.market.MarketService(url -> marketJson, "prices", m -> "h",
+                    java.time.Duration.ofMinutes(60), java.time.Clock.systemUTC());
+            testMarket.loadNow();
+            dev.opsuchtprices.client.QualityOfLife.init(cfg, () -> true, testMarket);
+            // Kurzschreibweise
+            if (!"pay Max 1500".equals(dev.opsuchtprices.client.QualityOfLife.command("pay Max 1,5k"))
+                    || !"2000000".equals(dev.opsuchtprices.client.QualityOfLife.anvilName("2m"))
+                    || !"Hallo".equals(dev.opsuchtprices.client.QualityOfLife.anvilName("Hallo"))) {
+                throw new AssertionError("Kurzschreibweise falsch");
+            }
+            System.out.println("OVERLAY-TEST ok: Kurzschreibweise /pay 1,5k -> 1500, Amboss 2m -> 2000000");
+            // Sign-Schutz: /sign wird zurückgehalten, Vorschau mit Farbcodes im Chat, erst Bestätigen sendet
+            sp.getServer().runCommand("item replace entity @p weapon.mainhand with minecraft:dark_oak_log[minecraft:custom_name=\"Schwarzeichenstamm\"]");
+            ctx.waitTicks(5);
+            ctx.runOnClient(mc -> mc.gui.getChat().clearMessages(false));
+            ctx.runOnClient(mc -> mc.getConnection().sendCommand("sign &6&lGold &r&7und &#55FFFFHex"));
+            ctx.waitTicks(3);
+            String held = ctx.computeOnClient(mc -> dev.opsuchtprices.client.QualityOfLife.pendingCommand());
+            ctx.runOnClient(mc -> mc.setScreen(new net.minecraft.client.gui.screens.ChatScreen("", false)));
+            ctx.waitTicks(3);
+            ctx.takeScreenshot("sign-schutz-vorschau");
+            ctx.runOnClient(mc -> mc.setScreen(null));
+            if (!"sign &6&lGold &r&7und &#55FFFFHex".equals(held)) throw new AssertionError("/sign nicht zurückgehalten: " + held);
+            String sent = ctx.computeOnClient(mc -> dev.opsuchtprices.client.QualityOfLife.confirmPending(
+                    dev.opsuchtprices.client.QualityOfLife.pendingToken()));
+            if (!sent.startsWith("Gesendet: /sign") || dev.opsuchtprices.client.QualityOfLife.pendingCommand() != null) {
+                throw new AssertionError("Bestätigen: " + sent);
+            }
+            // /rename ebenso, Abbrechen sendet nichts; andere Befehle laufen ungehindert durch
+            ctx.runOnClient(mc -> mc.getConnection().sendCommand("rename &bNeuer Name"));
+            ctx.waitTicks(2);
+            String renameHeld = dev.opsuchtprices.client.QualityOfLife.pendingCommand();
+            String cancel = dev.opsuchtprices.client.QualityOfLife.cancelPending(dev.opsuchtprices.client.QualityOfLife.pendingToken());
+            boolean otherPasses = ctx.computeOnClient(mc -> dev.opsuchtprices.client.QualityOfLife.allowCommand("spawn"));
+            if (!"rename &bNeuer Name".equals(renameHeld) || !"Abgebrochen.".equals(cancel) || !otherPasses) {
+                throw new AssertionError("Rename-Schutz falsch: " + renameHeld + " / " + cancel + " / " + otherPasses);
+            }
+            System.out.println("OVERLAY-TEST ok: Sign-/Rename-Schutz mit Vorschau, Bestätigen sendet, Abbrechen nicht");
+            // Verkaufbare Items grün (Diamantblock hat Kaufaufträge, Erde nicht)
+            sp.getServer().runCommand("give @p minecraft:diamond_block 5");
+            sp.getServer().runCommand("give @p minecraft:dirt 3");
+            // Rucksack mit gespeicherten Items in die Hand
+            sp.getServer().runCommand("item replace entity @p weapon.mainhand with minecraft:golden_horse_armor[minecraft:custom_name=\"Talismanrucksack\","
+                    + "minecraft:custom_data={IWAbilityBundle:{items:{items:[{id:\"minecraft:diamond\",count:3,Slot:0},{id:\"minecraft:emerald\",count:1,Slot:1}]}}}]");
+            ctx.waitTicks(10);
+            ctx.runOnClient(mc -> mc.setScreen(new net.minecraft.client.gui.screens.inventory.InventoryScreen(mc.player)));
+            ctx.waitTicks(5);
+            ctx.getInput().setCursorPos(5, 5);
+            ctx.waitTicks(2);
+            ctx.takeScreenshot("verkaufbar-gruen");
+            String qol = ctx.computeOnClient(mc -> {
+                var dia = new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.DIAMOND_BLOCK);
+                var dirt = new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.DIRT);
+                if (!dev.opsuchtprices.client.QualityOfLife.isSellable(dia) || dev.opsuchtprices.client.QualityOfLife.isSellable(dirt)) return "verkaufbar falsch";
+                java.util.List<net.minecraft.network.chat.Component> lines = new java.util.ArrayList<>();
+                dev.opsuchtprices.client.QualityOfLife.appendTooltip(mc.player.getMainHandItem(), lines);
+                String t = lines.stream().map(net.minecraft.network.chat.Component::getString).collect(java.util.stream.Collectors.joining(" | "));
+                return t.contains("Inhalt (2):") && t.contains("Diamond") && t.contains("x3") ? "ok " + t : "Vorschau falsch: " + t;
+            });
+            if (!qol.startsWith("ok")) throw new AssertionError(qol);
+            System.out.println("OVERLAY-TEST ok: verkaufbare Items + Rucksack-Vorschau (" + qol.substring(3) + ")");
+            ctx.runOnClient(mc -> mc.setScreen(null));
+            // Schilder-Suche
+            sp.getServer().runCommand("execute as @p at @s run tp @s ~ ~ ~ -90 10");
+            sp.getServer().runCommand("execute as @p at @s run setblock ~3 ~ ~ minecraft:oak_sign[rotation=4]{front_text:{messages:[\"Shop\",\"Diamanten\",\"\",\"\"]}}");
+            ctx.waitTicks(15);
+            int signs = ctx.computeOnClient(mc -> dev.opsuchtprices.client.QualityOfLife.searchSigns(mc, "shop").size());
+            ctx.waitTicks(5);
+            ctx.takeScreenshot("schilder-suche");
+            if (signs != 1) throw new AssertionError("Schilder-Suche: " + signs + " Treffer");
+            System.out.println("OVERLAY-TEST ok: Schilder-Suche findet 1 Schild");
+            // Inventar voll
+            sp.getServer().runCommand("give @p minecraft:stone 2304");
+            ctx.waitTicks(10);
+            boolean full = ctx.computeOnClient(mc -> dev.opsuchtprices.client.QualityOfLife.isInventoryFull(mc));
+            ctx.takeScreenshot("inventar-voll");
+            if (!full) throw new AssertionError("Inventar nicht als voll erkannt");
+            sp.getServer().runCommand("clear @p minecraft:stone");
+            ctx.waitTicks(5);
+            if (ctx.computeOnClient(mc -> dev.opsuchtprices.client.QualityOfLife.isInventoryFull(mc))) throw new AssertionError("Inventar nach clear noch voll");
+            System.out.println("OVERLAY-TEST ok: Inventar-voll erkannt und wieder frei");
+            // AFK-Warnung
+            ctx.runOnClient(mc -> dev.opsuchtprices.client.QualityOfLife.simulateIdle(5 * 60_000L));
+            ctx.waitTicks(15);
+            ctx.takeScreenshot("afk-warnung");
+            System.out.println("OVERLAY-TEST ok: AFK-Warnung ausgelöst (Screenshot)");
+            // Jobtracker: Job abwählen
+            cfg.jobTrackedJobs.remove("holzfäller");
+            if (dev.opsuchtprices.client.JobHud.jobShown(cfg, "Holzfäller") || !dev.opsuchtprices.client.JobHud.jobShown(cfg, "Farmer")) {
+                throw new AssertionError("Job-Auswahl falsch");
+            }
+            cfg.jobTrackedJobs.add("holzfäller");
+            System.out.println("OVERLAY-TEST ok: Job-Auswahl");
+            // Neue Einstellungsseiten
+            ctx.runOnClient(mc -> mc.setScreen(dev.opsuchtprices.client.MoreSettings.features(null, cfg, () -> {})));
+            ctx.waitTicks(3);
+            ctx.takeScreenshot("einstellungen-weitere-funktionen");
+            ctx.runOnClient(mc -> mc.setScreen(dev.opsuchtprices.client.MoreSettings.jobs(null, cfg, () -> {})));
+            ctx.waitTicks(3);
+            ctx.clickScreenButton("Fischer: AN");
+            ctx.waitTicks(2);
+            ctx.takeScreenshot("einstellungen-jobs");
+            if (cfg.jobTrackedJobs.contains("fischer")) throw new AssertionError("Fischer nicht abgewählt");
+            cfg.jobTrackedJobs.add("fischer");
+            System.out.println("OVERLAY-TEST ok: Einstellungsseiten Weitere Funktionen + Jobs");
+            ctx.runOnClient(mc -> mc.setScreen(null));
             // Nur im eigenen Inventar, nicht in anderen Menüs (z. B. Werkbank/Truhe)
             ctx.runOnClient(mc -> mc.setScreen(null));
             ctx.waitTicks(2);

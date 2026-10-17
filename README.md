@@ -137,3 +137,20 @@ Im eigenen Inventar (Taste E) erscheint eine Knopfleiste: Bank (`/bank`), Auktio
 Jobtracker-Anzeige einstellen (ab 1.23.0)
 
 Einstellungen → Jobtracker „Anzeige…“: Fortschrittsbalken, Zeit, Geld, Geld/h, XP, XP/h, Zeit bis Level-Up, Shards und Jobschatz lassen sich einzeln ein- und ausschalten (Config: `jobShowProgress`, `jobShowTime`, `jobShowMoney`, `jobShowMoneyPerHour`, `jobShowXp`, `jobShowXpPerHour`, `jobShowLevelUp`, `jobShowShards`, `jobShowTreasure`).
+
+Weitere Funktionen (ab 1.24.0)
+
+Einstellungen → „Weitere…“ (alles einzeln abschaltbar):
+- **Inventar voll:** Warnung in der Actionbar (alle `invFullWarningSeconds` s, optional mit Ton).
+- **AFK-Warnung:** grosse Einblendung nach `afkWarningMinutes` Minuten ohne Bewegung (optional mit Ton).
+- **Kurzschreibweise:** `1k`, `2,5m`, `1mrd` werden bei `/pay`, `/bank` und im Amboss (Eingabefelder des Servers) zur vollen Zahl.
+- **Sign-Schutz:** `/sign <Text>` wird erst gesendet, wenn man im Chat auf [ BESTÄTIGEN ] klickt; vorher zeigt die Mod Item und Vorschau mit Farbcodes (&a, &l, &#RRGGBB).
+- **Rename-Schutz:** dasselbe für `/rename <Name>`.
+- **Befehls-Schutz:** Klick auf Chat-Text, der einen Befehl ausführt, muss bestätigt werden.
+- **Verkaufbares grün:** Items mit Kaufaufträgen am Markt werden in Menüs grün markiert.
+- **Rucksack-Vorschau:** Inhalt von Talismanrucksack und anderen Behälter-Items im Tooltip.
+- **Schilder-Suche:** `/opa schild <Text>` umrandet passende Schilder 2 Minuten golden und listet die Koordinaten.
+
+Jobtracker → „Anzeige…“ → „Jobs & Hintergrund…“: Jobs auswählen, Hintergrund-Deckkraft, auf dem Citybuild ausblenden.
+
+Datensammlung für neue Funktionen: `/opa aufnahme start|stop` (Menüs, Klicks, Chat), `/opa item` (Daten des Items in der Hand).

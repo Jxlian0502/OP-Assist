@@ -97,6 +97,31 @@ public final class ModConfig {
     public int inventorySpeedX = -64;
     public int inventorySpeedY = 8;
 
+    /** Jobtracker: nur diese Jobs anzeigen (Kleinbuchstaben wie in der Actionbar), Hintergrund-Deckkraft, auf dem Citybuild aus. */
+    public List<String> jobTrackedJobs = new ArrayList<>(List.of(
+            "minenarbeiter", "holzfäller", "gräber", "jäger", "fischer", "farmer", "builder"));
+    public int jobBgOpacity = 56;
+    public boolean jobHideOnCitybuild = false;
+
+    /** Warnung bei vollem Inventar (Actionbar), alle X Sekunden, optional mit Ton. */
+    public boolean invFullWarning = true;
+    public int invFullWarningSeconds = 3;
+    public boolean invFullWarningSound = false;
+    /** AFK-Warnung: nach X Minuten ohne Bewegung grosse Einblendung, optional mit Ton. */
+    public boolean afkWarning = true;
+    public int afkWarningMinutes = 4;
+    public boolean afkWarningSound = false;
+    /** Kurzschreibweise 1k / 2,5m / 1mrd bei /pay, /bank und im Amboss. */
+    public boolean numberShorthand = true;
+    /** Schutz: beschriebene Schilder nur schleichend bearbeiten; Custom Items nicht versehentlich umbenennen; Chat-Befehle bestätigen. */
+    public boolean signProtection = true;
+    public boolean renameProtection = true;
+    public boolean commandLinkProtection = true;
+    /** Items, die man am Markt verkaufen kann (es gibt Kaufaufträge), in Menüs grün hervorheben. */
+    public boolean highlightSellable = true;
+    /** Inhalt von Talismanrucksack und anderen Behälter-Items im Tooltip. */
+    public boolean bundlePreview = true;
+
     /** Ein Knopf der Inventar-Leiste. */
     public static final class InventoryButton {
         public String item;

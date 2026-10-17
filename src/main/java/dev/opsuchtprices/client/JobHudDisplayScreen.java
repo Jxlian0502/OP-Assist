@@ -52,6 +52,8 @@ public final class JobHudDisplayScreen extends Screen {
                 b.setMessage(text(l, config));
             }).bounds(x, y + (i / 2) * 24, 150, 20).build());
         }
+        addRenderableWidget(Button.builder(Component.literal("Jobs & Hintergrund…"),
+                b -> minecraft.setScreen(MoreSettings.jobs(this, config, save))).bounds(cx + 5, y + 4 * 24, 150, 20).build());
         addRenderableWidget(Button.builder(Component.literal("Fertig"), b -> onClose())
                 .bounds(cx - 100, height - 28, 200, 20).build());
     }

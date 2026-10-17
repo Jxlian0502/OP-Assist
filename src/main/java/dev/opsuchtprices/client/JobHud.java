@@ -108,6 +108,9 @@ public final class JobHud {
         if (hiddenByOverlay(mc, config)) return;
         JobTracker.Stats s = tracker.current();
         if (s == null) return;
+        if (!jobShown(config, s.job)) return;
+        String world = StatsTracker.world();
+        if (config.jobHideOnCitybuild && world != null && world.toLowerCase(Locale.ROOT).contains("citybuild")) return;
         if (config.jobHideAfterMinutes > 0 && tracker.sinceLastEventMs(s) > config.jobHideAfterMinutes * 60_000L) return;
         // Position aus dem Drag-&-Drop-Menü, auf den Bildschirm begrenzt
         int x = Math.max(0, Math.min(config.jobHudX, g.guiWidth() - lastSize[0]));
@@ -192,7 +195,7 @@ public final class JobHud {
         }
         int h = 4 + 16 + (showBar ? 10 : 0) + rows.size() * lineH + 3 + (showCounter ? 26 : 0);
 
-        g.fill(x, y, x + w, y + h, C_BG);
+        g.fill(x, y, x + w, y + h, background());
         Item icon = ICONS.getOrDefault(s.job.toLowerCase(Locale.ROOT), Items.EXPERIENCE_BOTTLE);
         g.renderItem(new ItemStack(icon), x + 3, y + 2);
         g.drawString(font, title, x + 22, y + 6, C_TITLE);
@@ -254,6 +257,18 @@ public final class JobHud {
         ratesTracker = t;
         cachedMph = t.perHour(s, s.money);
         cachedXph = t.perHour(s, s.xp);
+    }
+
+    /** Hintergrundfarbe mit der eingestellten Deckkraft (0–100 %). */
+    static int background() {
+        int pct = config == null ? 56 : Math.max(0, Math.min(100, config.jobBgOpacity));
+        return (Math.round(pct * 255 / 100f) << 24);
+    }
+
+    /** true, wenn der Job in der Auswahl steht. */
+    public static boolean jobShown(ModConfig cfg, String job) {
+        if (cfg == null || cfg.jobTrackedJobs == null || job == null) return true;
+        return cfg.jobTrackedJobs.contains(job.toLowerCase(Locale.ROOT));
     }
 
     /** true, wenn die Zeile angezeigt werden soll (ohne Config, z. B. in Tests: alles an). */

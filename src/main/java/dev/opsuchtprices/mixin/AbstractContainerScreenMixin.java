@@ -39,6 +39,7 @@ public abstract class AbstractContainerScreenMixin {
     // renderContents statt render: das Inventar (mit Rezeptbuch) ruft render der Oberklasse nicht auf
     @Inject(method = "renderContents", at = @At("TAIL"))
     private void opsuchtprices$renderInventoryButtons(GuiGraphics g, int mouseX, int mouseY, float delta, CallbackInfo ci) {
+        dev.opsuchtprices.client.QualityOfLife.renderSlotHighlights(opsuchtprices$self(), leftPos, topPos, g);
         InventoryButtons.render(opsuchtprices$self(), leftPos, topPos, g, mouseX, mouseY);
     }
 

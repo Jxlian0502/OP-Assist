@@ -62,11 +62,13 @@ public final class SettingsScreen extends Screen {
         addRenderableWidget(Button.builder(Component.literal("Job-Actionbar: " + (config.jobHideActionBar ? "AUS" : "AN")), b -> {
             config.jobHideActionBar = !config.jobHideActionBar;
             b.setMessage(Component.literal("Job-Actionbar: " + (config.jobHideActionBar ? "AUS" : "AN")));
-        }).bounds(cx - 155, y, 150, 20).build());
+        }).bounds(cx - 155, y, 100, 20).build());
         addRenderableWidget(Button.builder(Component.literal("Chatscanner: " + (config.chatScanner ? "AN" : "AUS")), b -> {
             config.chatScanner = !config.chatScanner;
             b.setMessage(Component.literal("Chatscanner: " + (config.chatScanner ? "AN" : "AUS")));
-        }).bounds(cx + 5, y, 150, 20).build());
+        }).bounds(cx - 50, y, 100, 20).build());
+        addRenderableWidget(Button.builder(Component.literal("Weitere…"),
+                b -> minecraft.setScreen(MoreSettings.features(this, config, save))).bounds(cx + 55, y, 100, 20).build());
 
         addRenderableWidget(Button.builder(Component.literal("Fertig"), b -> onClose())
                 .bounds(cx - 100, height - 28, 200, 20).build());
