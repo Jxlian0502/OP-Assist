@@ -1,6 +1,6 @@
-# OP-Assistent (by Jxlian0502)
+# OP-Assistent
 
-Fabric-Client-Mod für **Minecraft 1.21.11** auf dem Server **OP SUCHT**: AH-Preise im Tooltip, Markt-Overlay,
+Fabric-Client-Mod für **Minecraft 1.21.11** auf dem Server **OPSUCHT**: AH-Preise im Tooltip, Markt-Overlay,
 Jobtracker, Inventar-Knöpfe, Speed-Anzeige und vieles mehr.
 
 > **© 2026 Julian (Jxlian0502) – Alle Rechte vorbehalten.** Die Mod darf privat in Minecraft benutzt werden.
