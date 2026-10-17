@@ -117,8 +117,10 @@ public final class ModConfig {
     public boolean signProtection = true;
     public boolean renameProtection = true;
     public boolean commandLinkProtection = true;
-    /** Items, die man am Markt verkaufen kann (es gibt Kaufaufträge), in Menüs grün hervorheben. */
+    /** Items, die man am Markt verkaufen kann (es gibt Kaufaufträge), grün hervorheben – nur in Verkaufsmenüs. */
     public boolean highlightSellable = true;
+    /** Verkaufsmenüs: Menütitel enthält einen dieser Begriffe (z. B. "OPSUCHT » Items verkaufen", /sell). */
+    public List<String> sellMenuTitles = new ArrayList<>(List.of("verkaufen", "sell"));
     /** Inhalt von Talismanrucksack und anderen Behälter-Items im Tooltip. */
     public boolean bundlePreview = true;
 

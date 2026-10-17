@@ -147,7 +147,7 @@ Einstellungen → „Weitere…“ (alles einzeln abschaltbar):
 - **Sign-Schutz:** `/sign <Text>` wird erst gesendet, wenn man im Chat auf [ BESTÄTIGEN ] klickt; vorher zeigt die Mod Item und Vorschau mit Farbcodes (&a, &l, &#RRGGBB).
 - **Rename-Schutz:** dasselbe für `/rename <Name>`.
 - **Befehls-Schutz:** Klick auf Chat-Text, der einen Befehl ausführt, muss bestätigt werden.
-- **Verkaufbares grün:** Items mit Kaufaufträgen am Markt werden in Menüs grün markiert.
+- **Verkaufbares grün:** Items mit Kaufaufträgen am Markt bekommen im Verkaufsmenü (`/sell`, Markt „Items verkaufen“) einen grünen Hintergrund (Menütitel-Begriffe: `sellMenuTitles`).
 - **Rucksack-Vorschau:** Inhalt von Talismanrucksack und anderen Behälter-Items im Tooltip.
 - **Schilder-Suche:** `/opa schild <Text>` umrandet passende Schilder 2 Minuten golden und listet die Koordinaten.
 

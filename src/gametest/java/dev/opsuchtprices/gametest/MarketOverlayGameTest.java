@@ -468,7 +468,31 @@ public class MarketOverlayGameTest implements FabricClientGameTest {
             ctx.waitTicks(5);
             ctx.getInput().setCursorPos(5, 5);
             ctx.waitTicks(2);
-            ctx.takeScreenshot("verkaufbar-gruen");
+            ctx.takeScreenshot("inventar-ohne-gruen");
+            if (ctx.computeOnClient(mc -> dev.opsuchtprices.client.QualityOfLife.isSellMenu(mc.screen))) {
+                throw new AssertionError("Grün darf im normalen Inventar nicht erscheinen");
+            }
+            ctx.runOnClient(mc -> mc.setScreen(null));
+            // Verkaufsmenü nachstellen: Truhe mit dem Titel des Markt-Verkaufsmenüs öffnen
+            net.minecraft.core.BlockPos chestPos = ctx.computeOnClient(mc -> mc.player.blockPosition().offset(-2, 0, 0));
+            sp.getServer().runCommand("setblock " + chestPos.getX() + " " + chestPos.getY() + " " + chestPos.getZ()
+                    + " minecraft:chest{CustomName:\"OPSUCHT » Items verkaufen\"}");
+            ctx.waitTicks(10);
+            ctx.runOnClient(mc -> mc.gameMode.useItemOn(mc.player, net.minecraft.world.InteractionHand.MAIN_HAND,
+                    new net.minecraft.world.phys.BlockHitResult(net.minecraft.world.phys.Vec3.atCenterOf(chestPos),
+                            net.minecraft.core.Direction.UP, chestPos, false)));
+            ctx.waitTicks(10);
+            String chestTitle = ctx.computeOnClient(mc -> mc.screen == null ? "-" : mc.screen.getTitle().getString());
+            boolean sellMenu = ctx.computeOnClient(mc -> dev.opsuchtprices.client.QualityOfLife.isSellMenu(mc.screen));
+            ctx.getInput().setCursorPos(5, 5);
+            ctx.waitTicks(2);
+            ctx.takeScreenshot("verkaufsmenue-gruen");
+            if (!sellMenu) throw new AssertionError("Verkaufsmenü nicht erkannt, Titel: " + chestTitle);
+            ctx.runOnClient(mc -> mc.setScreen(null));
+            sp.getServer().runCommand("setblock " + chestPos.getX() + " " + chestPos.getY() + " " + chestPos.getZ() + " minecraft:air");
+            ctx.waitTicks(3);
+            ctx.runOnClient(mc -> mc.setScreen(new net.minecraft.client.gui.screens.inventory.InventoryScreen(mc.player)));
+            ctx.waitTicks(3);
             String qol = ctx.computeOnClient(mc -> {
                 var dia = new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.DIAMOND_BLOCK);
                 var dirt = new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.DIRT);

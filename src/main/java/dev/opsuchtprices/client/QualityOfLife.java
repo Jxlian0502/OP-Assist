@@ -135,16 +135,28 @@ public final class QualityOfLife {
         return false;
     }
 
-    public static void renderSlotHighlights(AbstractContainerScreen<?> screen, int left, int top, GuiGraphics g) {
-        if (!on() || !config.highlightSellable) return;
+    /** Verkaufsmenü: /sell oder Markt "Items verkaufen" (Titel enthält einen der eingestellten Begriffe). */
+    public static boolean isSellMenu(Screen screen) {
+        if (!(screen instanceof AbstractContainerScreen<?>) || screen instanceof net.minecraft.client.gui.screens.inventory.InventoryScreen) return false;
+        String title = screen.getTitle().getString().toLowerCase(Locale.ROOT);
+        for (String t : config.sellMenuTitles) if (t != null && !t.isBlank() && title.contains(t.toLowerCase(Locale.ROOT))) return true;
+        return false;
+    }
+
+    /**
+     * Grüner Hintergrund hinter verkaufbaren Items, nur in Verkaufsmenüs. Wird vor dem Item gezeichnet
+     * (Koordinaten relativ zum Menü), damit das Item selbst klar sichtbar bleibt.
+     */
+    public static void renderSlotBackground(Screen screen, GuiGraphics g, Slot s) {
+        if (!on() || !config.highlightSellable || !s.hasItem() || !isSellMenu(screen)) return;
         market.refreshIfStale();
-        for (Slot s : screen.getMenu().slots) {
-            if (s.hasItem() && isSellable(s.getItem())) {
-                int x = left + s.x, y = top + s.y;
-                g.fill(x, y, x + 16, y + 16, 0x5532CD32);
-                g.fill(x, y + 15, x + 16, y + 16, 0xFF32CD32);
-            }
-        }
+        if (!isSellable(s.getItem())) return;
+        int x = s.x, y = s.y;
+        g.fill(x, y, x + 16, y + 16, 0x3A3CE05A);          // zarter Hintergrund
+        g.fill(x, y, x + 16, y + 1, 0xB05CE67A);           // feiner Rahmen
+        g.fill(x, y + 15, x + 16, y + 16, 0xB05CE67A);
+        g.fill(x, y + 1, x + 1, y + 15, 0xB05CE67A);
+        g.fill(x + 15, y + 1, x + 16, y + 15, 0xB05CE67A);
     }
 
     // ---------- Inhalts-Vorschau (Talismanrucksack u. a.) ----------
