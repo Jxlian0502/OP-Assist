@@ -9,7 +9,7 @@ Jobtracker, Inventar-Knöpfe, Speed-Anzeige und vieles mehr.
 
 ## Download
 
-Aktuelle Version: [`dist/`](dist/) → die `op-assistent-….jar` anklicken → Download.
+Aktuelle Version: [`dist/`](dist/) → `op-assistent-….jar` anklicken → Download.
 
 ## Installation
 
